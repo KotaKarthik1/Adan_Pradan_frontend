@@ -9,7 +9,7 @@ function home() {
                          <div id="carouselExampleControls" className="carousel slide" data-ride="carousel">
                               <div className="carousel-inner">
                                    <div className="carousel-item active">
-                                        <img src="./homepagephoto.jpg" alt="not loaded 1st item" className="img-fluid" />
+                                        <img src="images\homepagephoto.jpg" alt="not loaded 1st item" className="img-fluid" />
                                    </div>    
                                    <div className="carousel-item">
                                         <img src="images\lastEedit1.jpg" alt="not loaded 2nd item" className="img-fluid" />
