@@ -1,0 +1,21 @@
+.btn{
+    width:8cm;
+    display:block;
+    margin: auto;
+}
+.sidephoto{
+    height: 770px;
+    width: 650px;
+}
+.tothemiddle
+{
+    margin:auto;
+}
+.bck{
+    box-shadow:0px 0px 30px 0.01px #d3d7df,0px 0px 1px ;
+}
+.break{
+    display: flex;
+  /* grid-template-columns: repeat(2, 1fr); */
+  grid-gap: 3px;
+}

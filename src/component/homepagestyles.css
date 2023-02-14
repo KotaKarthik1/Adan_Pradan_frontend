@@ -1,0 +1,99 @@
+.navbar{
+    background-color:rgb(255, 255, 255);
+    box-shadow: 0px 0px 7px 0.2px #6c6f74,0px 0px 1px;
+}
+.navbar ul li{
+    margin-right: 15px;
+    margin-left: 15px;
+}
+.sitename{
+  font-family: 'Lobster Two', cursive;
+}
+.nav-link:hover{
+ color:brown;
+}
+.button1{
+  width: 3cm;
+  height:1cm;
+  background-color: rgba(221, 70, 29, 0.538); 
+  font-family: 'Josefin Sans', sans-serif;
+  }
+#josephin{
+  font-family: 'Josefin Sans', sans-serif;
+  color:crimson;
+}
+.bigimage{
+  height:20cm;
+}
+.fq{
+ color: rgb(61, 61, 57);
+}
+.fq:hover{
+ color:rgb(116, 6, 6);
+}
+.wrappingDiv{
+      margin-top: 2.5cm; 
+ }
+ .regstyle{
+      color: rgb(15, 107, 76);
+ }
+ .regstyle:hover{
+      color: rgb(109, 88, 26);
+ }
+ .circle {
+      height: 250px;
+      width: 250px;
+      border-radius: 50%;
+ }
+ .quick{
+      background-color: beige;
+      box-shadow: 0px 0px 30px 0.01px #d3d7df,0px 0px 1px;
+ }
+ .enrolled{
+      display: flex;
+      justify-content: center;
+      flex-direction:row;
+ }
+
+ .s{    
+      padding:5px;  
+      margin:10px;
+ }
+ .section-header{
+      background-color:gold;
+      box-shadow:0px 0px 30px 0.01px #d3d7df,0px 0px 1px ;
+ }
+ .c1{
+      box-shadow:0px 0px 30px 0.01px #d3d7df,0px 0px 1px ;
+ }
+ .b1{   
+      font-family: 'Poppins', sans-serif; 
+ }
+ .shadow{
+      text-shadow:#d3d7df;
+ }
+ body{
+  background-color: rgba(245, 245, 244, 0.56);
+ }
+ footer{
+    background-color:rgb(244, 223, 104);
+ }
+ a{
+  text-decoration: none;
+ }
+ .fu a{
+  color: black;
+ }
+ .social{
+  text-align: justify;
+  color:#6c6f74;
+  word-spacing: 2ch;
+ }
+ .fa{
+  padding-left:0.1cm;
+  color: black;
+ }
+ .jaa{
+     position: relative!important;
+     display:block!important;
+ }

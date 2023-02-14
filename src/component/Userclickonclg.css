@@ -1,0 +1,21 @@
+.box3{
+    margin-top: 3cm;
+    background-color: bisque;
+    border-radius: 6ch;
+}
+.clgndwrksp{
+    text-decoration: none;
+    color: brown;
+}
+.clgndwrksp:hover{
+    color:crimson
+}
+.tabItem{
+    color: rgb(142, 80, 5);
+}
+.itemcolor{
+    color:chocolate;
+}
+.itemcolor:hover{
+    color:rgb(2, 62, 15);
+}

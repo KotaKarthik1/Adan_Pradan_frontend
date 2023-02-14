@@ -1,0 +1,47 @@
+input[type="text"], input[type="email"], input[type="date"], select {
+    width: 100%;
+    padding: 12px 17px;
+    margin: 10px 0;
+    display: inline-block;
+    border: 1px solid rgb(10, 9, 9);
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.bookingform {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+input[type="date"]{
+    margin:5px ;
+    
+}
+.formcredentials {
+    border:2px solid black;
+    padding:10em;
+    width:75%
+}
+#slotbookingname{
+    color:rgb(230, 86, 8);
+}
+.button1{
+  width: 3cm;
+  height:1cm;
+  background-color: rgba(221, 70, 29, 0.538); 
+  font-family: 'Josefin Sans', sans-serif;
+  }
+.josephin{
+  font-family: 'Josefin Sans', sans-serif;
+}
