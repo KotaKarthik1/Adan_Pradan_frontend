@@ -33,7 +33,9 @@ function Loginpage() {
             </form>
           </div>
           <div className="col-6">
-            <img src="images\computerphotoOrg.jpg" className="image-fluid sidephoto" alt="not loaded" />
+             <div className="image-container">
+                 <img src="images\computerphotoOrg.jpg" className="image-fluid sidephoto" alt="not loaded" />
+              </div>
           </div>
         </div>
       </div>

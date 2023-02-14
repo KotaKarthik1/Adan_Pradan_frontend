@@ -1,12 +1,16 @@
 .btn{
-    width:8cm;
-    display:block;
+    display: block;
     margin: auto;
+    max-width: 120px;
 }
-.sidephoto{
-    height: 770px;
-    width: 650px;
-}
+.image-container {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  .sidephoto{
+    max-width: 100%;
+    height: auto;
+  }
 .tothemiddle
 {
     margin:auto;
