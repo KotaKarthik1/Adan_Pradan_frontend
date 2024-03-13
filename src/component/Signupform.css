@@ -1,0 +1,10 @@
+.boxing{
+    box-shadow: 0px 0px 7px 0.2px #6c6f74,0px 0px 1px;
+ }
+ .tothemiddle{
+    margin:auto;
+ }
+.signinbutton{
+    margin-top:2ch;
+    background-color: gold;
+}

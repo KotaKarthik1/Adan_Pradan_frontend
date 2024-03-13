@@ -1,0 +1,32 @@
+.student-profile {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  .left-nav {
+    width: 200px;
+    background-color: #f0f0f0;
+    padding: 10px;
+  }
+  
+  .left-nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .left-nav li {
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+  
+  .left-nav li:hover {
+    background-color: #ddd;
+  }
+  
+  .content {
+    flex: 1;
+    padding: 20px;
+    border: 1px solid #ccc;
+  }
+  

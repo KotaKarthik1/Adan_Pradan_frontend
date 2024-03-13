@@ -1,0 +1,6 @@
+[
+    { "id":1,"name": "Sydney Island", "lati": -16.68972, "lon": 139.45917 },
+    { "id":2,"name": "Sydney Creek",  "lati": -16.3,     "lon": 128.95 },
+    { "id":3,"name": "Mount Sydney",  "lati": -21.39864, "lon": 121.193 }
+]
+ 

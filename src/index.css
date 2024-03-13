@@ -1,0 +1,70 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.c1{
+  box-shadow:0px 0px 30px 0.01px #d3d7df,0px 0px 1px ;
+}
+.wrappingDiv{
+  margin-top: 2.5cm; 
+}
+.navbar{
+  background-color:rgb(255, 255, 255);
+  box-shadow: 0px 0px 7px 0.2px #6c6f74,0px 0px 1px;
+}
+.navbar ul li{
+  margin-right: 15px;
+  margin-left: 15px;
+}
+.sitename{
+font-family: 'Lobster Two', cursive;
+}
+.nav-link:hover{
+color:brown;
+}
+.button1{
+width: 3cm;
+height:1cm;
+background-color: rgba(221, 70, 29, 0.538); 
+font-family: 'Josefin Sans', sans-serif;
+}
+.josephin{
+font-family: 'Josefin Sans', sans-serif;
+}
+.wrappingDiv{
+    margin-top: 2.5cm; 
+}
+.circle {
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+}
+.c1{
+  box-shadow:0px 0px 30px 0.01px #d3d7df,0px 0px 1px ;
+}
+.footer{
+  background-color:rgb(244, 223, 104);
+}
+a{
+text-decoration: none;
+}
+.fu a{
+color: black;
+}
+.social{
+text-align: justify;
+color:#6c6f74;
+word-spacing: 2ch;
+}
+.fa{
+padding-left:0.1cm;
+}
