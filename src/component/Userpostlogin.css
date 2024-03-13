@@ -57,5 +57,13 @@
 .c2{
   border-color: rgb(255, 255, 255);
   height: 100px;
+<<<<<<< HEAD
+  background-image: linear-gradient(180deg, rgb(244, 227, 45), rgb(255, 255, 255));
+ }
+ .thisbody
+ {
+  background-color: #ffffff !important;
+=======
   background-image: linear-gradient(180deg, rgb(239, 169, 231), rgb(255, 255, 255));
+>>>>>>> eead39944a4b0d839e9fe84b2d2492547468b01e
  }

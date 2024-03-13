@@ -1,3 +1,65 @@
+<<<<<<< HEAD
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import "./Userclickonclg.css";
+import axios from "axios";
+
+function Userclickonclg() {
+  const [data, setData] = useState([]);
+  // const {bookingAvail,setbookingAvail} = useState(0);
+  // const [workshopdata,setworkshopdata] = useState([]);
+  useEffect(() => {
+    axios.get("http://localhost:5031/AdanPradan/colleges/list")
+      .then((response) => {
+        setData(response.data.data);
+        // console.log(response.data.data);
+      });
+    console.log(data);
+  });
+
+  return (
+    <div className="container table-container">
+          <table className="table">
+            <thead className="thead-dark">
+              <tr>
+                <th scope="col">S.No</th>
+                <th scope="col">
+                  <div style={{ cursor: "pointer" }}>College Name</div>
+                </th>
+                <th scope="col">JNTU Code</th>
+                <th scope="col">BOOK</th>
+              </tr>
+            </thead>
+            <tbody>
+              {data.map((row, index) => (
+                <tr key={row.id}>
+                  <td>{index + 1}</td>
+                  <td>{row.collegeName}</td>
+                  <td>{row.JntuCode}</td>
+                  <td>
+                    <Link to={`/bookform/${row._id}`}>
+                      <button
+                        type="button"
+                        style={{
+                          display: "flex",
+                          background: "green",
+                          color: "white",
+                          borderRadius: "10px",
+                          marginLeft: "30px",
+                          whiteSpace: "nowrap",
+                        }}
+                      >
+                        Book
+                      </button>
+                    </Link>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+    </div>
+  );
+=======
 import React, { useState } from "react";
 import "./Userclickonclg.css"
 
@@ -81,6 +143,7 @@ function Userclickonclg() {
             </div>
         </>
     );
+>>>>>>> eead39944a4b0d839e9fe84b2d2492547468b01e
 }
 
 export default Userclickonclg;

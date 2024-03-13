@@ -18,4 +18,27 @@
 }
 .itemcolor:hover{
     color:rgb(2, 62, 15);
+<<<<<<< HEAD
 }
+.table-container {
+    overflow-x: auto;
+}
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+
+  .table th, .table td {
+    padding: 8px;
+    text-align: left;
+    border: 1px solid #ddd;
+  }
+  @media (max-width: 768px) {
+    .table th, .table td {
+      font-size: 14px;
+    }
+  }
+=======
+}
+>>>>>>> eead39944a4b0d839e9fe84b2d2492547468b01e
