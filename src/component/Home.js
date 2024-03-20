@@ -58,8 +58,8 @@ export default function Home() {
                     </div>
 
                     <div className="container py-5 my-5 wrappingDiv">
-                         <h1 className="display-4 josephin"><center>Can't do your lab work in home?</center></h1>
-                         <h1 className="display-6 regstyle"><center><b>Register now</b></center></h1>
+                         <p className="display-4 josephin" style={{fontFamily:'josephin'}}><center>Can't do your lab work in home?</center></p>
+                         {/* <h1 className="display-6 regstyle"><center><b>Register now</b></center></h1> */}
                     </div>
                     <div className="container pt-5 my-5 .wrappingDiv c1" >
                          <div className="display-4" style={{ color: "rgb(105, 58, 19)" }}><b>About us</b></div>

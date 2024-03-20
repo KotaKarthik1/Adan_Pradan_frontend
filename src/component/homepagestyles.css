@@ -19,7 +19,7 @@
   font-family: 'Josefin Sans', sans-serif;
   }
 #josephin{
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Josefin Sans', sans-serif !important;
   color:crimson;
 }
 .bigimage{
