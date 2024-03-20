@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 import React, { useEffect, useState } from "react";
 import "./homepagestyles.css";
 import { Link } from "react-router-dom";
@@ -34,21 +31,8 @@ export default function Home() {
         <Error />
       ) : (
         <>
-        <div id="A">
-=======
-=======
->>>>>>> 3b4b2718cbede826489eb08ce9ac35ad64ff498a
-import React from "react";
-import "./homepagestyles.css";
-import {Link} from "react-router-dom"
-function home() {
-     return (
-          <>
                <div id="A">
-<<<<<<< HEAD
->>>>>>> eead39944a4b0d839e9fe84b2d2492547468b01e
-=======
->>>>>>> 3b4b2718cbede826489eb08ce9ac35ad64ff498a
+
                     <div className="container-expand wrappingDiv">
                          <div id="carouselExampleControls" className="carousel slide" data-ride="carousel">
                               <div className="carousel-inner">
@@ -161,23 +145,9 @@ function home() {
                          <h2>Lorem ipsum dolor sit amet</h2>
                     </div>
                </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
         </>
       )}
     </>
   );
 }
 
-=======
-          </>
-     )
-}
-export default home;
->>>>>>> eead39944a4b0d839e9fe84b2d2492547468b01e
-=======
-          </>
-     )
-}
-export default home;
->>>>>>> 3b4b2718cbede826489eb08ce9ac35ad64ff498a

@@ -1,10 +1,9 @@
 import React from "react";
-<<<<<<< HEAD
+
 import "./Collegepostlogin.css";
 import { Link } from "react-router-dom";
-=======
+
 import "./Collegepostlogin.css"
->>>>>>> eead39944a4b0d839e9fe84b2d2492547468b01e
 function Collegepostlogin() {
     return (
         <>
@@ -24,7 +23,7 @@ function Collegepostlogin() {
                   <li style={{padding: "10px"}}><h4>21BD1A05DY - Keshav memorial College of Engineering</h4></li>
                   <li style={{padding: "10px"}}><h4>21BD1A05DZ - Keshav memorial Institute of Technology</h4></li>
                  </ul>
-<<<<<<< HEAD
+
                  <Link to="/todaylist" className="viewmore" ><h3>view more</h3></Link>
                </div>
            </div>
@@ -35,8 +34,7 @@ function Collegepostlogin() {
                          <h2>Lorem ipsum dolor sit amet</h2>
                          <h2>Lorem ipsum dolor sit amet</h2>
                          <h2>Lorem ipsum dolor sit amet</h2>
-                    </div>
-=======
+                    <div>
                  <a href="#" className="viewmore" ><h3>view more</h3></a>
                </div>
            </div>
@@ -63,12 +61,24 @@ function Collegepostlogin() {
              <li style={{padding:" 10px"}}><h4>21BD1A05DY</h4></li>
              <li style={{padding:" 10px"}}><h4>21BD1A05DZ</h4></li>
             </ul>
+            <div>
             <a href="#" className="viewmore" ><h3>view more</h3></a>
           </div>
       </div>
         </div>    
->>>>>>> eead39944a4b0d839e9fe84b2d2492547468b01e
+
         </>
     )
 }
 export default Collegepostlogin;
+// import React from 'react'
+
+// function Collegepostlogin() {
+//   return (
+//     <div>
+      
+//     </div>
+//   )
+// }
+
+// export default Collegepostlogin

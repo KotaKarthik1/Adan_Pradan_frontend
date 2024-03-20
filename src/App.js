@@ -4,17 +4,17 @@ import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
 import Navbar from './component/Navbar';
 import Footer from './component/Footer';
 import Signupform from './component/Signupform';
-<<<<<<< HEAD
+
 import Bookinpage from './component/Bookingpage';
-=======
+
 // import Bookinpage from './component/Bookingpage';
->>>>>>> eead39944a4b0d839e9fe84b2d2492547468b01e
+
 import Userpostlogin from './component/Userpostlogin';
 import Faq from './component/Faq';
 import Loginpage from './component/Loginpage';
 import Collegepostlogin from './component/Collegepostlogin';
 import Contact from './component/Contact';
-<<<<<<< HEAD
+
 // import Search from './component/Search';
 import Userclickonclg from './component/Userclickonclg';
 import StudentNav from './component/Studentnav';
@@ -29,6 +29,11 @@ import CollegeSignUpform from './component/CollegeSignUpform';
 import UpdatesClg from './component/UpdatesClg';
 import CollegeBookings from './component/CollegeBookings';
 import UserCollegetab from './component/UserCollegetab';
+import Hehe from './component/Hehe';
+import UserProfile from './component/UserProfile';
+import UpdateUser from './component/UpdateUser';
+
+
 
 function App() {
   const { authenticated } = useAuth();
@@ -59,6 +64,7 @@ function App() {
               {/* <Route path="bookeđ" element={<><StudentNav/><Userbooked/> </>}/> */}
               <Route path="clgsingnUp" element={<><Navbar/><CollegeSignUpform/></>}/>
               <Route path="Login2" element={<><Navbar/><Loginpage2/></>}/>
+              
               {authenticated?(
                 <>
                 <Route path="student" element={<><StudentNav/><Userpostlogin/><Contact/></>}/>
@@ -66,10 +72,11 @@ function App() {
                 <Route path="clickcollege" element={<><StudentNav/><UserCollegetab/></>}/>
                 <Route path="studcontact" element={<><StudentNav/><Contact/></>}/>
                 <Route path="UserClickOnBooked" element={<><StudentNav/><Userbooked/></>}/>
-                
+                <Route path="tostudprofile" element={<><StudentNav/><UserProfile/></>}></Route>
                 {/* <Route path="bookform/:id" element={<><StudentNav/><Bookinpage/> </>}/> */}
                 {/* <Route path="collegeUpdate" element={<><Collegenav/><UpdatesClg/></>}/> */}
                 <Route path="bookform/:id" element={<><StudentNav/><Bookinpage/> </>}/>
+                <Route path="updateuser" element={<><StudentNav/><UpdateUser/></>}/>
                 </>
               ):(
                 <Route path="*" element={<><Navbar/><Home/></>} />
@@ -91,32 +98,6 @@ function App() {
 
               
           </Routes>
-          
-=======
-import Search from './component/Search';
-import Userclickonclg from './component/Userclickonclg';
-import StudentNav from './component/Studentnav';
-import Collegenav from './component/Collegenav';
-function App() {
-  return (
-    <>
-     <Router>
-          
-          <Routes>
-              <Route path="/" element={<><Navbar/><Home/></>} />
-              <Route path="faq" element={<><Navbar/><Faq/></>}/>
-              <Route path="Login" element={<><Navbar/><Loginpage/></>}/>
-              <Route path="student" element={<><StudentNav/><Userpostlogin/></>}/>
-              <Route path="college" element={<><Collegenav/><Collegepostlogin/></>}/>
-              <Route path="signup" element={<><Navbar/><Signupform/></>}/>
-              <Route path="contact" element={<><Navbar/><Contact/></>}/>
-              <Route path="studcontact" element={<><StudentNav/><Contact/></>}/>
-              <Route path="search" element={<><StudentNav/><Search/></>}/>
-              <Route path="studfaq" element={<><StudentNav/><Faq/></>}/>
-              <Route path="clickcollege" element={<><StudentNav/><Userclickonclg/></>}/>
-              
-          </Routes>
->>>>>>> eead39944a4b0d839e9fe84b2d2492547468b01e
     </Router>
     <Footer/>
      

@@ -28,14 +28,18 @@ code {
 .sitename{
 font-family: 'Lobster Two', cursive;
 }
+.nav-link{
+  margin-top: 0.6rem;
+}
 .nav-link:hover{
 color:brown;
 }
 .button1{
-width: 3cm;
+width: 2cm;
 height:1cm;
-background-color: rgba(221, 70, 29, 0.538); 
+background-color:#ffc107 !important;
 font-family: 'Josefin Sans', sans-serif;
+border-radius: 10px;
 }
 .josephin{
 font-family: 'Josefin Sans', sans-serif;

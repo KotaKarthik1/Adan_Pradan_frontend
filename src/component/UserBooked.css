@@ -1,0 +1,11 @@
+/* BookingTable.css */
+.sortable-header {
+    cursor: pointer;
+  }
+  
+  .sortable-header:hover {
+    cursor: pointer;
+  }
+  .thead-dark{
+    background-color: rgb(244, 223, 104) !important;
+  }

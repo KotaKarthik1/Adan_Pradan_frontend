@@ -1,13 +1,11 @@
 import React from "react";
 function Footer(){
     return(
-<<<<<<< HEAD
+
         <footer style={{position:"fixed-bottom",bottom:"0px"}}>
             <div className="container-fluid">
-=======
-        <footer>
-            <div className="container">
->>>>>>> eead39944a4b0d839e9fe84b2d2492547468b01e
+
+
               <div className="row">
                 <div className="col-xl-3">
                   <div>
