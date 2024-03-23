@@ -301,7 +301,7 @@ function BookingPage() {
       .then((response) => {
         setColleges(response.data);
       });
-  },[]);
+  },[id]);
 
   return (
     <div className="container wrappingDiv">

@@ -87,7 +87,7 @@ const CollegeBookings = () => {
           }
         }
         // console.log(`out side for loop ${itemid} done`);
-        if (workshopsOnCurrentDate.length == 0 && formattedDate>=todaydate) {
+        if (workshopsOnCurrentDate.length === 0 && formattedDate>=todaydate) {
           continue;
         }
         FilteredBookings.push([

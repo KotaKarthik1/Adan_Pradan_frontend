@@ -16,7 +16,7 @@ import Collegepostlogin from './component/Collegepostlogin';
 import Contact from './component/Contact';
 
 // import Search from './component/Search';
-import Userclickonclg from './component/Userclickonclg';
+// import Userclickonclg from './component/Userclickonclg';
 import StudentNav from './component/Studentnav';
 import Collegenav from './component/Collegenav';
 import Userbooked from './component/Userbooked';
@@ -29,7 +29,6 @@ import CollegeSignUpform from './component/CollegeSignUpform';
 import UpdatesClg from './component/UpdatesClg';
 import CollegeBookings from './component/CollegeBookings';
 import UserCollegetab from './component/UserCollegetab';
-import Hehe from './component/Hehe';
 import UserProfile from './component/UserProfile';
 import UpdateUser from './component/UpdateUser';
 

@@ -65,7 +65,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Userclickonclg.css";
 import axios from "axios";
-import { FaSort, FaSortDown, FaSortUp } from "react-icons/fa";
+import { FaSortDown, FaSortUp } from "react-icons/fa";
 
 function Userclickonclg() {
   const [data, setData] = useState([]);

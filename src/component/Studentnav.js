@@ -1,10 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "./Authcontext";
+import "C:/react/Adan_Pradan_frontend/src/component/Studentnav.css";
 export default function StudentNav() {
   const { logout } = useAuth();
   const navigate = useNavigate();
+  const [showDropdown, setShowDropdown] = useState(false);
+
+  const handleProfileClick = () => {
+    setShowDropdown(!showDropdown);
+  };
+
   return (
     <>
       <div>
@@ -59,46 +66,32 @@ export default function StudentNav() {
                     <b>B o o k e d</b>
                   </Link>
                 </li>
-                <li
-                  className="nav-item"
-                  style={{ marginTop: "0.5rem", marginLeft: "0.2px" }}
-                >
-                  <div
-                    className="dropdown"
-                    style={{
-                      backgroundColor: "transparent",
-                      marginTop: "-1.1rem",
-                    }}
-                  >
-                    <div
-                      className="drop-trigger"
-                      style={{ textDecoration: "none", marginLeft: "0.2px" }}
-                    >
+                <li className="nav-item">
+                  {/* <div className="dropdown" style={{ backgroundColor: "transparent", marginTop: "-1.1rem" }}>
+                    <div className="drop-trigger" onClick={handleProfileClick} style={{ textDecoration: "none", marginLeft: "0.2px" }}>
                       <b className="nav-link" style={{ fontWeight: "bold" }}>
                         P r o f i l e
                       </b>
                     </div>
-                    <div
-                      className="dropdown-content"
-                      style={{
-                        backgroundColor: "#ffc107",
-                        marginLeft: "0.2px",
-                      }}
-                    >
-                      <Link to="/tostudprofile" className="nav-link">
-                        <b>Profile</b>
-                      </Link>
-                      <Link to="/updateuser " className="nav-link">
-                        <b>Update Details</b>
-                      </Link>
-                    </div>
-                  </div>
+                    {showDropdown && (
+                      <div className="dropdown-content" style={{ backgroundColor: "#ffc107", marginLeft: "0.2px" }}>
+                        <Link to="/tostudprofile" className="nav-link">
+                          <b>Profile</b>
+                        </Link>
+                        <Link to="/updateuser" className="nav-link">
+                          <b>Update Details</b>
+                        </Link>
+                      </div>
+                    )}
+                  </div> */}
+                  <Link to="/tostudprofile" className="nav-link">
+                    <b>P r o f i l e</b>
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  {/* <Link to="/"> */}
                   <button
                     type="button"
-                    className="button1 nav-link"
+                    className="nav-link buttonstudnav"
                     style={{ color: "black" }}
                     onClick={(e) => {
                       e.preventDefault();
@@ -108,12 +101,7 @@ export default function StudentNav() {
                   >
                     LOG &nbsp;OUT
                   </button>
-                  {/* </Link> */}
                 </li>
-
-                {/* <li className="nav-item">
-                  <Link to="/studentprofilepage">Profile</Link>
-                </li> */}
               </ul>
             </div>
           </div>

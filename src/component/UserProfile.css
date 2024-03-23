@@ -1,0 +1,161 @@
+/* .setthebox
+{
+    padding-top: 0px !important;
+}
+.dropdown
+{
+    background-color: white !important;
+    padding: 0px !important;
+    margin-bottom: 0px !important;
+}
+#dropdown-basic{
+    height:40px !important;
+    width: 200px !important;
+}
+.dropdown-button {
+    background-color: gold;
+    color: #000;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .dropdown-list {
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-list li {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+  }
+  
+  .dropdown-list li:hover {
+    background-color: #f1db35;
+  } */
+  /* UserProfile.css */
+
+.setthebox {
+  padding-top: 0px !important;
+}
+
+.dropdown {
+  background-color: white !important;
+  padding: 0px !important;
+  margin-bottom: 0px !important;
+}
+
+#dropdown-basic {
+  height: 40px !important;
+  width: 200px !important;
+}
+
+.dropdown-button {
+  background-color: gold;
+  color: #000;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown-list {
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-list li {
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+}
+
+.dropdown-list li:hover {
+  background-color: #f1db35;
+}
+
+/* Additional styles for UserProfile */
+/* .container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 5px;
+  margin-top: 50px;
+} */
+.container h1 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Student data styles */
+.student-data {
+  margin-bottom: 20px;
+}
+
+.student-data h2 {
+  color: #007bff;
+}
+
+.student-data p {
+  margin-bottom: 10px;
+}
+h1 {
+  color: #333;
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #f1db35 ;
+  color: #000000 ;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+button:hover {
+  background-color: green;
+}
+
+form {
+  margin-top: 20px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.modal-header {
+  background-color: #f4e860;
+  color: #fff;
+  border-bottom: none;
+}
+
+.modal-footer {
+  border-top: none;
+}
+
+.modal-body {
+  padding: 20px;
+}

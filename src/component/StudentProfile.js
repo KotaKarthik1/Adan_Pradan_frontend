@@ -30,10 +30,7 @@ function StudentProfile() {
       console.log(Data);
      
     });
-  }, []);
-
-
-
+  }, [Data]);
 
   const renderContent = () => {
     if (selectedNavItem === 'personal-info') {

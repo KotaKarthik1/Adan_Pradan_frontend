@@ -48,3 +48,34 @@ margin-top: 1000px;
     background-color: rgb(241, 239, 237);
 
   }
+  /* .clgcard{
+    font-family:"Krona One";
+          border: "1px solid #ccc";
+          border-radius: "5px";
+          padding: "30px";
+          margin: "25px";
+          width: "450px" !important;
+          height: "300px"!important;
+          transition: "box-shadow 0.3s";
+          box-shadow: "0 0 5px rgba(0, 0, 0, 0.3)";
+          cursor: "pointer";
+          
+  }
+  .clgcard:hover{
+    background-color: #ecde6e;
+    box-shadow : "0 0 10px rgba(0, 0, 0, 0.5)";
+    transform:scale(1.04);
+  } */
+  .card-container {
+    display: flex;
+    align-items: center;
+  }
+  /* .hey{ */
+    
+      /* flex: 1 0 300px !important;  */
+      /* grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); */
+      /* border: 1px solid #ccc; */
+      /* padding: 1rem; */
+      /* margin: 0.5rem; */
+    
+  /* } */

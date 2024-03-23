@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import Loader from "./Loader";
 import Error from "./Error";
-import Success from "./Success";
+// import Success from "./Success";
 import "./Signupform.css";
 const Signup = () => {
   const [loading, setloading] = useState(false);

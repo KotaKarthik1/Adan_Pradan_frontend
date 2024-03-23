@@ -97,3 +97,9 @@
      position: relative!important;
      display:block!important;
  }
+ .carousel-control-prev:hover{
+     background-color: transparent !important;
+ }
+ .carousel-control-next:hover{
+     background-color: transparent !important;
+ }

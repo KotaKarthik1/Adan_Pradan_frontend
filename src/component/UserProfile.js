@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { Dropdown, Modal, Button, Form } from "react-bootstrap";
-import './Profile.css';
+import {  Modal, Button, Form } from "react-bootstrap";
+import './UserProfile.css';
 
 function UserProfile() {
   const [data, setData] = useState([]);
@@ -16,6 +16,7 @@ function UserProfile() {
   const [message,setmessage]=useState("");
   const [errormessage,seterrormessage]=useState("");
   const [showerrorModal,setShowerrorModal]=useState(false);
+  const [showDropdown, setShowDropdown] = useState(false);
   useEffect(() => {
     async function fetchData() {
       try {
@@ -29,30 +30,30 @@ function UserProfile() {
       }
     }
     fetchData();
-  }, []);
+  }, [user_id]);
 
-  function updatecolleges(userid) {
-    try {
-      const response = axios.patch(
-        `http://localhost:5031/AdanPradan/std/list/update/${userid}`
-      );
-      setData(response.data.data);
-      console.log("data updated ");
-      console.log(response.data.data);
-      // setUpdateSuccess(true);
-      // setShowSuccessModal(true);
-    } catch (error) {
-      console.log(error);
-    }
-  }
+  // function updatecolleges(userid) {
+  //   try {
+  //     const response = axios.patch(
+  //       `http://localhost:5031/AdanPradan/std/list/update/${userid}`
+  //     );
+  //     setData(response.data.data);
+  //     console.log("data updated ");
+  //     console.log(response.data.data);
+  //     // setUpdateSuccess(true);
+  //     // setShowSuccessModal(true);
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // }
 
-  const buttonStyle = {
-    backgroundColor: 'gold',
-    color: 'white',
-    borderRadius: '5px',
-    border: 'none',
-    cursor: 'pointer'
-  };
+  // const buttonStyle = {
+  //   backgroundColor: 'gold',
+  //   color: 'white',
+  //   borderRadius: '5px',
+  //   border: 'none',
+  //   cursor: 'pointer'
+  // };
 
   const containerStyle = {
     padding: '20px',
@@ -63,7 +64,7 @@ function UserProfile() {
 
   const handleEmailSubmit = async () => {
     try {
-      const response = await axios.patch(
+      await axios.patch(
         `http://localhost:5031/AdanPradan/std/updateemail/${user_id}`,
         { email: email }
       );
@@ -83,10 +84,12 @@ function UserProfile() {
   const handlePasswordSubmit = async () => {
     try {
       if (newPassword !== reenterednewPassword) {
-        console.error("Passwords do not match");
+        console.error("Re-entered password do not match");
+        seterrormessage(" Re-entered password do not match");
+        setShowerrorModal(true);
         return;
       }
-      const response = await axios.patch(
+      await axios.patch(
         `http://localhost:5031/AdanPradan/std/updatepassword/${user_id}`,
         { prevPassword: prevPassword, newPassword: newPassword }
       );
@@ -109,9 +112,9 @@ function UserProfile() {
       <div>
         <div className="container wrappingDiv setthebox" style={containerStyle}>
           <h1 style={{ color: 'green' }}>Student Data:</h1>
-          <h1>{data.name}</h1>
-          <h1>{data.collegeName}</h1>
-          <Dropdown>
+          <h1>Name: {data.name}</h1>
+          <h1>College Name: {data.collegeName}</h1>
+          {/* <Dropdown>
             <Dropdown.Toggle variant="success" id="dropdown-basic" >
             Update Details
             </Dropdown.Toggle>
@@ -119,13 +122,27 @@ function UserProfile() {
               <Dropdown.Item eventKey="1" onClick={() => setShowEmailModal(true)}>Update Email</Dropdown.Item>
               <Dropdown.Item eventKey="2" onClick={() => setShowPasswordModal(true)}>Update Password</Dropdown.Item>
             </Dropdown.Menu>
-          </Dropdown>
+          </Dropdown> */}
+          <div className="custom-dropdown">
+      <button
+        className="dropdown-button"
+        onClick={() => setShowDropdown(!showDropdown)}
+      >
+        Update Details
+      </button>
+      {showDropdown && (
+        <ul className="dropdown-list">
+          <li onClick={() => setShowEmailModal(true)}>Update Email</li>
+          <li onClick={() => setShowPasswordModal(true)}>Update Password</li>
+        </ul>
+      )}
+    </div>
         </div>
       </div>
       {/* Email Modal */}
       <Modal show={showEmailModal} onHide={() => setShowEmailModal(false)}>
-        <Modal.Header closeButton>
-          <Modal.Title>Update Email</Modal.Title>
+        <Modal.Header >
+          <Modal.Title style={{color:"black"}}>Update Email</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <Form.Group controlId="formEmail">
@@ -139,9 +156,7 @@ function UserProfile() {
           </Form.Group>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={() => setShowEmailModal(false)}>
-            Close
-          </Button>
+          
           <Button variant="primary" onClick={handleEmailSubmit}>
             Submit
           </Button>
@@ -150,8 +165,8 @@ function UserProfile() {
 
       {/* Password Modal */}
       <Modal show={showPasswordModal} onHide={() => setShowPasswordModal(false)}>
-        <Modal.Header closeButton>
-          <Modal.Title>Update Password</Modal.Title>
+        <Modal.Header >
+          <Modal.Title style={{color:"black"}}>Update Password</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <Form.Group controlId="formPreviousPassword">
@@ -196,9 +211,9 @@ function UserProfile() {
           {message}
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="primary" onClick={() => setShowSuccessModal(false)}>
+          {/* <Button  variant="primary" onClick={() => setShowSuccessModal(false)}>
             Close
-          </Button>
+          </Button> */}
         </Modal.Footer>
       </Modal>
       <Modal show={showerrorModal} onHide={() => setShowerrorModal(false)}>
@@ -209,9 +224,9 @@ function UserProfile() {
           {errormessage}
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="primary" onClick={() => setShowerrorModal(false)}>
+          {/* <Button variant="primary" onClick={() => setShowerrorModal(false)}>
             Close
-          </Button>
+          </Button> */}
         </Modal.Footer>
       </Modal>
     </div>

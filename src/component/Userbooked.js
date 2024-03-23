@@ -108,7 +108,7 @@
 // export default BookingTable;
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { FaSort, FaSortDown, FaSortUp } from "react-icons/fa";
+import {  FaSortDown, FaSortUp } from "react-icons/fa";
 import "./UserBooked.css"; // Add your custom CSS for table headers
 
 const BookingTable = () => {

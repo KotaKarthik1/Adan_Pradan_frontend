@@ -155,11 +155,8 @@ export default function CurrentWorkShopsClg() {
               <tbody>
                 {workshops.map((workshop) => (
                   <tr key={workshop.workshop_id}>
-                    <td>{workshop.workshop_id}</td>
                     <td>{workshop.workshopTitle}</td>
-                    <td>
-                      {new Date(workshop.workshopDate).toLocaleDateString()}
-                    </td>
+                    <td>{new Date(workshop.workshopDate).toLocaleDateString().split('T')[0]}</td>
                     <td>
                       <button
                         className="btn btn-danger"

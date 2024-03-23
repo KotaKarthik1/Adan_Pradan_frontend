@@ -60,7 +60,7 @@ export default function Collegenav() {
                     LOG - OUT
                   </button>
                    */}
-                    <button type="button" className="button1"
+                    <button type="button" className="buttonclgnav"
                     onClick={(e) => {
                       e.preventDefault();
                       logout();
