@@ -2,9 +2,12 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import {  Modal, Button, Form } from "react-bootstrap";
 import './UserProfile.css';
+import Loader from "./Loader";
+import EmptyDataComponent from "./EmptyDataComponent";
 
 function UserProfile() {
   const [data, setData] = useState([]);
+  const [loading,setLoading]=useState(false);
   const [showEmailModal, setShowEmailModal] = useState(false);
   const [showPasswordModal, setShowPasswordModal] = useState(false);
   const [email, setEmail] = useState("");
@@ -20,12 +23,15 @@ function UserProfile() {
   useEffect(() => {
     async function fetchData() {
       try {
+        setLoading(true);
         const response = await axios.get(
-          `http://localhost:5031/AdanPradan/std/list/${user_id}`
+          `https://adan-pradan-backend.onrender.com/AdanPradan/std/list/${user_id}`
         );
         setData(response.data.data);
+        setLoading(false);
         console.log(response.data.data.name);
       } catch (error) {
+        setLoading(false);
         console.error(error);
       }
     }
@@ -64,25 +70,31 @@ function UserProfile() {
 
   const handleEmailSubmit = async () => {
     try {
+      setLoading(true);
       await axios.patch(
-        `http://localhost:5031/AdanPradan/std/updateemail/${user_id}`,
+        `https://adan-pradan-backend.onrender.com/AdanPradan/std/updateemail/${user_id}`,
         { email: email }
       );
       // setData(response.data.data);
       console.log("Email updated");
       setShowEmailModal(false);
+      setEmail("");
       setmessage("Your email has been updated successfully");
       setShowSuccessModal(true); // Show success modal after successful update
     } catch (error) {
       seterrormessage("error updating");
+      setEmail("");
       setShowerrorModal(true);
       console.error(error);
       setShowEmailModal(false);
+    }finally{
+      setLoading(false);
     }
   };
   
   const handlePasswordSubmit = async () => {
     try {
+      setLoading(true);
       if (newPassword !== reenterednewPassword) {
         console.error("Re-entered password do not match");
         seterrormessage(" Re-entered password do not match");
@@ -96,21 +108,40 @@ function UserProfile() {
       // setData(response.data.data);
       console.log("Password updated");
       setShowPasswordModal(false);
+      setPrevPassword("");
+      setNewPassword("");
       setmessage("Your password has been updated successfully");
       setShowSuccessModal(true); // Show success modal after successful update
     } catch (error) {
+      setPrevPassword("");
+      setNewPassword("");
+      setreenteredNewPassword("");
       seterrormessage("error updating");
       setShowerrorModal(true);
       console.error(error);
       setShowPasswordModal(false);
+    }finally{
+      setLoading(false);
     }
   };
-  
+  // if(showPasswordModal===false)
+  //     {
+  //       setPrevPassword("");
+  //       setNewPassword("");
+  //       setreenteredNewPassword("");
+  //   }
+  //   if(showEmailModal===false)
+  // {
+  //   setEmail("");
+  // }
   
   return (
     <div>
       <div>
         <div className="container wrappingDiv setthebox" style={containerStyle}>
+          {loading?<Loader/>:data.length==0?(<EmptyDataComponent/>):(<>
+            {data && 
+          <div>
           <h1 style={{ color: 'green' }}>Student Data:</h1>
           <h1>Name: {data.name}</h1>
           <h1>College Name: {data.collegeName}</h1>
@@ -138,6 +169,39 @@ function UserProfile() {
       )}
     </div>
         </div>
+}
+          </>)}
+          {/* {data && 
+          <div>
+          <h1 style={{ color: 'green' }}>Student Data:</h1>
+          <h1>Name: {data.name}</h1>
+          <h1>College Name: {data.collegeName}</h1>
+          {/* <Dropdown>
+            <Dropdown.Toggle variant="success" id="dropdown-basic" >
+            Update Details
+            </Dropdown.Toggle>
+            <Dropdown.Menu>
+              <Dropdown.Item eventKey="1" onClick={() => setShowEmailModal(true)}>Update Email</Dropdown.Item>
+              <Dropdown.Item eventKey="2" onClick={() => setShowPasswordModal(true)}>Update Password</Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown> */}
+          {/* <div className="custom-dropdown">
+      <button
+        className="dropdown-button"
+        onClick={() => setShowDropdown(!showDropdown)}
+      >
+        Update Details
+      </button>
+      {showDropdown && (
+        <ul className="dropdown-list">
+          <li onClick={() => setShowEmailModal(true)}>Update Email</li>
+          <li onClick={() => setShowPasswordModal(true)}>Update Password</li>
+        </ul>
+      )}
+    </div>
+        </div>
+}  */}
+      </div>
       </div>
       {/* Email Modal */}
       <Modal show={showEmailModal} onHide={() => setShowEmailModal(false)}>
@@ -156,10 +220,18 @@ function UserProfile() {
           </Form.Group>
         </Modal.Body>
         <Modal.Footer>
-          
-          <Button variant="primary" onClick={handleEmailSubmit}>
-            Submit
-          </Button>
+          <button type="submit" className="btn"  style={{ backgroundColor: "gold" }} disabled={loading} onClick={handleEmailSubmit}>
+    {loading ? (
+      <div className="d-flex align-items-center">
+        <div className="spinner-border" role="status">
+          <span className="sr-only"></span>
+        </div>
+        {/* <span className="ml-2">Login...</span> */}
+      </div>
+    ) : (
+      'Submit'
+    )}
+  </button>
         </Modal.Footer>
       </Modal>
 
@@ -198,9 +270,18 @@ function UserProfile() {
           </Form.Group>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="primary" onClick={handlePasswordSubmit}>
-            Submit
-          </Button>
+          <button type="submit" className="btn"  style={{ backgroundColor: "gold" }} disabled={loading} onClick={handlePasswordSubmit}>
+    {loading ? (
+      <div className="d-flex align-items-center">
+        <div className="spinner-border" role="status">
+          <span className="sr-only"></span>
+        </div>
+        {/* <span className="ml-2">Login...</span> */}
+      </div>
+    ) : (
+      'Submit'
+    )}
+  </button>
         </Modal.Footer>
       </Modal>
       <Modal show={showSuccessModal} onHide={() => setShowSuccessModal(false)}>
@@ -214,6 +295,9 @@ function UserProfile() {
           {/* <Button  variant="primary" onClick={() => setShowSuccessModal(false)}>
             Close
           </Button> */}
+          <button onClick={() => setShowSuccessModal(false)} className="btn" >
+            Close
+          </button>
         </Modal.Footer>
       </Modal>
       <Modal show={showerrorModal} onHide={() => setShowerrorModal(false)}>

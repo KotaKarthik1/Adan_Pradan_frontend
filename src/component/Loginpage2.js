@@ -12,16 +12,16 @@ export default function Loginpage2() {
   const [error, setError] = useState("");
   const navigate = useNavigate();
   const {login} = useAuth();
-
+const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (check) => {
     check.preventDefault();
     try {
-
+      setLoading(true);
       const token = localStorage.getItem('token');
 
       const response = await axios.post(
-        'http://localhost:5031/AdanPradan/loginclg',
+        'https://adan-pradan-backend.onrender.com/AdanPradan/loginclg',
          {
            email: email,
            password: password,
@@ -45,6 +45,8 @@ export default function Loginpage2() {
           } catch (error) {
       setError('Failed to log in');
       console.log(error.message);
+    }finally{
+      setLoading(false);
     }
   };
 
@@ -77,13 +79,19 @@ export default function Loginpage2() {
               <div className="container">
                 <div className="form-group">
                   <br />
-                  <button
-                    type="submit"
-                    className="btn"
-                    style={{ backgroundColor: "gold" }}
-                  >
-                    LogIn as college
-                  </button>
+        
+                  <button type="submit" className="btn"  style={{ backgroundColor: "gold" }} disabled={loading}>
+    {loading ? (
+      <div className="d-flex align-items-center">
+        <div className="spinner-border" role="status">
+          <span className="sr-only"></span>
+        </div>
+        {/* <span className="ml-2">Login...</span> */}
+      </div>
+    ) : (
+      'LogIn as college'
+    )}
+  </button>
                   <br />
                 </div>
               </div>
@@ -91,15 +99,16 @@ export default function Loginpage2() {
             </form>
             <div className="container break">
               <Link to="/login">
-                <button
+              <button
                   className="btn"
                   style={{ backgroundColor: "green", color: "white" }}
                 >
-                  
+                 Student
                 </button>
+  
               </Link>
 
-              <Link to="/signup2">
+              <Link to="/signup">
                 <button
                   className="btn"
                   style={{ backgroundColor: "green", color: "white" }}

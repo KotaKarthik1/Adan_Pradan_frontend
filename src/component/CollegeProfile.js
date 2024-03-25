@@ -15,7 +15,7 @@ const CollegeProfile = () => {
   const [errormessage,seterrormessage]=useState("");
   const [showerrorModal,setShowerrorModal]=useState(false);
   const [showDropdown, setShowDropdown] = useState(false);
-
+const [loading,setLoading]=useState(false);
   const handleCloseModal = () => {
     // Reset password state values when the modal is closed
     setPrevPassword('');
@@ -25,8 +25,9 @@ const CollegeProfile = () => {
   };
   const handleEmailSubmit = async () => {
     try {
+      setLoading(true);
       await axios.patch(
-        `http://localhost:5031/AdanPradan/clg/updateemail/${user_id}`,
+        `https://adan-pradan-backend.onrender.com/AdanPradan/clg/updateemail/${user_id}`,
         { email: email }
       );
       // setData(response.data.data);
@@ -39,11 +40,14 @@ const CollegeProfile = () => {
       setShowerrorModal(true);
       console.error(error);
       setShowEmailModal(false);
+    }finally{
+      setLoading(false);
     }
   };
   
   const handlePasswordSubmit = async () => {
     try {
+      setLoading(false);
       if (newPassword !== reenterednewPassword) {
         console.error("Re-entered password doesn't match");
         seterrormessage("Re-entered password doesn't match")
@@ -51,7 +55,7 @@ const CollegeProfile = () => {
         return;
       }
       await axios.patch(
-        `http://localhost:5031/AdanPradan/clg/updatepassword/${user_id}`,
+        `https://adan-pradan-backend.onrender.com/AdanPradan/clg/updatepassword/${user_id}`,
         { prevPassword: prevPassword, newPassword: newPassword }
       );
       // setData(response.data.data);
@@ -64,11 +68,13 @@ const CollegeProfile = () => {
       setShowerrorModal(true);
       console.error(error);
       setShowPasswordModal(false);
+    }finally{
+      setLoading(false);
     }
   };
   return (
     <>
-    <div className="WrappingDiv">
+    <div className="WrappingDiv" style={{marginBottom:"10px"}}>
       <div className="custom-dropdown">
       <button
         className="dropdown-button"
@@ -100,12 +106,21 @@ const CollegeProfile = () => {
           </Form.Group>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={() => {setShowEmailModal(false);setEmail('');}}>
-            Close
-          </Button>
-          <Button variant="primary" onClick={handleEmailSubmit}>
-            Submit
-          </Button>
+         <button className="btn"   onClick={() => {setShowEmailModal(false);setEmail('');}}>
+          Close
+          </button>
+          <button type="submit" className="btn" disabled={loading} onClick={handleEmailSubmit}>
+    {loading ? (
+      <div className="d-flex align-items-center" style={{color:"gold"}}>
+        <div className="spinner-border" role="status">
+          <span className="sr-only"></span>
+        </div>
+        {/* <span className="ml-2">Login...</span> */}
+      </div>
+    ) : (
+      'Submit'
+    )}
+  </button>
         </Modal.Footer>
       </Modal>
 
@@ -144,9 +159,21 @@ const CollegeProfile = () => {
           </Form.Group>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="primary" onClick={handlePasswordSubmit}>
+          {/* <Button variant="primary" onClick={handlePasswordSubmit}>
             Submit
-          </Button>
+          </Button> */}
+          <button type="submit" className="btn"  style={{ backgroundColor: "gold" }} disabled={loading} onClick={handlePasswordSubmit}>
+    {loading ? (
+      <div className="d-flex align-items-center">
+        <div className="spinner-border" role="status">
+          <span className="sr-only"></span>
+        </div>
+        {/* <span className="ml-2">Login...</span> */}
+      </div>
+    ) : (
+      'Submit'
+    )}
+  </button>
         </Modal.Footer>
       </Modal>
       <Modal show={showSuccessModal} onHide={() => setShowSuccessModal(false)}>
@@ -157,9 +184,9 @@ const CollegeProfile = () => {
           {message}
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="primary" onClick={() => setShowSuccessModal(false)}>
+          <button className="btn" onClick={() => setShowSuccessModal(false)}>
             Close
-          </Button>
+          </button>
         </Modal.Footer>
       </Modal>
       <Modal show={showerrorModal} onHide={() => setShowerrorModal(false)}>

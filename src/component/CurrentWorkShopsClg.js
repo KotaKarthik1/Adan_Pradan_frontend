@@ -87,7 +87,10 @@
 // }
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-
+import Loader from "./Loader";
+import Error from "./Error";
+import { set } from "mongoose";
+import './CurrentWorkshopsClg.css';
 export default function CurrentWorkShopsClg() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const toggleDropdown = () => {
@@ -95,22 +98,30 @@ export default function CurrentWorkShopsClg() {
   };
   const [workshops, setWorkshops] = useState([]);
   const userId = localStorage.getItem("Id");
-
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
   useEffect(() => {
+    setLoading(true);
+    setError(false);
     axios
-      .get(`http://localhost:5031/AdanPradan/workshopsforclg/${userId}`)
+      .get(`https://adan-pradan-backend.onrender.com/AdanPradan/workshopsforclg/${userId}`)
       .then((response) => {
         setWorkshops(response.data);
         console.log(response.data);
+        setLoading(false);
       })
-      .catch((error) => {
+      .catch((error) => { 
         console.error(error);
-      });
+        setError(true);
+      })
   }, [userId]);
 
   const handleDelete = (id) => {
+    setLoading(true);
+    setError(false);
     axios
-      .delete("http://localhost:5031/AdanPradan/deleteworkshops", {
+      // .delete("https://adan-pradan-backend.onrender.com/AdanPradan/deleteworkshops", {
+        .delete("http://localhost:5031/AdanPradan/deleteworkshops", {
         data: {
           workshopId: id,
           userId: userId,
@@ -120,9 +131,11 @@ export default function CurrentWorkShopsClg() {
         console.log("Workshop deleted successfully");
         // Update state to reflect the deletion
         setWorkshops(workshops.filter((workshop) => workshop.workshop_id !== id));
+        setLoading(false);
       })
       .catch((error) => {
         console.error(error);
+        setError(true);
       });
   };
   
@@ -130,20 +143,17 @@ export default function CurrentWorkShopsClg() {
   return (
     <div>
       <div className="container my-6 p-4">
-        <button
-          onClick={toggleDropdown}
-          style={{
-            backgroundColor: "green",
-            color: "white",
-            borderRadius: "10px",
-          }}
-          className="TOGGLEbUTTON"
+        <p className="display-3"
         >
           Current workshops
-        </button>
-        {isDropdownOpen && (
+        </p>
           <div>
-            <h2>Current Workshops</h2>
+          {loading ? (
+        <Loader />
+      ) : error ? (
+        <Error />
+      ) : (
+        <>
             <table className="table">
               <thead>
                 <tr>
@@ -159,7 +169,7 @@ export default function CurrentWorkShopsClg() {
                     <td>{new Date(workshop.workshopDate).toLocaleDateString().split('T')[0]}</td>
                     <td>
                       <button
-                        className="btn btn-danger"
+                        className="btn deletebutton"
                         onClick={() => handleDelete(workshop.workshop_id)}
                       >
                         Delete
@@ -169,8 +179,9 @@ export default function CurrentWorkShopsClg() {
                 ))}
               </tbody>
             </table>
+            </>
+      )}
           </div>
-        )}
       </div>
     </div>
   );

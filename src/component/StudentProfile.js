@@ -23,7 +23,7 @@ function StudentProfile() {
 
   useEffect(() => {
     const userId = localStorage.getItem("Id");
-    axios.get(`http://localhost:5031/AdanPradan/std/${userId}`).then((response) => {
+    axios.get(`https://adan-pradan-backend.onrender.com/AdanPradan/std/${userId}`).then((response) => {
       // setData(response.data[0]);
       setData(response.data.post);
       console.log(response.data);

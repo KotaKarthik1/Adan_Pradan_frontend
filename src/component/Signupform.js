@@ -29,14 +29,14 @@ const Signup = () => {
     try {
       setloading(true);
       console.log("em roo ber")
-      await axios.post("http://localhost:5031/AdanPradan/register", user);
-      setloading(false);
+      await axios.post("https://adan-pradan-backend.onrender.com/AdanPradan/register", user);
        window.location.href = "/success"; // Redirect to success page
       // setloading(false);
       // <Success/> // redirect to success component
     } catch (error) {
       setError(true);
       console.log(error);
+    }finally{
       setloading(false);
     }
   };
@@ -139,7 +139,19 @@ const Signup = () => {
               />
             </label>
             </div>
-            <button className="btn" type="submit" style={{ backgroundColor: "green",color:"white", float:"left"}}>Signup</button>
+            
+            <button type="submit" className="btn"  style={{ backgroundColor: "green",color:"white", float:"left"}} disabled={loading}>
+    {loading ? (
+      <div className="d-flex align-items-center">
+        <div className="spinner-border" role="status">
+          <span className="sr-only"></span>
+        </div>
+        {/* <span className="ml-2">Login...</span> */}
+      </div>
+    ) : (
+      'Signup'
+    )}
+  </button>
           </form>
           <div className='container break'>
             <br/>

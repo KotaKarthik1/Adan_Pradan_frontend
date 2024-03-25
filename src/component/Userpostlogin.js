@@ -56,7 +56,7 @@ function Userpostlogin() {
       try {
         setloading(true);
         const response = await axios.get(
-          "http://localhost:5031/AdanPradan/colleges/list"
+          "https://adan-pradan-backend.onrender.com/AdanPradan/colleges/list"
         );
         setData(response.data.post); // Assuming response.data.post contains the array of colleges
 

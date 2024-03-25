@@ -19,7 +19,7 @@
   grid-gap: 3px;
 }
 body {
-    display: grid;
+    /* display: grid; */
     place-items: center;
     /* height: 100vh; Set full viewport height for body (optional) */
   }

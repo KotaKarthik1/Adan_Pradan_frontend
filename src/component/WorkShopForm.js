@@ -57,7 +57,7 @@ const WorkShopForm = () => {
    console.log(formData.workshops);
     try {
       const response = await axios.post(
-        "http://localhost:5031/AdanPradan/addworkshops",
+        "https://adan-pradan-backend.onrender.com/AdanPradan/addworkshops",
         {
           workshops: formData.workshops.filter(
             (workshop) => workshop.workshopTitle !== ""

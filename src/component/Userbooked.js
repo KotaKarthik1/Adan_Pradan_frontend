@@ -8,7 +8,7 @@
 // //   useEffect(() => {
 // //     console.log(userId);
 // //     axios
-// //       .get(`http://localhost:5031/AdanPradan/userbooked/${userId}`)
+// //       .get(`https://adan-pradan-backend.onrender.com/AdanPradan/userbooked/${userId}`)
 // //       .then((response) => {
 // //         setBookings(response.data);
 // //         console.log(userId);
@@ -58,7 +58,7 @@
 //   useEffect(() => {
 //     console.log(userId);
 //     axios
-//       .get(`http://localhost:5031/AdanPradan/userbooked/${userId}`)
+//       .get(`https://adan-pradan-backend.onrender.com/AdanPradan/userbooked/${userId}`)
 //       .then((response) => {
 //         setBookings(response.data);
 //         console.log(userId);
@@ -110,22 +110,33 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import {  FaSortDown, FaSortUp } from "react-icons/fa";
 import "./UserBooked.css"; // Add your custom CSS for table headers
+import Loader from "./Loader";
+import EmptyDataComponent from "./EmptyDataComponent";
+import NoBookingsFound from "./NoBookingsFound";
 
 const BookingTable = () => {
   const [bookings, setBookings] = useState([]);
   const [sortConfig, setSortConfig] = useState({ key: null, direction: "ascending" });
   const userId = localStorage.getItem("Id");
+  const [loading, setLoading] = useState(false);
+  const [error,setError]=useState(false);
 
   useEffect(() => {
+    setLoading(true); // Set loading to true when starting the fetch
     axios
-      .get(`http://localhost:5031/AdanPradan/userbooked/${userId}`)
+      .get(`https://adan-pradan-backend.onrender.com/AdanPradan/userbooked/${userId}`)
       .then((response) => {
         setBookings(response.data);
       })
       .catch((error) => {
         console.log(error);
+        setError(true);
+      })
+      .finally(() => {
+        setLoading(false); // Set loading to false after fetching data (whether successful or not)
       });
   }, [userId]);
+  
 
   const requestSort = (key) => {
     let direction = "ascending";
@@ -154,21 +165,29 @@ const BookingTable = () => {
   const handlecancel=async (id)=>
   {
     try {
-      console.log(id);
+      setLoading(true);
       const response = await axios.delete(
-        `http://localhost:5031/AdanPradan/cancelBooking/${id}`
+        `https://adan-pradan-backend.onrender.com/AdanPradan/cancelBooking/${id}`
       );
       console.log(response.message);
       setBookings((prevBookings) => prevBookings.filter((booking) => booking._id !== id));
     } catch (error) {
       console.error( error.message);
+    }finally{
+      setLoading(false);
     }
   }
   return (
     <div className="container wrappingDiv">
-      <h1>em rooo</h1>
       <div>
-        <table className="table">
+
+        <p className="display-3">All Bookings</p>
+        {loading?(<Loader/>):error?(<div>error  occured! </div>):bookings.length==0?(<NoBookingsFound/>):(
+        <>
+          {
+            (
+              <>
+              <table className="table">
           <thead className="thead-dark">
             <tr>
               <th className="sortable-header" onClick={() => requestSort("workshopTitle")} scope="col">
@@ -215,8 +234,20 @@ const BookingTable = () => {
                 <td>{booking.collegeName}</td>
                 <td>
                   {badge === 'cancel' &&  (
-            
-                      <button className="btn" value="cancel" onClick={()=>handlecancel(booking._id)}>Cancel</button>
+                      <div>
+                        <button value="cancel" onClick={()=>handlecancel(booking._id)} disabled={loading}>
+                        {loading ? (
+                          <div className="d-flex align-items-center" style={{color:"gold"}}>
+                            <div className="spinner-border" role="status">
+                              <span className="sr-only"></span>
+                            </div>
+                          </div>
+                        ) : (
+                          'Cancel'
+                        )}
+                        
+                      </button>
+                      </div>
                     
                   )}
                 </td>
@@ -225,6 +256,80 @@ const BookingTable = () => {
             })}
           </tbody>
         </table>
+              </>
+            )
+          }
+        </>
+        )}
+        {/* <table className="table">
+          <thead className="thead-dark">
+            <tr>
+              <th className="sortable-header" onClick={() => requestSort("workshopTitle")} scope="col">
+                Workshop
+                {sortConfig && sortConfig.key === "workshopTitle" && (
+                  <span className="sort-icon">
+                    {sortConfig.direction === "ascending" ? <FaSortUp /> : <FaSortDown />}
+                  </span>
+                )}
+              </th>
+              <th className="sortable-header"onClick={() => requestSort("Date")} scope="col">
+                Date and Time Booked
+                {sortConfig && sortConfig.key === "Date" && (
+                  <span className="sort-icon">
+                    {sortConfig.direction === "ascending" ? <FaSortUp /> : <FaSortDown />}
+                  </span>
+                )}
+              </th>
+              <th className="sortable-header" onClick={() => requestSort("collegeName")} scope="col">
+                College
+                {sortConfig && sortConfig.key === "collegeName" && (
+                  <span className="sort-icon">
+                    {sortConfig.direction === "ascending" ? <FaSortUp /> : <FaSortDown />}
+                  </span>
+                )}
+              </th>
+              <th>Option</th>
+            </tr>
+          </thead>
+          <tbody>
+            {sortedBookings().map((booking, index) => {
+              const st=booking.Date.split('T')[0];
+              const check=new Date().toISOString().split('T')[0];
+              console.log(st,check);
+              const badge =
+              st >= check
+              ? 'cancel'
+              : 'notcancel';
+  
+              return(
+              <tr key={index}>
+                <td>{booking.workshopTitle}</td>
+                <td>{booking.Date}</td>
+                <td>{booking.collegeName}</td>
+                <td>
+                  {badge === 'cancel' &&  (
+                      <div>
+                        <button className="btn" value="cancel" onClick={()=>handlecancel(booking._id)} disabled={loading}>
+                        {loading ? (
+                          <div className="d-flex align-items-center" style={{color:"gold"}}>
+                            <div className="spinner-border" role="status">
+                              <span className="sr-only"></span>
+                            </div>
+                          </div>
+                        ) : (
+                          'Cancel'
+                        )}
+                        
+                      </button>
+                      </div>
+                    
+                  )}
+                </td>
+              </tr>
+              );
+            })}
+          </tbody>
+        </table> */}
       </div>
     </div>
   );

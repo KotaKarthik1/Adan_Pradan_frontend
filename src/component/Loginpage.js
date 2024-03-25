@@ -12,15 +12,17 @@ export default function Loginpage() {
   const [error, setError] = useState('');
   const navigate = useNavigate();
   const {login} = useAuth();
+const [loading, setLoading] = useState(false);
   
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
+      setLoading(true);
        // Retrieve the token from local storage
        const token = localStorage.getItem('token');
 
        const response = await axios.post(
-         'http://localhost:5031/AdanPradan/login',
+         'https://adan-pradan-backend.onrender.com/AdanPradan/login',
          {
            email: email,
            password: password,
@@ -46,6 +48,8 @@ export default function Loginpage() {
           } catch (error) {
       setError('Failed to log in');
       console.log(error.message);
+    }finally{
+      setLoading(false);
     }
   };
 
@@ -66,14 +70,27 @@ export default function Loginpage() {
           <div className="container">
           <div className="form-group">
             <br/>
-            <button type="submit" className="btn" style={{ backgroundColor: "gold"}}>LogIn as student</button>
+            <button type="submit" className="btn"  style={{ backgroundColor: "gold" }} disabled={loading}>
+    {loading ? (
+      <div className="d-flex align-items-center">
+        <div className="spinner-border" role="status">
+          <span className="sr-only"></span>
+        </div>
+        {/* <span className="ml-2">Login...</span> */}
+      </div>
+    ) : (
+      'LogIn as Student'
+    )}
+  </button>
             <br/>
           </div>
           </div>
           {error && <div className="alert alert-danger">{error}</div>}
         </form>
         <div className='container break'>
-        <Link to="/Login2"><button className="btn" style={{ backgroundColor: "green",color:"white" }}>college</button></Link>
+        <Link to="/Login2"><button className="btn" style={{ backgroundColor: "green",color:"white" }}>college</button>
+    
+        </Link>
             
         <Link to="/signup"><button className="btn" style={{ backgroundColor: "green", color: "white" }}>Register</button></Link>
         </div>

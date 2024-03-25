@@ -23,7 +23,7 @@ function ImageUpload() {
         getImage()
     },[])
   function uploadImage() {
-    fetch("http://localhost:5031/AdanPradan/upload-image", {
+    fetch("https://adan-pradan-backend.onrender.com/AdanPradan/upload-image", {
       method: "POST", // Use POST instead of GET
       headers: {
         "Content-Type": "application/json",
@@ -38,7 +38,7 @@ function ImageUpload() {
   }
   function getImage()
   {
-    fetch('http://localhost:5031/AdanPradan/get-images',{
+    fetch('https://adan-pradan-backend.onrender.com/AdanPradan/get-images',{
         method:'GET',
     }).then((res)=>res.json())
         .then((data)=> {console.log(data)

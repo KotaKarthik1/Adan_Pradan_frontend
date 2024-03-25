@@ -8,7 +8,7 @@ input[type="text"], input[type="email"], input[type="date"], select {
     box-sizing: border-box;
 }
 
-input[type="submit"] {
+.buttonforsubmit {
     width: 100%;
     background-color: #4CAF50;
     color: white;

@@ -25,7 +25,7 @@ const CollegeSignUpform= () => {
     }
     try {
       setloading(true);
-      await axios.post("http://localhost:5031/AdanPradan/registerclg", user);
+      await axios.post("https://adan-pradan-backend.onrender.com/AdanPradan/registerclg", user);
       setloading(false);
        window.location.href = "/success"; // Redirect to success page
       // setloading(false);

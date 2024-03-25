@@ -21,7 +21,7 @@ import StudentNav from './component/Studentnav';
 import Collegenav from './component/Collegenav';
 import Userbooked from './component/Userbooked';
 import Loginpage2 from './component/Loginpage2';
-import Todaylist from './component/Todaylist';
+// import Todaylist from './component/Todaylist';
 import StudentProfile from './component/StudentProfile';
 import Success from './component/Success';
 import { useAuth } from './component/Authcontext';
@@ -85,7 +85,7 @@ function App() {
                 <>
                 
                 <Route path="collegebookings" element={<><Collegenav/><CollegeBookings/></>}/>
-                <Route path="todaylist" element={<><Collegenav/><Todaylist/> </>}/>
+                {/* <Route path="todaylist" element={<><Collegenav/><Todaylist/> </>}/> */}
                 <Route path="college" element={<><Collegenav/><Collegepostlogin/></>}/>
                 <Route path="collegeUpdate" element={<><Collegenav/><UpdatesClg/></>}/>
                 </>
