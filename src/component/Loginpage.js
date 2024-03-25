@@ -7,8 +7,8 @@ import "./Loginpage.css";
 import {useAuth} from './Authcontext';
 
 export default function Loginpage() {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState('karthikkota@gmail.com');
+  const [password, setPassword] = useState('123456');
   const [error, setError] = useState('');
   const navigate = useNavigate();
   const {login} = useAuth();
@@ -57,7 +57,10 @@ const [loading, setLoading] = useState(false);
     <>
     <div className="container wrappingDiv bck">
          <div className="row">
+          
            <div className="col-4 tothemiddle">
+            {/* <h1>Testing mail:karthik@gmail.com</h1>
+            <h1>password:123456</h1> */}
              <form onSubmit={handleSubmit}>
           <div className="form-group">
             <label htmlFor="email">Email:</label>
@@ -66,6 +69,9 @@ const [loading, setLoading] = useState(false);
           <div className="form-group">
             <label htmlFor="password">Password:</label>
             <input type="password" id="password" className="form-control" value={password} onChange={(check) => setPassword(check.target.value)} />
+            <Link to="/Login2"><p style={{ color:"green" }}>Login as College</p>
+    
+        </Link>
           </div>
           <div className="container">
           <div className="form-group">
@@ -79,7 +85,7 @@ const [loading, setLoading] = useState(false);
         {/* <span className="ml-2">Login...</span> */}
       </div>
     ) : (
-      'LogIn as Student'
+      'Log in'
     )}
   </button>
             <br/>
@@ -88,13 +94,10 @@ const [loading, setLoading] = useState(false);
           {error && <div className="alert alert-danger">{error}</div>}
         </form>
         <div className='container break'>
-        <Link to="/Login2"><button className="btn" style={{ backgroundColor: "green",color:"white" }}>college</button>
-    
-        </Link>
-            
-        <Link to="/signup"><button className="btn" style={{ backgroundColor: "green", color: "white" }}>Register</button></Link>
-        </div>
+      <Link to="/signup"><button className="btn" style={{ backgroundColor: "green", color: "white" }}>Register</button></Link>
       </div>
+      </div>
+      
       <div className="col-6">
               <div className="image-container">
                   <img src="images\computerphotoOrg.jpg" className="image-fluid sidephoto" alt="not loaded" />

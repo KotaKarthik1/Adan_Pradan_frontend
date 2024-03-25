@@ -6,7 +6,20 @@ function Navbar(){
         <nav className="navbar navbar-expand-lg fixed-top">
         <div className="container">
             <div href="#" className="navbar-brand">
-              <Link to="/"><img src="images\lastEdit2.jpg" width="55" height="65" alt="not loaded" className="d-inline-block align-middle mr-2" style={{boxShadow:" 0px 0px 10px 0.2px #afb5be,0px 0px 1px"}}/></Link>
+            <Link to="/">
+  <img
+    src="images\Adan_Pradan_logo.jpeg"
+    width="65"
+    height="65"
+    style={{
+      borderRadius: "50%", // Use 50% for a circular shape
+      boxShadow: "0px 0px 10px 0.2px #afb5be, 0px 0px 1px",
+    }}
+    alt="not loaded"
+    className="d-inline-block align-middle mr-2"
+  />
+</Link>
+
               <Link to="/"><span className="sitename display-6" style={{color:"black"}}>Adan Pradan</span></Link>
             </div>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#T" aria-controls="T" aria-expanded="false" aria-label="Toggle navigation">

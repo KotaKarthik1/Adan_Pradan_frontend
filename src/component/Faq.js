@@ -38,87 +38,24 @@ export default function Faq() {
             <ul>
               <li>
                 <p className="fq josephin">
-                  <h2>How can I book a slot?</h2>
+                  <h2>How do I book a workshop as a student?</h2>
                   <br />
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic
-                  obcaecati ipsam ex quibusdam animi assumenda minus laboriosam
-                  ipsa tempore eum porro consectetur expedita neque minima, magn
-                  am culpa architecto libero quas.Lorem ipsum dolor sit amet,
-                  consectetur adipisicing elit. Hic obcaecati ipsam ex quibusdam
-                  animi assumenda minus laboriosam ipsa tempore eum porro
-                  consectetur expedita neque minima, magn am culpa architecto
-                  libero quas.Lorem ipsum dolor sit amet, consectetur
-                  adipisicing elit. Hic obcaecati ipsam ex quibusdam animi
-                  assumenda minus laboriosam ipsa tempore eum porro consectetur
-                  expedita neque minima, magn am culpa architecto libero
-                  quas.Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Hic obcaecati ipsam ex quibusdam animi assumenda minus
-                  laboriosam ipsa tempore eum porro consectetur expedita neque
-                  minima, magn am culpa architecto libero quas.{" "}
+                  Simply log in, browse workshops, select one, and fill out the registration form.
+
                 </p>
               </li>
               <li>
                 <p className="fq josephin">
-                  <h2>How can I book based on location?</h2>
+                  <h2>Can I cancel a workshop booking?</h2>
                   <br />
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic
-                  obcaecati ipsam ex quibusdam animi assumenda minus laboriosam
-                  ipsa tempore eum porro consectetur expedita neque minima, magn
-                  am culpa architecto libero quas.Lorem ipsum dolor sit amet,
-                  consectetur adipisicing elit. Hic obcaecati ipsam ex quibusdam
-                  animi assumenda minus laboriosam ipsa tempore eum porro
-                  consectetur expedita neque minima, magn am culpa architecto
-                  libero quas.Lorem ipsum dolor sit amet, consectetur
-                  adipisicing elit. Hic obcaecati ipsam ex quibusdam animi
-                  assumenda minus laboriosam ipsa tempore eum porro consectetur
-                  expedita neque minima, magn am culpa architecto libero
-                  quas.Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Hic obcaecati ipsam ex quibusdam animi assumenda minus
-                  laboriosam ipsa tempore eum porro consectetur expedita neque
-                  minima, magn am culpa architecto libero quas.Lorem ipsum dolor
-                  sit amet, consectetur adipisicing elit. Hic obcaecati ipsam ex
-                  quibusdam animi assumenda minus laboriosam ipsa tempore eum
-                  porro consectetur expedita neque minima, magn am culpa
-                  architecto libero quas.Lorem ipsum dolor sit amet, consectetur
-                  adipisicing elit. Hic obcaecati ipsam ex quibusdam animi
-                  assumenda minus laboriosam ipsa tempore eum porro consectetur
-                  expedita neque minima, magn am culpa architecto libero quas.
+                  Yes, students can cancel workshop bookings at any time.
                 </p>
               </li>
               <li>
                 <p className="fq josephin">
-                  <h2>Who will receive me in college? </h2>
+                  <h2>How do colleges manage workshops?</h2>
                   <br />
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic
-                  obcaecati ipsam ex quibusdam animi assumenda minus laboriosam
-                  ipsa tempore eum porro consectetur expedita neque minima, magn
-                  am culpa architecto libero quas.Lorem ipsum dolor sit amet,
-                  consectetur adipisicing elit. Hic obcaecati ipsam ex quibusdam
-                  animi assumenda minus laboriosam ipsa tempore eum porro
-                  consectetur expedita neque minima, magn am culpa architecto
-                  libero quas.Lorem ipsum dolor sit amet, consectetur
-                  adipisicing elit. Hic obcaecati ipsam ex quibusdam animi
-                  assumenda minus laboriosam ipsa tempore eum porro consectetur
-                  expedita neque minima, magn am culpa architecto libero
-                  quas.Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Hic obcaecati ipsam ex quibusdam animi assumenda minus
-                  laboriosam ipsa tempore eum porro consectetur expedita neque
-                  minima, magn am culpa architecto libero quas.Lorem ipsum dolor
-                  sit amet, consectetur adipisicing elit. Hic obcaecati ipsam ex
-                  quibusdam animi assumenda minus laboriosam ipsa tempore eum
-                  porro consectetur expedita neque minima, magn am culpa
-                  architecto libero quas.Lorem ipsum dolor sit amet, consectetur
-                  adipisicing elit. Hic obcaecati ipsam ex quibusdam animi
-                  assumenda minus laboriosam ipsa tempore eum porro consectetur
-                  expedita neque minima, magn am culpa architecto libero
-                  quas.Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Hic obcaecati ipsam ex quibusdam animi assumenda minus
-                  laboriosam ipsa tempore eum porro consectetur expedita neque
-                  minima, magn am culpa architecto libero quas.Lorem ipsum dolor
-                  sit amet, consectetur adipisicing elit. Hic obcaecati ipsam ex
-                  quibusdam animi assumenda minus laboriosam ipsa tempore eum
-                  porro consectetur expedita neque minima, magn am culpa
-                  architecto libero quas.
+                  Colleges can easily add, cancel, and update workshops through the platform, with changes reflected in student dashboards.
                 </p>
               </li>
             </ul>

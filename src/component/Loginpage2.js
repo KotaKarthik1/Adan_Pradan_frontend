@@ -7,8 +7,8 @@ import {useAuth} from './Authcontext';
 
 
 export default function Loginpage2() {
-  const [email, setemail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setemail] = useState("keshavMemorial@gmail.com");
+  const [password, setPassword] = useState("123456");
   const [error, setError] = useState("");
   const navigate = useNavigate();
   const {login} = useAuth();
@@ -75,6 +75,16 @@ const [loading, setLoading] = useState(false);
                   value={password}
                   onChange={(check) => setPassword(check.target.value)}
                 />
+                <Link to="/login">
+              {/* <button
+                  className="btn"
+                  style={{ backgroundColor: "green", color: "white" }}
+                >
+                 Student
+                </button> */}
+                <p style={{color: "green" }}>Login as Student</p>
+  
+              </Link>
               </div>
               <div className="container">
                 <div className="form-group">
@@ -89,7 +99,7 @@ const [loading, setLoading] = useState(false);
         {/* <span className="ml-2">Login...</span> */}
       </div>
     ) : (
-      'LogIn as college'
+      'Log in'
     )}
   </button>
                   <br />
@@ -98,17 +108,18 @@ const [loading, setLoading] = useState(false);
               {error && <div className="alert alert-danger">{error}</div>}
             </form>
             <div className="container break">
-              <Link to="/login">
-              <button
+
+              {/* <Link to="/signup">
+                <button
                   className="btn"
                   style={{ backgroundColor: "green", color: "white" }}
                 >
-                 Student
+                  Register
                 </button>
-  
-              </Link>
-
-              <Link to="/signup">
+              </Link> */}
+            </div>
+            <div className="container break">
+            <Link to="/signup">
                 <button
                   className="btn"
                   style={{ backgroundColor: "green", color: "white" }}

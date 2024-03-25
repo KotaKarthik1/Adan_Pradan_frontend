@@ -3,6 +3,8 @@ import "./homepagestyles.css";
 import { Link } from "react-router-dom";
 import Loader from "./Loader";
 import Error from "./Error";
+import Faq from "./Faq";
+import Contact from "./Contact";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -63,9 +65,16 @@ export default function Home() {
                     </div>
                     <div className="container pt-5 my-5 .wrappingDiv c1" >
                          <div className="display-4" style={{ color: "rgb(105, 58, 19)" }}><b>About us</b></div>
-                         <h3 className="b1"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut, nam commodi? Deserunt, placeat ratione alias quasi sint tenetur pariatur accusamus aperiam praesentium. Corrupti minus laudantium aliquam omnis totam, beatae nostrum.<br />
-                              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut, nam commodi? Deserunt, placeat ratione alias quasi sint tenetur pariatur accusamus aperiam praesentium. Corrupti minus laudantium aliquam omnis totam, beatae nostrum.<br />
-                              <br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, error quidem? Ad provident natus minima officiis nemo omnis tenetur illo accusamus nostrum velit fuga totam consequuntur, molestiae ducimus doloremque ut.<br /></h3>
+                         <p className="b1 display-6" style={{fontFamily:'Alegreya'}}> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Adan Pradan</b>
+                         is a workshop management platform designed to streamline the process of organizing and attending workshops.
+                          For colleges, it offers a comprehensive solution 
+                         to efficiently manage workshop details, such as scheduling, participant registration, and tracking.
+                         <br></br>
+                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For students, Adan Pradan provides a user-friendly interface to explore various workshops,
+                          register for those of interest, and receive updates and reminders. It simplifies the workshop experience, 
+                          making it easier for students to engage with new learning opportunities and for colleges to manage 
+                          and promote their workshops effectively.</p>
                     </div>
                     <div className="container-md my-5 pt-5 quick c1">
                          <div className="josephin"><h1>SIMPLE STEPS TO BOOK YOUR WORKSHOP</h1>
@@ -80,7 +89,7 @@ export default function Home() {
                                    </div>
 
                                    <div className="col-6">
-                                        <div className="b1" ><h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic obcaecati ipsam ex quibusdam animi assumenda minus laboriosam ipsa tempore eum porro consectetur expedita neque minima, magnam culpa architecto libero quas.<br />
+                                        <div className="b1" ><h2>With a user-friendly interface, students can easily log in and browse through a variety of workshops available. They can choose workshops based on their interests or college-specific offerings. Once they find a workshop they like, they can easily book a spot by filling out a simple registration form.<br />
                                         </h2><br />
                                         </div>
                                    </div>
@@ -88,7 +97,7 @@ export default function Home() {
                               <div className="row">
                                    <div className="col-8">
                                         <br />
-                                        <div className="b1"><br /><h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic obcaecati ipsam ex quibusdam animi assumenda minus laboriosam ipsa tempore eum porro consectetur expedita neque minima, magnam culpa architecto libero quas.</h2>
+                                        <div className="b1"><br /><h2>What's more, students have the flexibility to cancel their workshop bookings if their plans change, giving them control and convenience. Adan Pradan aims to streamline the workshop booking process, making it hassle-free for students to explore and participate in various learning opportunities.</h2>
                                              <br />
                                         </div>
                                    </div>
@@ -102,9 +111,9 @@ export default function Home() {
                                    </div>
                                    <div className="col-8">
                                         <br />
-                                        <div className="b1"><br /><h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic obcaecati ipsam
-                                             ex quibusdam animi assumenda minus laboriosam ipsa tempore eum porro consectetur expedita neque minima, magn
-                                             am culpa architecto libero quas.</h2><br />
+                                        <div className="b1"><br /><h2>College users can efficiently manage workshops through Adan Pradan.
+                                              They can log in to view workshops booked by students, track bookings by date, and download lists for record-keeping. 
+                                              The platform allows colleges to seamlessly add, cancel, or update workshops, ensuring smooth management of their workshop offerings.</h2><br />
                                              <br />
                                         </div>
                                    </div>
@@ -112,9 +121,7 @@ export default function Home() {
                               <div className="row">
                                    <div className="col-8">
                                         <br />
-                                        <div className="b1"><h2><br /><b>Lorem ipsum dolor sit amet, consectetur adipisicing elit.Hic obcaecati ipsam ex quibusdam animi assumenda minu
-                                             s laboriosam ipsa tempore eum porro consectetur expedita neque mi
-                                             nima, magnam culpa architecto libero quas.</b></h2>
+                                        <div className="b1"><h2><br />Additionally, when a workshop is deleted, student dashboards reflecting bookings for that workshop are automatically updated, maintaining accurate records.</h2>
                                              <br />
                                              <br />
                                         </div>
@@ -126,7 +133,7 @@ export default function Home() {
                          </div>
                     </div>
 
-                    <div className="container wrappingDiv c1" id="C">
+                    {/* <div className="container wrappingDiv c1" id="C">
                          <div className="display-2" style={{ color: "rgb(105, 58, 19)" }}><b>FAQ's</b></div>
                          <ul>
                               <li>< h2>How can I book a slot?</h2></li>
@@ -136,14 +143,16 @@ export default function Home() {
                               &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;view more </h3></Link>
                          </ul>
 
-                    </div>
-                    <div className="container wrappingDiv c1 p-5 my-5" id="D">
+                    </div> */}
+                    <Faq/>
+                    {/* <div className="container wrappingDiv c1 p-5 my-5" id="D">
                          <div className="display-2" style={{ color: "rgb(105, 58, 19)" }}>
                               <b>Contact us</b></div>
                          <h2>Lorem ipsum dolor sit amet</h2>
                          <h2>Lorem ipsum dolor sit amet</h2>
                          <h2>Lorem ipsum dolor sit amet</h2>
-                    </div>
+                    </div> */}
+                    <Contact/>
                </div>
         </>
       )}

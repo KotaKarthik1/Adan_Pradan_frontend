@@ -75,6 +75,7 @@ const Signup = () => {
             <div className="col-12" style={{justifyContent:"center", display:"flex"}}>
               <div style={{justifyContent:"center",border:"3px Solid gold",padding:"1cm"}}>
           <h1 className="display-1 josephin">Signup</h1>
+          <Link to="/clgsingnUp"><p className="display-7"style={{color:"green", margin:"5px", float:"right"}}>Register as college?</p></Link>
           <form onSubmit={handleSubmit} >
           <div className="form-group">
             
@@ -157,7 +158,6 @@ const Signup = () => {
             <br/>
             <div className="row">
               <div className="col-12">
-        <Link to="/clgsingnUp"><button className="btn" style={{fontSize: "0.8rem",width:"100px",backgroundColor: "green",color:"white", margin:"5px", float:"left"}}>Register college</button></Link>
         <Link to="/Login"><button className="btn" style={{ width:"100px",backgroundColor: "green", color: "white", float:"right",margin:"5px"}}>Login</button></Link>
         </div>
         </div>
