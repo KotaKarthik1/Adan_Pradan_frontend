@@ -65,7 +65,7 @@ export default function Home() {
                     </div>
                     <div className="container pt-5 my-5 .wrappingDiv c1" >
                          <div className="display-4" style={{ color: "rgb(105, 58, 19)" }}><b>About us</b></div>
-                         <p className="b1 display-6" style={{fontFamily:'Alegreya'}}> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                         <p className="b1 display-6" style={{fontFamily:'josephin'}}> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Adan Pradan</b>
                          is a workshop management platform designed to streamline the process of organizing and attending workshops.
                           For colleges, it offers a comprehensive solution 
@@ -107,7 +107,7 @@ export default function Home() {
                               </div>
                               <div className="row">
                                    <div className="col-4">
-                                        <img src="images\plaincolorblue.jpg" alt="not loaded" className="img-fluid circle" />
+                                        <img src="images\lastEdit5.jpg" alt="not loaded" className="img-fluid circle" />
                                    </div>
                                    <div className="col-8">
                                         <br />

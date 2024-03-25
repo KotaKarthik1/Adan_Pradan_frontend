@@ -56,51 +56,51 @@ const CollegeSignUpform= () => {
     //       <form onSubmit={handleSubmit}>
     //       <div className="form-group">
     //         <div className="row">
-    //           <div className="col-4">
-    //         <label>
-    //           College Name:
-    //           <input
-    //             type="text"
-    //             name="collegeName"
-    //             value={user.collegeName}
-    //             className="form-control"
-    //             onChange={(e) =>
-    //               setUser({ ...user, collegeName: e.target.value })
-    //             }
-    //           />
-    //         </label>
-    //         </div>
-    //         <div className="col-5">
-    //         <label>
-    //           Email:
-    //           <input
-    //             type="email"
-    //             name="email"
-    //             value={user.email}
-    //             className="form-control"
-    //   onChange={(e) =>
-    //     setUser({ ...user, email: e.target.value })
-    //   }
-    //   required
-    //           />
-    //         </label>
-    //         </div>
+      //         <div className="col-4">
+      //       <label>
+      //         College Name:
+      //         <input
+      //           type="text"
+      //           name="collegeName"
+      //           value={user.collegeName}
+      //           className="form-control"
+      //           onChange={(e) =>
+      //             setUser({ ...user, collegeName: e.target.value })
+      //           }
+      //         />
+      //       </label>
+      //       </div>
+      //       <div className="col-5">
+      //       <label>
+      //         Email:
+      //         <input
+      //           type="email"
+      //           name="email"
+      //           value={user.email}
+      //           className="form-control"
+      // onChange={(e) =>
+      //   setUser({ ...user, email: e.target.value })
+      // }
+      // required
+      //         />
+      //       </label>
+      //       </div>
     //         </div>
     //         </div>
     //         {/* <div className="form-group"> */}
-    //         {/* <label>
-    //           Email:
-    //           <input
-    //             type="email"
-    //             name="email"
-    //             value={user.email}
-    //             className="form-control"
-    //   onChange={(e) =>
-    //     setUser({ ...user, email: e.target.value })
-    //   }
-    //   required
-    //           />
-    //         </label> */}
+      //        <label>
+      //         Email:
+      //         <input
+      //           type="email"
+      //           name="email"
+      //           value={user.email}
+      //           className="form-control"
+      // onChange={(e) =>
+      //   setUser({ ...user, email: e.target.value })
+      // }
+      // required
+      //         />
+      //       </label> 
     //         {/* </div> */}
     //         <div className="form-group">
     //         <label>
@@ -205,34 +205,33 @@ const CollegeSignUpform= () => {
             <div className="row justify-content-center">
               <div className="col-12 col-md-8" style={{ border: "3px Solid gold", padding: "1cm" }}>
                 <h1 className="display-1 josephin text-center">Signup</h1>
-                <Link to="/signup"><p style={{ color: "green", float: "right", marginTop: "4px" }}>Register as Student?</p></Link>
-                <form onSubmit={handleSubmit}>
-                  <div className="row">
-                    <div className="col-12 col-md-6">
-                      <label>College Name:</label>
-                      <input
-                        type="text"
-                        name="collegeName"
-                        value={user.collegeName}
-                        className="form-control"
-                        onChange={(e) =>
-                          setUser({ ...user, collegeName: e.target.value })
-                        }
-                      />
-                    </div>
-                    <div className="col-12 col-md-6">
-                      <label>Email:</label>
-                      <input
-                        type="email"
-                        name="email"
-                        value={user.email}
-                        className="form-control"
-                        onChange={(e) =>
-                          setUser({ ...user, email: e.target.value })
-                        }
-                        required
-                      />
-                    </div>
+                <Link to="/signup"><p style={{ color: "green", float: "right", marginTop: "4px" }}>Register Student?</p></Link>
+                <form onSubmit={handleSubmit}> 
+                  <div className="form-group">
+                    <label>College Name:</label>
+                    <input
+                      type="text"
+                      name="collegeName"
+                      value={user.collegeName}
+                      className="form-control"
+                      onChange={(e) =>
+                        setUser({ ...user, collegeName: e.target.value })
+                      }
+                      required
+                    />
+                  </div>
+                  <div className="form-group">
+                    <label>Email:</label>
+                    <input
+                      type="email"
+                      name="email"
+                      value={user.email}
+                      className="form-control"
+                      onChange={(e) =>
+                        setUser({ ...user, email: e.target.value })
+                      }
+                      required
+                    />
                   </div>
                   <div className="form-group">
                     <label>Password:</label>
