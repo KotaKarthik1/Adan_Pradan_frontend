@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "./Authcontext";
-import "C:/react/Adan_Pradan_frontend/src/component/Studentnav.css";
+import "./Studentnav.css";
 export default function StudentNav() {
   const { logout } = useAuth();
   const navigate = useNavigate();
