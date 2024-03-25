@@ -13,12 +13,12 @@ export default function Collegenav() {
         <nav className="navbar navbar-expand-lg fixed-top">
           <Link to="/college" className="navbar-brand">
             <img
-              src="images\lastEdit2.jpg"
-              width="55"
+              src="images\Adan_Pradan_logo.jpeg"
+              width="65"
               height="65"
               alt=""
               className="d-inline-block align-middle mr-2"
-              style={{ boxShadow: "0px 0px 10px 0.2px #afb5be,0px 0px 1px" }}
+              style={{ borderRadius: "50%",boxShadow: "0px 0px 10px 0.2px #afb5be,0px 0px 1px" }}
             />
             <span className="sitename display-6">Adan Pradan</span>
           </Link>

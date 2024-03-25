@@ -69,12 +69,10 @@ const [loading, setLoading] = useState(false);
           <div className="form-group">
             <label htmlFor="password">Password:</label>
             <input type="password" id="password" className="form-control" value={password} onChange={(check) => setPassword(check.target.value)} />
-            <Link to="/Login2"><p style={{ color:"green" }}>Login as College</p>
-    
-        </Link>
+            <Link to="/Login2"><p style={{ color:"green" }}>Login as College</p></Link>
           </div>
-          <div className="container">
-          <div className="form-group">
+          <div className="container justify-content-md-start" >
+          <div className="form-group" >
             <br/>
             <button type="submit" className="btn"  style={{ backgroundColor: "gold" }} disabled={loading}>
     {loading ? (
@@ -94,7 +92,8 @@ const [loading, setLoading] = useState(false);
           {error && <div className="alert alert-danger">{error}</div>}
         </form>
         <div className='container break'>
-      <Link to="/signup"><button className="btn" style={{ backgroundColor: "green", color: "white" }}>Register</button></Link>
+          <span>dont have an account?</span>
+      <Link to="/signup"><p className='display-7' style={{ color: "green"}}><b>Register now</b></p></Link>
       </div>
       </div>
       
