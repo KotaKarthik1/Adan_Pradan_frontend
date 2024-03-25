@@ -2,8 +2,8 @@ import React from 'react'
 
 function Error() {
   return (
-    <div>
-      
+    <div className='container wrappingDiv'>
+      <h1> error occured</h1>
     </div>
   )
 }

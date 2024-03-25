@@ -617,7 +617,7 @@ const CollegeBookings = () => {
     try {
       setloading(true);
       const response = await axios.get(
-        `http://localhost:5031/AdanPradan/bookingsfilterbydate?id=${userId}&checkdate=${date}`
+        `https://adan-pradan-backend.onrender.com/AdanPradan/bookingsfilterbydate?id=${userId}&checkdate=${date}`
       );
       setNormalBookings(response.data);
       setloading(false);
@@ -642,7 +642,7 @@ const CollegeBookings = () => {
       setloading(true);
       const formattedDate = new Date(date).toISOString().split("T")[0];
       const response = await axios.get(
-        `http://localhost:5031/AdanPradan/bookingsfilterbydatepast?id=${userId}&checkdate=${formattedDate}`
+        `https://adan-pradan-backend.onrender.com/AdanPradan/bookingsfilterbydatepast?id=${userId}&checkdate=${formattedDate}`
       );
       setPastBookings(response.data);
       setDatespast(Object.keys(response.data));
@@ -667,7 +667,7 @@ const CollegeBookings = () => {
       setloading(true);
       const formattedDate = new Date(date).toISOString().split("T")[0];
       const response = await axios.get(
-        `http://localhost:5031/AdanPradan/bookingsfilterbydatepast?id=${userId}&checkdate=${formattedDate}`
+        `https://adan-pradan-backend.onrender.com/AdanPradan/bookingsfilterbydatepast?id=${userId}&checkdate=${formattedDate}`
       );
       setUpcomingBookings(response.data);
       setDatesupcoming(Object.keys(response.data));

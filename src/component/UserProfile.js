@@ -102,7 +102,7 @@ function UserProfile() {
         return;
       }
       await axios.patch(
-        `http://localhost:5031/AdanPradan/std/updatepassword/${user_id}`,
+        `https://adan-pradan-backend.onrender.com/AdanPradan/std/updatepassword/${user_id}`,
         { prevPassword: prevPassword, newPassword: newPassword }
       );
       // setData(response.data.data);

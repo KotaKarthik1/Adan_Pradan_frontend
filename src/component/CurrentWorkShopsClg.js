@@ -121,7 +121,7 @@ export default function CurrentWorkShopsClg() {
     setError(false);
     axios
       // .delete("https://adan-pradan-backend.onrender.com/AdanPradan/deleteworkshops", {
-        .delete("http://localhost:5031/AdanPradan/deleteworkshops", {
+        .delete("https://adan-pradan-backend.onrender.com/AdanPradan/deleteworkshops", {
         data: {
           workshopId: id,
           userId: userId,
