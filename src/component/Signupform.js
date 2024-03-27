@@ -158,7 +158,7 @@ const Signup = () => {
             <br/>
             <div className="row">
               <div className="col-12">
-        <Link to="/Login"><button className="btn" style={{ width:"100px",backgroundColor: "green", color: "white", float:"right",margin:"5px"}}>Login</button></Link>
+        <Link to="/Loginupdate"><button className="btn" style={{ width:"100px",backgroundColor: "green", color: "white", float:"right",margin:"5px"}}>Login</button></Link>
         </div>
         </div>
         </div>
