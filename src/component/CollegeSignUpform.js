@@ -299,7 +299,7 @@ const CollegeSignUpform= () => {
                 </form>
                 <div className="container break">
                   <div className="row">
-                    <Link to="/login"><button className="btn" type="submit" style={{ backgroundColor: "green", color: "white", float: "left", padding: "0px", marginTop: "4px" }}>Login</button></Link>
+                    <Link to="/loginupdate"><button className="btn" type="submit" style={{ backgroundColor: "green", color: "white", float: "left", padding: "0px", marginTop: "4px" }}>Login</button></Link>
                   </div>
                 </div>
               </div>
