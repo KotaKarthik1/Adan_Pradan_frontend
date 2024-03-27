@@ -67,7 +67,7 @@ function Footer() {
       <div className="fu pt-5">
         <h4>Follow Us</h4>
         <div className="social container">
-          <div className="row">\
+          <div className="row">
           <div className="col-4">
             <a href="https://github.com/KotaKarthik1/Adan_Pradan_frontend.git">
               <FaGithub size={30}/>

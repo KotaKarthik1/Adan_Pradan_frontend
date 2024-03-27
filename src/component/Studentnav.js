@@ -20,8 +20,8 @@ export default function StudentNav() {
             <a href="#" className="navbar-brand">
               <img
                 src="images\Adan_Pradan_logo.jpeg"
-                width="65"
-                height="65"
+                width="45"
+                height="45"
                 alt="not loaded"
                 className="d-inline-block align-middle mr-2"
                 style={{borderRadius: "50%", boxShadow: "0px 0px 10px 0.2px #afb5be,0px 0px 1px" }}

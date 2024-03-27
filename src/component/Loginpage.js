@@ -6,7 +6,7 @@ import axios from 'axios';
 import "./Loginpage.css";
 import {useAuth} from './Authcontext';
 
-export default function Loginpage() {
+export default function Loginpageold() {
   const [email, setEmail] = useState('karthikkota@gmail.com');
   const [password, setPassword] = useState('123456');
   const [error, setError] = useState('');

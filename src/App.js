@@ -31,6 +31,8 @@ import CollegeBookings from './component/CollegeBookings';
 import UserCollegetab from './component/UserCollegetab';
 import UserProfile from './component/UserProfile';
 import UpdateUser from './component/UpdateUser';
+import TestingLogInclgnew from './component/SignUpDate2';
+import Loginpagenew from './component/SignUpdate';
 
 
 
@@ -63,7 +65,8 @@ function App() {
               {/* <Route path="bookeđ" element={<><StudentNav/><Userbooked/> </>}/> */}
               <Route path="clgsingnUp" element={<><Navbar/><CollegeSignUpform/></>}/>
               <Route path="Login2" element={<><Navbar/><Loginpage2/></>}/>
-              
+              <Route path="loginupdate" element={<><Navbar/><Loginpagenew/></>}></Route>
+              <Route path="loginupdate2" element={<><Navbar/><TestingLogInclgnew/></>}></Route>
               {authenticated?(
                 <>
                 <Route path="student" element={<><StudentNav/><Userpostlogin/><Contact/></>}/>

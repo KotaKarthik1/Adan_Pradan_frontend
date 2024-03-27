@@ -9,8 +9,8 @@ function Navbar(){
             <Link to="/">
   <img
     src="images\Adan_Pradan_logo.jpeg"
-    width="65"
-    height="65"
+    width="45"
+    height="45"
     style={{
       borderRadius: "50%", // Use 50% for a circular shape
       boxShadow: "0px 0px 10px 0.2px #afb5be, 0px 0px 1px",
@@ -34,7 +34,7 @@ function Navbar(){
             <li className="nav-item">
               <Link className="nav-link" to="/contact"><b>C o n t a c t- u s</b></Link></li>
               <li className="nav-item">
-                <Link to="/Login"><button type="button" className="button1">LOG - IN</button></Link>
+                <Link to="/loginupdate"><button type="button" className="button1">LOG - IN</button></Link>
               </li>
           </ul>
         </div>

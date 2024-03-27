@@ -33,9 +33,9 @@ export default function Home() {
         <Error />
       ) : (
         <>
-               <div id="A">
+               <div id="A" style={{marginTop:"2.2cm"}}>
 
-                    <div className="container-expand wrappingDiv">
+                    <div className="container-expand ">
                          <div id="carouselExampleControls" className="carousel slide" data-ride="carousel">
                               <div className="carousel-inner">
                                    <div className="carousel-item active">
