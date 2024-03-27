@@ -7,7 +7,7 @@ function Success() {
       <div class="alert alert-success" role="alert">
         This is a success alert—check it out!
       </div>
-      <Link to="/Login">
+      <Link to="/loginupdate">
         <button className="btn" style={{marginBottom:'5px'}}>Click here Login</button>
       </Link>
     </div>
