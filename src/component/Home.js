@@ -65,10 +65,10 @@ export default function Home() {
                     </div>
                     <div className="container pt-5 my-5 .wrappingDiv c1" >
                          <div className="display-4" style={{ color: "rgb(105, 58, 19)" }}><b>About us</b></div>
-                         <p className="b1 display-6" style={{fontFamily:'josephin'}}> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                         <p className="b1 display-6" style={{fontFamily:'josephin',fontSize:'25px'}}> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Adan Pradan </b>
                          is a workshop management platform designed to streamline the process of organizing and attending workshops.
-                          For colleges, it offers a comprehensive solution 
+                          For colleges, it offers a complete solution 
                          to efficiently manage workshop details, such as scheduling, participant registration, and tracking.
                          <br></br>
                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For students, Adan Pradan provides a user-friendly interface to explore various workshops,
@@ -77,7 +77,7 @@ export default function Home() {
                           and promote their workshops effectively.</p>
                     </div>
                     <div className="container-md my-5 pt-5 quick c1">
-                         <div className="josephin"><h1>SIMPLE STEPS TO BOOK YOUR WORKSHOP</h1>
+                         <div className="josephin"><p className="display-6"><b>SIMPLE STEPS TO BOOK YOUR WORKSHOP</b></p>
                               <br />
                          </div>
                          <div className="container">
@@ -132,26 +132,7 @@ export default function Home() {
                               </div>
                          </div>
                     </div>
-
-                    {/* <div className="container wrappingDiv c1" id="C">
-                         <div className="display-2" style={{ color: "rgb(105, 58, 19)" }}><b>FAQ's</b></div>
-                         <ul>
-                              <li>< h2>How can I book a slot?</h2></li>
-                              <li><h2>How can I book based on location?</h2></li>
-                              <li><h2>Who will receive me in college? </h2></li>
-                              <Link to="/faq"><h3 style={{ color: "rgb(201, 44, 44)" }}>&nbsp; 
-                              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;view more </h3></Link>
-                         </ul>
-
-                    </div> */}
                     <Faq/>
-                    {/* <div className="container wrappingDiv c1 p-5 my-5" id="D">
-                         <div className="display-2" style={{ color: "rgb(105, 58, 19)" }}>
-                              <b>Contact us</b></div>
-                         <h2>Lorem ipsum dolor sit amet</h2>
-                         <h2>Lorem ipsum dolor sit amet</h2>
-                         <h2>Lorem ipsum dolor sit amet</h2>
-                    </div> */}
                     <Contact/>
                </div>
         </>

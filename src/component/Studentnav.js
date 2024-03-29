@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "./Authcontext";
@@ -6,11 +6,27 @@ import "./Studentnav.css";
 export default function StudentNav() {
   const { logout } = useAuth();
   const navigate = useNavigate();
-  const [showDropdown, setShowDropdown] = useState(false);
+  const [navClose, setNavClose] = useState(window.innerWidth > 991 ? false : true);
 
-  const handleProfileClick = () => {
-    setShowDropdown(!showDropdown);
-  };
+  function handleNavClose() {
+    setNavClose(!navClose);
+  }
+
+  useEffect(() => {
+    function handleResize() {
+      if (window.innerWidth > 991) {
+        setNavClose(false);
+      } else {
+        setNavClose(true);
+      }
+    }
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
     <>
@@ -24,23 +40,15 @@ export default function StudentNav() {
                 height="45"
                 alt="not loaded"
                 className="d-inline-block align-middle mr-2"
-                style={{borderRadius: "50%", boxShadow: "0px 0px 10px 0.2px #afb5be,0px 0px 1px" }}
+                style={{borderRadius: "50%", boxShadow: "rgb(175, 181, 190) 0px 0px 3px 0.1px, inset 0px 0px 0px 0px" }}
               />
               <span className="sitename display-6">Adan Pradan</span>
             </a>
-            <button
-              className="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#T"
-              aria-controls="T"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
+            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#T" aria-controls="T" aria-expanded={!navClose ? true : false} aria-label="Toggle navigation" onClick={handleNavClose}>
               <span className="navbar-toggler-icon"></span>
             </button>
-            <div className="navbar-collapse collapse" id="T">
-              <ul className="navbar-nav ms-auto mb-2 mb-md-0">
+            <div className={`${navClose ? 'collapse' : ''} navbar-collapse`} id="T" style={{ transition: 'height 0.5s ease-in-out', maxHeight: navClose ? '0' : '100vh', overflow: 'hidden' }}>
+              <ul className="navbar-nav ms-auto mb-2 mb-md-0" onClick={handleNavClose}>
                 <li className="nav-item">
                   <Link to="/student" className="nav-link">
                     <b>H o m e</b>
