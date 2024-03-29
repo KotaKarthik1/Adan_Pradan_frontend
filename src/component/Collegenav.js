@@ -52,14 +52,6 @@ export default function Collegenav() {
               </li>
               <li className="nav-item">
                 <Link to="/">
-                  {/* <button
-                    type="button"
-                    onClick={logouthandler}
-                    className="button1"
-                  >
-                    LOG - OUT
-                  </button>
-                   */}
                     <button type="button" className="buttonclgnav"
                     onClick={(e) => {
                       e.preventDefault();

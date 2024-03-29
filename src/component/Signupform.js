@@ -40,25 +40,6 @@ const Signup = () => {
       setloading(false);
     }
   };
-  // const handleSubmit = async (event) => {
-  //   event.preventDefault();
-  //   if (user.password !== user.confirmpassword) {
-  //     alert("Passwords do not match");
-  //     return;
-  //   }
-  //   try {
-  //     setloading(true);
-  //     await axios.post("http://localhost:5031/AdanPradan/register", user);
-  //     setloading(false); // Set loading to false on successful submission
-  //     window.location.href = "/student"; // Redirect to success page
-  //   } catch (error) {
-  //     setError(true);
-  //     console.log(error);
-  //     setloading(false); // Set loading to false on error
-  //   }
-  // };
-  
-
   return (
     <div>
       {loading ? (

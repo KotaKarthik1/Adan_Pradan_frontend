@@ -53,20 +53,28 @@ function BookingPage() {
       .then((response) => {
         console.log(response.data.message);
         if (response.status === 400) {
-          console.log(response.data.message);
+          // console.log(response.data.message);
           seterrmsg(response.data.message);
+          setSelectedWorkshop("");
+          setSelectedDate("");
         } else if (response.status === 201) {
           // seter("Booking Successful!");
           seterrmsg("");
           setBookingSuccess(true);
           setShowSuccessPopup(true);
+          setSelectedWorkshop("");
+          setSelectedDate("");
         } else {
-          console.log(response);
+          // console.log(response);
           alert("Form data saved successfully");
+          setSelectedWorkshop("");
+          setSelectedDate("");
         }
       })
       .catch((error) => {
-        console.error(error);
+        // console.error(error);
+        setSelectedWorkshop("");
+        setSelectedDate("");
         seterrmsg(error.response.data.message);
         // Handle error
       });
@@ -102,30 +110,6 @@ function BookingPage() {
           <form className="booking-form" onSubmit={handleSubmit}>
              <div className="form-row">
               <label>Select Workshop:</label>
-            {/*  <div className="workshop-dropdown">
-                <button
-                  className="dropdown-button"
-                  onClick={() => {
-                    setWorkshopid("");
-                    setSelectedWorkshop("");
-                  }}
-                >
-                  {selectedWorkshop || "Select Workshop"}
-                </button>
-                <ul className="dropdown-list">
-                  {colleges.map((college, index) => (
-                    <li
-                      key={index}
-                      onClick={() => {
-                        setWorkshopid(college.workshop_id);
-                        setSelectedWorkshop(college.workshopTitle);
-                      }}
-                    >
-                      {college.workshopTitle}
-                    </li>
-                  ))}
-                </ul>
-              </div> */}
                <div className="workshop-dropdown">
                 <button
                   className="dropdown-button"

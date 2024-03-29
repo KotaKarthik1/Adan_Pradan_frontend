@@ -31,14 +31,14 @@ const [loading,setLoading]=useState(false);
         { email: email }
       );
       // setData(response.data.data);
-      console.log("Email updated");
+      // //console.log("Email updated");
       setShowEmailModal(false);
       setmessage("Your email has been updated successfully");
       setShowSuccessModal(true); // Show success modal after successful update
     } catch (error) {
       seterrormessage("error updating");
       setShowerrorModal(true);
-      console.error(error);
+      //console.error(error);
       setShowEmailModal(false);
     }finally{
       setLoading(false);
@@ -49,7 +49,7 @@ const [loading,setLoading]=useState(false);
     try {
       setLoading(false);
       if (newPassword !== reenterednewPassword) {
-        console.error("Re-entered password doesn't match");
+        //console.error("Re-entered password doesn't match");
         seterrormessage("Re-entered password doesn't match")
         setShowerrorModal(true);
         return;
@@ -59,14 +59,14 @@ const [loading,setLoading]=useState(false);
         { prevPassword: prevPassword, newPassword: newPassword }
       );
       // setData(response.data.data);
-      console.log("Password updated");
+      //console.log("Password updated");
       setShowPasswordModal(false);
       setmessage("Your password has been updated successfully");
       setShowSuccessModal(true); // Show success modal after successful update
     } catch (error) {
       seterrormessage("error updating");
       setShowerrorModal(true);
-      console.error(error);
+      //console.error(error);
       setShowPasswordModal(false);
     }finally{
       setLoading(false);

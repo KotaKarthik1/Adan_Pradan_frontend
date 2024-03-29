@@ -45,24 +45,8 @@ function Footer() {
               </li>
             </ul>
             <h4>Address</h4>
-            <p>3-5-***,Narayanaguda,Hyderabad,Telangana</p>
+            <p>3-**,Narayanaguda,Hyderabad,Telangana</p>
           </div>
-
-          {/* <div className="col-xl-3">
-  <div className="fu pt-5">
-    <h4>Follow Us</h4>
-    <div className="social">
-      <div>
-        <a href="link1" className="fa fa-github"></a>
-        <p>Frontend Repository</p>
-      </div>
-      <div>
-        <a href="link2" className="fa fa-github"></a>
-        <p>Backend Repository</p>
-      </div>
-    </div>
-  </div>
-</div> */}
 <div className="col-xl-3">
       <div className="fu pt-5">
         <h4>Follow Us</h4>

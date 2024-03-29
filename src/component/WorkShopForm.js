@@ -153,68 +153,6 @@ const WorkShopForm = () => {
       </div>
   </div>
 )}
-      {/* <div className="row justify-content-center">
-        <div className="col-md-6">
-          <div className="card">
-            <div className="card-header">
-              <h2 className="card-title">Add Workshops</h2>
-            </div>
-            <div className="card-body">
-              <form onSubmit={handleRegistration}>
-                {formData.workshops.map((workshop, index) => (
-                  <div key={index}>
-                    <input
-                      type="text"
-                      name={`workshopTitle`}
-                      placeholder={`Workshop Title ${index + 1}`}
-                      value={workshop.workshopTitle}
-                      onChange={(e) => handleInputChange(e, index, "workshopTitle")}
-                    />
-                    <input
-                      type="date"
-                      name={`workshopDate`}
-                      placeholder={`Workshop Date ${index + 1}`}
-                      value={workshop.workshopDate}
-                      onChange={(e) => handleInputChange(e, index, "workshopDate")}
-                    />
-                    <input
-                      type="text"
-                      name={`workshopSeats`}
-                      placeholder={`Workshop Seats ${index + 1}`}
-                      value={workshop.workshopSeats}
-                      onChange={(e) => handleInputChange(e, index, "workshopSeats")}
-                    />
-                    <input
-                      type="time"
-                      name={`workshopTiming`}
-                      placeholder={`Workshop Timing ${index + 1}`}
-                      value={workshop.workshopTiming}
-                      onChange={(e) => handleInputChange(e, index, "workshopTiming")}
-                    />
-                    <button
-                      type="button"
-                      onClick={() => handleRemoveWorkshop(index)}
-                    >
-                      Remove Workshop
-                    </button>
-                  </div>
-                ))}
-                <button type="button" onClick={handleAddWorkshop}>
-                  Add Workshop
-                </button>
-
-                <button type="submit">save</button>
-              </form>
-              {error && (
-                <div className="alert alert-danger" role="alert">
-                  {error}
-                </div>
-              )}
-            </div>
-          </div>
-        </div>
-      </div> */}
-
     </div>
     
   );

@@ -9,39 +9,6 @@ function Userpostlogin() {
   const [Data, setData] = useState([]);
   const [loading, setloading] = useState();
   const [error, seterror] = useState();
-  // let posts;
-  // useEffect(() => {
-  //     try {
-  //       setloading(true);
-  //       axios.get(
-  //         "http://localhost:5031/AdanPradan/colleges/list"
-  //       ).then((response) => {
-  //         //console.log(response.data);
-  //       //  const {posts}=response.data;
-  //         //console.log(posts);
-  //         // setClgs(posts);
-  //         setData(response.data.post);
-  //         const {post}=response.data;
-  //         console.log(post);
-  //         global.post=post;
-  //         console.log(post);
-  //         // console.log(response.data);
-  //         // console.log(Data);
-  //         setloading(false);
-  //       });
-  //       // const data = response.data.data;
-  //       // console.log(response.data.posts);
-  //       // setclgs(response.data.post);
-  //       // console.log(Clgs);
-  //       // setloading(false);
-  //     } catch (error) {
-  //       seterror(true);
-  //       console.error("Error fetching data:", error);
-  //       setloading(false);
-  //     }
-
-  // }, []);
-
   const shuffleArray = (array) => {
     const shuffled = [...array];
     for (let i = shuffled.length - 1; i > 0; i--) {
@@ -58,13 +25,11 @@ function Userpostlogin() {
         const response = await axios.get(
           "https://adan-pradan-backend.onrender.com/AdanPradan/colleges/list"
         );
-        setData(response.data.post); // Assuming response.data.post contains the array of colleges
+        setData(response.data.post); 
 
         setloading(false);
 
         const shuffledData = shuffleArray(response.data.post);
-
-        // Select unique titles and ensure at least three cards
         const uniqueTitles = new Set();
         const selectedCollege = [];
         for (const clg of shuffledData) {
@@ -73,12 +38,12 @@ function Userpostlogin() {
             selectedCollege.push(clg);
 
             if (selectedCollege.length >= 6) {
-              break; // Ensure at least three cards
+              break; 
             }
           }
         }
 
-        // If there are fewer than three unique titles, repeat the titles to reach three cards
+      
         while (selectedCollege.length < 3 && shuffledData.length > 0) {
           const randomIndex = Math.floor(Math.random() * shuffledData.length);
           const randomWorkshop = shuffledData.splice(randomIndex, 1)[0];
@@ -94,7 +59,7 @@ function Userpostlogin() {
     };
     fetchData();
     console.log(Data);
-  }, []);
+  },[]);
 
   return (
     <>

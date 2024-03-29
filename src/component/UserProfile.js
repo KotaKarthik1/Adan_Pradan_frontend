@@ -29,7 +29,7 @@ function UserProfile() {
         );
         setData(response.data.data);
         setLoading(false);
-        console.log(response.data.data.name);
+        // console.log(response.data.data.name);
       } catch (error) {
         setLoading(false);
         console.error(error);
@@ -38,28 +38,6 @@ function UserProfile() {
     fetchData();
   }, [user_id]);
 
-  // function updatecolleges(userid) {
-  //   try {
-  //     const response = axios.patch(
-  //       `http://localhost:5031/AdanPradan/std/list/update/${userid}`
-  //     );
-  //     setData(response.data.data);
-  //     console.log("data updated ");
-  //     console.log(response.data.data);
-  //     // setUpdateSuccess(true);
-  //     // setShowSuccessModal(true);
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // }
-
-  // const buttonStyle = {
-  //   backgroundColor: 'gold',
-  //   color: 'white',
-  //   borderRadius: '5px',
-  //   border: 'none',
-  //   cursor: 'pointer'
-  // };
 
   const containerStyle = {
     padding: '20px',
@@ -76,7 +54,7 @@ function UserProfile() {
         { email: email }
       );
       // setData(response.data.data);
-      console.log("Email updated");
+      // console.log("Email updated");
       setShowEmailModal(false);
       setEmail("");
       setmessage("Your email has been updated successfully");
@@ -106,7 +84,7 @@ function UserProfile() {
         { prevPassword: prevPassword, newPassword: newPassword }
       );
       // setData(response.data.data);
-      console.log("Password updated");
+      // console.log("Password updated");
       setShowPasswordModal(false);
       setPrevPassword("");
       setNewPassword("");
@@ -124,16 +102,7 @@ function UserProfile() {
       setLoading(false);
     }
   };
-  // if(showPasswordModal===false)
-  //     {
-  //       setPrevPassword("");
-  //       setNewPassword("");
-  //       setreenteredNewPassword("");
-  //   }
-  //   if(showEmailModal===false)
-  // {
-  //   setEmail("");
-  // }
+
   
   return (
     <div>
@@ -145,15 +114,7 @@ function UserProfile() {
           <h1 style={{ color: 'green' }}>Student Data:</h1>
           <h1>Name: {data.name}</h1>
           <h1>College Name: {data.collegeName}</h1>
-          {/* <Dropdown>
-            <Dropdown.Toggle variant="success" id="dropdown-basic" >
-            Update Details
-            </Dropdown.Toggle>
-            <Dropdown.Menu>
-              <Dropdown.Item eventKey="1" onClick={() => setShowEmailModal(true)}>Update Email</Dropdown.Item>
-              <Dropdown.Item eventKey="2" onClick={() => setShowPasswordModal(true)}>Update Password</Dropdown.Item>
-            </Dropdown.Menu>
-          </Dropdown> */}
+         
           <div className="custom-dropdown">
       <button
         className="dropdown-button"
@@ -171,36 +132,6 @@ function UserProfile() {
         </div>
 }
           </>)}
-          {/* {data && 
-          <div>
-          <h1 style={{ color: 'green' }}>Student Data:</h1>
-          <h1>Name: {data.name}</h1>
-          <h1>College Name: {data.collegeName}</h1>
-          {/* <Dropdown>
-            <Dropdown.Toggle variant="success" id="dropdown-basic" >
-            Update Details
-            </Dropdown.Toggle>
-            <Dropdown.Menu>
-              <Dropdown.Item eventKey="1" onClick={() => setShowEmailModal(true)}>Update Email</Dropdown.Item>
-              <Dropdown.Item eventKey="2" onClick={() => setShowPasswordModal(true)}>Update Password</Dropdown.Item>
-            </Dropdown.Menu>
-          </Dropdown> */}
-          {/* <div className="custom-dropdown">
-      <button
-        className="dropdown-button"
-        onClick={() => setShowDropdown(!showDropdown)}
-      >
-        Update Details
-      </button>
-      {showDropdown && (
-        <ul className="dropdown-list">
-          <li onClick={() => setShowEmailModal(true)}>Update Email</li>
-          <li onClick={() => setShowPasswordModal(true)}>Update Password</li>
-        </ul>
-      )}
-    </div>
-        </div>
-}  */}
       </div>
       </div>
       {/* Email Modal */}
@@ -308,9 +239,6 @@ function UserProfile() {
           {errormessage}
         </Modal.Body>
         <Modal.Footer>
-          {/* <Button variant="primary" onClick={() => setShowerrorModal(false)}>
-            Close
-          </Button> */}
         </Modal.Footer>
       </Modal>
     </div>

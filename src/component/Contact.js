@@ -12,8 +12,7 @@ export default function Contact() {
     const fetchData = async () => {
       try {
         setLoading(true);
-        // Perform your data fetching or asynchronous operations here
-        // For demonstration, I'll simulate loading for 2 seconds
+
         await new Promise((resolve) => setTimeout(resolve, 1000));
         setLoading(false);
       } catch (err) {
@@ -57,7 +56,7 @@ export default function Contact() {
               <p className="display-7"><b>Site Maintenance Address:</b></p>
             </div>
             <div className="col-lg-6 col-md-8 col-sm-12">
-              <p>3-5-***,Narayanaguda,Hyderabad,Telangana</p>
+              <p>3-**,Narayanaguda,Hyderabad,Telangana</p>
             </div>
           </div>
         </div>

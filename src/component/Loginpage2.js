@@ -39,8 +39,8 @@ const [loading, setLoading] = useState(false);
       localStorage.setItem('token', newToken);
        localStorage.setItem('Id',response.data.user._id);
        
-       console.log('login Response:', response.data);
-       console.log(JSON.stringify(response.data))
+      //  console.log('login Response:', response.data);
+      //  console.log(JSON.stringify(response.data))
        navigate('/college');
           } catch (error) {
       setError('Failed to log in');

@@ -67,23 +67,6 @@ export default function StudentNav() {
                   </Link>
                 </li>
                 <li className="nav-item">
-                  {/* <div className="dropdown" style={{ backgroundColor: "transparent", marginTop: "-1.1rem" }}>
-                    <div className="drop-trigger" onClick={handleProfileClick} style={{ textDecoration: "none", marginLeft: "0.2px" }}>
-                      <b className="nav-link" style={{ fontWeight: "bold" }}>
-                        P r o f i l e
-                      </b>
-                    </div>
-                    {showDropdown && (
-                      <div className="dropdown-content" style={{ backgroundColor: "#ffc107", marginLeft: "0.2px" }}>
-                        <Link to="/tostudprofile" className="nav-link">
-                          <b>Profile</b>
-                        </Link>
-                        <Link to="/updateuser" className="nav-link">
-                          <b>Update Details</b>
-                        </Link>
-                      </div>
-                    )}
-                  </div> */}
                   <Link to="/tostudprofile" className="nav-link">
                     <b>P r o f i l e</b>
                   </Link>

@@ -15,10 +15,10 @@
 //       )
 //       .then((response) => {
 //         setWorkshops(response.data);
-//         console.log(response.data);
+//         //console.log(response.data);
 //       })
 //       .catch((error) => {
-//         console.error(error);
+//         //console.error(error);
 //       });
 //   }, []);
 //   const handleDelete = (id) => {
@@ -32,7 +32,7 @@
 //       })
 //       .then(() =>{})
 //       .catch((error) => {
-//         console.error(error);
+//         //console.error(error);
 //       });
 //   };
 //   return (
@@ -107,11 +107,11 @@ export default function CurrentWorkShopsClg() {
       .get(`https://adan-pradan-backend.onrender.com/AdanPradan/workshopsforclg/${userId}`)
       .then((response) => {
         setWorkshops(response.data);
-        console.log(response.data);
+        //console.log(response.data);
         setLoading(false);
       })
       .catch((error) => { 
-        console.error(error);
+        //console.error(error);
         setError(true);
       })
   }, [userId]);
@@ -128,13 +128,13 @@ export default function CurrentWorkShopsClg() {
         },
       })
       .then(() => {
-        console.log("Workshop deleted successfully");
+        //console.log("Workshop deleted successfully");
         // Update state to reflect the deletion
         setWorkshops(workshops.filter((workshop) => workshop.workshop_id !== id));
         setLoading(false);
       })
       .catch((error) => {
-        console.error(error);
+        //console.error(error);
         setError(true);
       });
   };

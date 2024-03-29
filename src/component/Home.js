@@ -33,8 +33,8 @@ export default function Home() {
         <Error />
       ) : (
         <>
-               <div id="A" style={{marginTop:"2.2cm"}}>
-
+               <div id="A" style={{marginTop:"1.9cm"}}>
+               
                     <div className="container-expand ">
                          <div id="carouselExampleControls" className="carousel slide" data-ride="carousel">
                               <div className="carousel-inner">
@@ -66,7 +66,7 @@ export default function Home() {
                     <div className="container pt-5 my-5 .wrappingDiv c1" >
                          <div className="display-4" style={{ color: "rgb(105, 58, 19)" }}><b>About us</b></div>
                          <p className="b1 display-6" style={{fontFamily:'josephin'}}> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Adan Pradan</b>
+                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Adan Pradan </b>
                          is a workshop management platform designed to streamline the process of organizing and attending workshops.
                           For colleges, it offers a comprehensive solution 
                          to efficiently manage workshop details, such as scheduling, participant registration, and tracking.
@@ -88,7 +88,7 @@ export default function Home() {
                                         <img src="images\lastEdit4.jpg" alt="not loaded" className="img-fluid circle"  />
                                    </div>
 
-                                   <div className="col-6">
+                                   <div className="col-8">
                                         <div className="b1" ><h2>With a user-friendly interface, students can easily log in and browse through a variety of workshops available. They can choose workshops based on their interests or college-specific offerings. Once they find a workshop they like, they can easily book a spot by filling out a simple registration form.<br />
                                         </h2><br />
                                         </div>
