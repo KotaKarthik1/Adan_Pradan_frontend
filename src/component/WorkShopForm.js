@@ -80,7 +80,7 @@ const WorkShopForm = () => {
   };
 
   return (
-    <div className="container my-6 wrappingDiv p-4">
+    <div className="container my-6 p-4">
       <button onClick={toggleDropdown} style={{ backgroundColor: "green", color: "white" ,borderRadius:'10px'}} className="TOGGLEbUTTON">Add workshops</button>
 
 {isDropdownOpen && (

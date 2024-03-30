@@ -22,7 +22,7 @@ function BookingPage() {
   // Get the current date
   const currentDate = new Date();
   const endDate = new Date();
-  endDate.setDate(currentDate.getDate() + 5);
+  endDate.setDate(currentDate.getDate() + 8);
 
   // Format the end date as a string for the max attribute
   const maxDate = endDate.toISOString().split("T")[0];

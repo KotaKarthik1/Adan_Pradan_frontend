@@ -142,12 +142,13 @@ const CollegeSignUpform= () => {
                     />
                   </div>
                   <button className="btn" type="submit" style={{ backgroundColor: "green", color: "white", float: "left" }}>Signup</button>
+                  <Link to="/loginupdate"><button className="btn" type="submit" style={{ backgroundColor: "green", color: "white", float: "right", padding: "0px" }}>Login</button></Link>
                 </form>
-                <div className="container break">
+                {/* <div className="container break">
                   <div className="row">
-                    <Link to="/loginupdate"><button className="btn" type="submit" style={{ backgroundColor: "green", color: "white", float: "left", padding: "0px", marginTop: "4px" }}>Login</button></Link>
+                    <Link to="/loginupdate"><button className="btn" type="submit" style={{ backgroundColor: "green", color: "white", float: "right", padding: "0px" }}>Login</button></Link>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

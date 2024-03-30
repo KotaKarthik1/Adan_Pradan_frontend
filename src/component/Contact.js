@@ -31,7 +31,7 @@ export default function Contact() {
       ) : error ? (
         <Error />
       ) : (
-        <div className="container wrappingDiv p-5 my-5" style={{ boxShadow: "0px 0px 30px 0.01px #d3d7df,0px 0px 1px" }}>
+        <div className="container wrappingDiv my-5 p-5" style={{ boxShadow: "0px 0px 30px 0.01px #d3d7df,0px 0px 1px" }}>
           <div className="display-4" style={{ color: "rgb(105, 58, 19)" }}>
             <b>Contact us</b>
           </div>

@@ -63,7 +63,7 @@ export default function Home() {
                          <p className="display-4 josephin" style={{fontFamily:'josephin'}}><center>Can't do your lab work in home?</center></p>
                          {/* <h1 className="display-6 regstyle"><center><b>Register now</b></center></h1> */}
                     </div>
-                    <div className="container pt-5 my-5 .wrappingDiv c1" >
+                    <div className="container p-4 my-5 wrappingDiv c1" >
                          <div className="display-4" style={{ color: "rgb(105, 58, 19)" }}><b>About us</b></div>
                          <p className="b1 display-6" style={{fontFamily:'josephin',fontSize:'25px'}}> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Adan Pradan </b>

@@ -9,7 +9,9 @@ export default function Collegenav() {
     const [navClose, setNavClose] = useState(window.innerWidth > 991 ? false : true);
 
   function handleNavClose() {
+    if (window.innerWidth <= 991){
     setNavClose(!navClose);
+    }
   }
 
   useEffect(() => {

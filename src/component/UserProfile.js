@@ -107,7 +107,7 @@ function UserProfile() {
   return (
     <div>
       <div>
-        <div className="container wrappingDiv setthebox" style={containerStyle}>
+        <div className="container wrappingDiv my-5 p-5" style={containerStyle}>
           {loading?<Loader/>:data.length==0?(<EmptyDataComponent/>):(<>
             {data && 
           <div>

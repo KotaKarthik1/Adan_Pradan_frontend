@@ -16,6 +16,7 @@ const CollegeBookings = () => {
   const [datesupcoming, setDatesupcoming] = useState([]);
   const [normalBookings, setNormalBookings] = useState([]);
   const [activeTab, setActiveTab] = useState("pastbookings");
+  const [loadingpast,setloadingpast]=useState(false);
   const fetchBookingDetails = async (date) => {
     try {
       setloading(true);
@@ -42,18 +43,18 @@ const CollegeBookings = () => {
 
   const fetchBookingDetailspast = async (date) => {
     try {
-      setloading(true);
+      setloadingpast(true);
       const formattedDate = new Date(date).toISOString().split("T")[0];
       const response = await axios.get(
         `https://adan-pradan-backend.onrender.com/AdanPradan/bookingsfilterbydatepast?id=${userId}&checkdate=${formattedDate}`
       );
       setPastBookings(response.data);
       setDatespast(Object.keys(response.data));
-      setloading(false);
+      setloadingpast(false);
       setEmpty(response.data.length === 0);
     } catch (error) {
       setError(true);
-      setloading(false);
+      setloadingpast(false);
       setEmpty(false);
       if (error.response && error.response.status === 404) {
         setError(error.response.data.message);
@@ -70,7 +71,7 @@ const CollegeBookings = () => {
       setloading(true);
       const formattedDate = new Date(date).toISOString().split("T")[0];
       const response = await axios.get(
-        `https://adan-pradan-backend.onrender.com/AdanPradan/bookingsfilterbydatepast?id=${userId}&checkdate=${formattedDate}`
+        `https://adan-pradan-backend.onrender.com/AdanPradan/bookingsfilterbydateupcoming?id=${userId}&checkdate=${formattedDate}`
       );
       setUpcomingBookings(response.data);
       setDatesupcoming(Object.keys(response.data));
@@ -180,7 +181,7 @@ const CollegeBookings = () => {
                 activeTab === "upcomingBookings" ? "active" : ""
               }`}
               onClick={() => {
-                handleDateClick2(upcomingdate);
+                handleDataClick3(upcomingdate);
                 setActiveTab("upcomingBookings");
               }}
               id="upcomingBookings-tab"
@@ -189,7 +190,7 @@ const CollegeBookings = () => {
               type="button"
               role="tab"
               aria-controls="upcomingBookings"
-              aria-selected={false}
+              aria-selected={selectedDate === upcomingdate}
             >
               <div className="itemcolor">
                 <h1>Upcoming Bookings</h1>
@@ -206,60 +207,27 @@ const CollegeBookings = () => {
             role="tabpanel"
             aria-labelledby="pastBookings-tab"
           >
-            {loading ? (
+            {loadingpast ? (
               <Loader />
             ) : error ? (
               <div>{error}</div>
             ) : empty ? (
               <EmptyDataComponent />
             ) : (
-              // <>
-              // <div className="container">
-              //     <div className="row">
-              //       <div className="col-12">
-              //   {datespast.map((date, index) => (
-              
-              //     <div key={index} className="col-md-4 mb-4">
-              //       <div className="card">
-              //         <div className="card-header">{date}</div>
-                      
-              //         <div className="card-body table-container">
-              //           <table className="table">
-              //             <thead className="thead-dark">
-              //               <tr>
-              //                 <th>User</th>
-              //                 <th>College Name</th>
-              //                 <th>Date</th>
-              //                 <th>Slot Time</th>
-              //               </tr>
-              //             </thead>
-              //             <tbody>
-              //               {pastBookings[date].map((booking, bookingIndex) => (
-              //                 <tr key={bookingIndex}>
-              //                   <td>{booking.user}</td>
-              //                   <td>{booking.studentclgName}</td>
-              //                   <td>{booking.Date}</td>
-              //                   <td>{booking.slotTime}</td>
-              //                 </tr>
-              //               ))}
-              //             </tbody>
-              //           </table>
-              //         </div>
-              //       </div>
-              //     </div>
-              //   )
-              //   )}
-              //   </div>
-              //     </div>
-              //     </div>
-              // </>
               <>
   <div className="container">
     <div className="row">
       {datespast.map((date, index) => (
         <div key={index} className="col-md-4 mb-4">
           <div className="card">
-            <div className="card-header">{date}</div>
+            <div className="card-header"> {new Date(date).toLocaleDateString(
+                                    "en-IN",
+                                    {
+                                      day: "2-digit",
+                                      month: "short",
+                                      year: "numeric",
+                                    }
+                                  )}</div>
             <div className="card-body table-container">
               <table className="table">
                 <thead className="thead-dark">
@@ -289,8 +257,8 @@ const CollegeBookings = () => {
   </div>
 </>
 
-            )
-            }
+             )
+            } 
           </div>
         </div>
         <div className="tab-content " id="myTabContent">
@@ -303,13 +271,13 @@ const CollegeBookings = () => {
             aria-labelledby="upcomingBookings-tab"
           >
             <h1>Upcoming Bookings</h1>
-            {loading ? (
+            {/* {loading ? (
               <Loader />
             ) : error ? (
               <div>{error}</div>
             ) : empty ? (
               <EmptyDataComponent />
-            ) : (
+            ) : ( */}
               <>
                 {datesupcoming.map((date, index) => (
                   <div key={index} className="col-md-4 mb-4">
@@ -341,7 +309,7 @@ const CollegeBookings = () => {
                   </div>
                 ))}
               </>
-            )}
+            {/* )} */}
             {/* Display upcoming bookings here */}
           </div>
         </div>

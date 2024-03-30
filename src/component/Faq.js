@@ -31,7 +31,7 @@ export default function Faq() {
       ) : (
         <div>
           <Link to="/faq"></Link>
-          <div className="container wrappingDiv c1" id="C">
+          <div className="container wrappingDiv my-5 p-5 c1" id="C">
             <div className="display-2" style={{ color: "rgb(105, 58, 19)" }}>
               <b>FAQ's</b>
             </div>
