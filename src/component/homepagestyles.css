@@ -140,4 +140,7 @@
        transform: translateX(-600%);
      }
    }
-   
+.fontforaboutus{
+     font-family: "Pixelify Sans", sans-serif;
+     color:rgba(224, 71, 0, 0.863);
+}

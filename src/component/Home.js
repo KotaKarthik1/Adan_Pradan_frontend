@@ -6,6 +6,7 @@ import Error from "./Error";
 import Faq from "./Faq";
 import Contact from "./Contact";
 import AboutUsNew from "./Aboutusnew";
+import styles from "./AboutUsnew.module.css";
 export default function Home() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
@@ -27,18 +28,23 @@ export default function Home() {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [textIndex, setTextIndex] = useState(0);
   const [isScrolling, setIsScrolling] = useState(false);
-  const [scriptindex,setscriptIndex]=useState(0);
-  const texts = ['Text 1', 'Text 2', 'Text 3', 'Text 4'];
-  const script=['ncfhuikbn kjvbvnkdv','fuhshuvn fkhjbinvk','njibshkjn jvndbkvb ','kiubsk snm sibk v'];
+  const [scriptindex, setscriptIndex] = useState(0);
+  const texts = ["Text 1", "Text 2", "Text 3", "Text 4"];
+  const script = [
+    "ncfhuikbn kjvbvnkdv",
+    "fuhshuvn fkhjbinvk",
+    "njibshkjn jvndbkvb ",
+    "kiubsk snm sibk v",
+  ];
   const images = [
-     `images/kmeccollege.jpg`,
-     `images/kmitcollege.jpg`,
-     `images/mcv16311_malla.png`,
-     `images/ngitcollegereal.jpeg`,
-     `images/osmaniacollege.jpg`,
-     `images/tirumalaengineeringcollege.jpg`,
-     // Add more image URLs as needed
-   ];
+    `images/kmeccollege.jpg`,
+    `images/kmitcollege.jpg`,
+    `images/mcv16311_malla.png`,
+    `images/ngitcollegereal.jpeg`,
+    `images/osmaniacollege.jpg`,
+    `images/tirumalaengineeringcollege.jpg`,
+    // Add more image URLs as needed
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -59,10 +65,10 @@ export default function Home() {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, [scrollPosition]);
 
@@ -74,13 +80,12 @@ export default function Home() {
       }, 300); // Adjust the duration of the transition as needed
     };
 
-    window.addEventListener('scroll', handleScrollEnd);
+    window.addEventListener("scroll", handleScrollEnd);
 
     return () => {
-      window.removeEventListener('scroll', handleScrollEnd);
+      window.removeEventListener("scroll", handleScrollEnd);
     };
   }, []);
-
 
   return (
     <>
@@ -90,38 +95,121 @@ export default function Home() {
         <Error />
       ) : (
         <>
-               <div id="A" style={{marginTop:"1.9cm"}}>
-               
-                    <div className="container-expand ">
-                         <div id="carouselExampleControls" className="carousel slide" data-ride="carousel">
-                              <div className="carousel-inner">
-                                   <div className="carousel-item active">
-                                        <img src="images\homepagephoto.jpg" alt="not loaded 1st item" className="img-fluid" />
-                                   </div>    
-                                   <div className="carousel-item">
-                                        <img src="images\lastEedit1.jpg" alt="not loaded 2nd item" className="img-fluid" />
-                                   </div>
-                                   <div className="carousel-item">
-                                        <img src="images\lastEdit2.jpg" alt="not loaded 2nd item" className="img-fluid" />
-                                   </div>
-                              </div>
-                              <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                                   <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                                   <span className="visually-hidden">Previous</span>
-                              </button>
-                              <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                                   <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                                   <span className="visually-hidden">Next</span>
-                              </button>
-                         </div>
-                    </div>
+          <div id="A" style={{ marginTop: "1.9cm" }}>
+            <div className="container-expand ">
+              <div
+                id="carouselExampleControls"
+                className="carousel slide"
+                data-ride="carousel"
+              >
+                <div className="carousel-inner">
+                  <div className="carousel-item active">
+                    <img
+                      src="images\homepagephoto.jpg"
+                      alt="not loaded 1st item"
+                      className="img-fluid"
+                    />
+                  </div>
+                  <div className="carousel-item">
+                    <img
+                      src="images\lastEedit1.jpg"
+                      alt="not loaded 2nd item"
+                      className="img-fluid"
+                    />
+                  </div>
+                  <div className="carousel-item">
+                    <img
+                      src="images\lastEdit2.jpg"
+                      alt="not loaded 2nd item"
+                      className="img-fluid"
+                    />
+                  </div>
+                </div>
+                <button
+                  className="carousel-control-prev"
+                  type="button"
+                  data-bs-target="#carouselExampleControls"
+                  data-bs-slide="prev"
+                >
+                  <span
+                    className="carousel-control-prev-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span className="visually-hidden">Previous</span>
+                </button>
+                <button
+                  className="carousel-control-next"
+                  type="button"
+                  data-bs-target="#carouselExampleControls"
+                  data-bs-slide="next"
+                >
+                  <span
+                    className="carousel-control-next-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span className="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div>
 
-                    <div className="container my-5  wrappingDiv">
-                         <p className="display-4 josephin" style={{fontFamily:'josephin'}}><center>Can't do your lab work in home?</center></p>
-                    </div>
+            <div className="container my-5  wrappingDiv">
+              <p
+                className="display-4 josephin"
+                style={{ fontFamily: "josephin" }}
+              >
+                <center>A platform to book workshop slots in colleges</center>
+              </p>
+            </div>
+            {/* <div className="container-fluid middletemp">
+              <h1> hello hello 123</h1>
 
-                    <AboutUsNew/>
-                    {/* <div className="container-md  quick c1" style={{marginTop:"11cm"}}>
+            </div> */}
+             <div className={`${styles.spacer} ${styles.layerforhome}`}>
+               <p1 className="display-1 fontforaboutus"> About us </p1>
+               <img src="images\Robotic-Labs.jpg.webp" alt="Your Image" className={styles.centeredImage} />
+               <p className={styles.centeredText}>
+               <b>AdanPradan</b> is an innovative platform for workshop management platform designed to streamline the process of organizing and attending workshops.
+          <br /><br />
+          For <b>COLLEGES</b>, it provides a full solution to easily manage workshop details, such as scheduling, participant registration, and tracking.
+          <br /><br />
+          For <b>STUDENTS</b>, it provides a user-friendly interface to explore various workshops,
+          register for those of interest, and receive updates and reminders. It simplifies the workshop experience, 
+          making it easier for students to engage with new learning opportunities and for colleges to manage.
+               </p>
+             </div>
+
+            {/* <AboutUsNew/> */}
+            {/* <div className={styles.outerContainer}>
+      <div className={styles.centeredContainer}>
+        <p className='display-6'><b>About Us</b></p>
+        <img src="images\Robotic-Labs.jpg.webp" alt="Your Image" className={styles.centeredImage} />
+        <p className={styles.centeredText}>
+          <b>AdanPradan</b> is an innovative platform for workshop management platform designed to streamline the process of organizing and attending workshops.
+          <br /><br />
+          For <b>schools</b>, it provides a full solution to easily manage workshop details, such as scheduling, participant registration, and tracking.
+          <br /><br />
+          For <b>students</b>, it provides a user-friendly interface to explore various workshops,
+          register for those of interest, and receive updates and reminders. It simplifies the workshop experience, 
+          making it easier for students to engage with new learning opportunities and for colleges to manage 
+        </p>
+      </div>
+    </div> */}
+
+            <div className={styles.faqContainer}>
+              <Link to="/faq" className={styles.faqLink}>
+                <p className={`${styles.faqText} display-6`}>
+                  <b>Faq</b>
+                </p>
+              </Link>
+              <Link to="/faq">
+                <div className={styles.arrowContainer}>
+                  <span className={styles.arrow}></span>
+                  <span className={styles.arrow}></span>
+                  <span className={styles.arrow}></span>
+                </div>
+              </Link>
+            </div>
+            {/* <div className="container-md  quick c1" style={{marginTop:"11cm"}}>
                          <div className="josephin"><p className="display-6"><b>SIMPLE STEPS TO BOOK YOUR WORKSHOP</b></p>
                               <br />
                          </div>
@@ -177,27 +265,28 @@ export default function Home() {
                               </div>
                          </div>
                     </div> */}
-                    {/* <Faq/> */}
-                    {/* <Link to='/faq'><p className={`${styles.centeredContainer} display-6`}>Faq</p></Link> */}
+            {/* <Faq/> */}
+            {/* <Link to='/faq'><p className={`${styles.centeredContainer} display-6`}>Faq</p></Link> */}
 
-              {/* <Contact/> */}
-              <div className="container-fluid">
-               <center><h1> Popular colleges registered</h1></center>
-      <div className="marquee" style={{ display: "flex", overflow: "hidden" }}>
-  {images.map((image, index) => (
-    <div key={index}>
-      <img src={image} alt={`Image ${index + 1}`}/>
-    </div>
-  ))}
-</div>
-
-    </div>
-
-
-               </div>
+            {/* <Contact/> */}
+            <div className="container-fluid">
+              <center>
+                <h1> Popular colleges registered</h1>
+              </center>
+              <div
+                className="marquee"
+                style={{ display: "flex", overflow: "hidden" }}
+              >
+                {images.map((image, index) => (
+                  <div key={index}>
+                    <img src={image} alt={`Image ${index + 1}`} />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
         </>
       )}
     </>
   );
 }
-

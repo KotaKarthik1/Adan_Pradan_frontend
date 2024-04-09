@@ -28,6 +28,7 @@
   font-size: 1.3em;
   text-align: justify;
   font-family: "Forum", serif;
+  color: aliceblue;
 }
 
 @media (max-width: 768px) {
@@ -44,8 +45,6 @@
     max-width: 250px;
   }
 }
-
-
 
 .faqContainer {
   display: flex;
@@ -89,14 +88,14 @@
 .arrow:nth-child(3) {
   animation-delay: -0.4s;
 }
-@media (max-width: 768px) {
+@media (max-width: 756px) {
   .outerContainer {
-    margin-bottom: 22rem; /* Reset margin bottom */
+    margin-bottom: 10rem; /* Reset margin bottom */
   }
-
+/* 
   .faqContainer {
-    margin-top: 30rem; /* Margin top for faqContainer on smaller screens */
-  }
+    margin-top: 20rem; 
+  } */
 }
 @keyframes animate {
   0% {
@@ -110,4 +109,57 @@
     opacity: 0;
     transform: rotate(311deg) translate(10px, 10px);
   }
+}
+/* .layerforhome {
+  background-image: url('./layered-waves-haikei.svg');
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 80vh; 
+}
+@media (max-width:900px) {
+  .layerforhome{
+    height:90vh;
+  }
+} */
+.layerforhome {
+  /* background-image: url('./layered-waves-haikei.svg'); */
+  /* background: linear-gradient(180deg, #ffc107, #f2eadf); */
+  background: linear-gradient(180deg, #f2eadf 0%, #ffc107 33.33%,  33.33%, #ffc107 66.66%, #ffc107 66.66%, #f2eadf 100%);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  /* height: 70vh; 
+  padding: 20px;
+  font-size: 120%; */
+}
+
+@media (min-width: 400px) {
+  .layerforhome {
+    /* height: 113vh;
+    font-size: 10rem; */
+  }
+}
+
+.fontforaboutus {
+  font-size: 3rem; /* Set the desired font size */
+  margin-top: 20px; /* Set the desired margin */
+}
+
+.centeredText {
+  font-size: 1.3rem; /* Set the desired font size */
+  text-align: center;
+  color: black;
+}
+
+.spacer {
+  aspect-ratio: 1600/1000;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
