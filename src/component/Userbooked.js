@@ -119,7 +119,7 @@ const BookingTable = () => {
                     <td>{booking.collegeName}</td>
                     <td>
                       {badge === "cancel" && (
-                        <button className="btn" value="cancel" onClick={() => handlecancel(booking._id)} disabled={loading}>
+                        <button className="btnforcancel" value="cancel" onClick={() => handlecancel(booking._id)} disabled={loading}>
                           {loading ? (
                             <div className="d-flex align-items-center" style={{ color: "gold" }}>
                               <div className="spinner-border" role="status">

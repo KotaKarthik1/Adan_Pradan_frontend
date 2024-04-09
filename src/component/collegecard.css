@@ -10,25 +10,47 @@
     margin-right: -20px; 
     border-radius: 5px;
   }
-  .btn
+  /* .btn
   {
     background-color:rgb(255, 252, 217) ;
      color:rgb(12, 11, 11) ;
      box-shadow:none 
   }
   .btn:hover{
-    background-color: rgb(237, 237, 13);
+    background-color: #ffc107;
     color: black;
-  }
+  } */
   h1 {
     font-size: 20px !important;
+  }
+  .buttonforcollegecard {
+    display: flex;
+    background: #0f0f10;
+    border: 0.1px solid #ffc107; /* Set border to 2px solid with border color #ffc107 */
+    color: white;
+    border-radius: 10px;
+    margin-left: 30px;
+    white-space: nowrap;
+    transition: background 0.3s; /* Add transition for smoother hover effect */
+  }
+  
+  .buttonforcollegecard:hover {
+    background: #ffc107; /* Change background color on hover */
   }
   
   .textalign {
     text-align: left;
   }
+  .rubik-maps-regular
+  {
+    font-family: "Rubik Maps", system-ui;
+    font-weight: 300;
+    /* font-style: normal; */
+  }
   .bs
   {
+    
+    color:white;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     margin-top: 20px;
     border-radius: 10px;
@@ -38,12 +60,20 @@
   }
   .bs:hover
   {
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    box-shadow: #f1f0edde;
     transform: scale(1.04);
-    background-color:#ecde6e;
+    background-color:#ffc107cf ;
     /* background-color:#f1db35; */
     border-radius: 0%;
+    
   }
+  .bs:hover .h1forcollegecode {
+    color: black !important;
+  }
+  .h1forcollegecode{
+    color:#ffc107 !important;
+  }
+
 
   .bigimg
   {

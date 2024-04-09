@@ -1,0 +1,113 @@
+.outerContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  height: 110vh;
+  background: linear-gradient(to top, transparent 0%, transparent 10%, rgba(255, 217, 0, 0.884) 50%, rgba(255, 217, 0, 0.884) 30%, transparent 90%);
+}
+
+.centeredImage {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.centeredContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.centeredText {
+  width: 50%;
+  margin-top: 20px;
+  font-size: 1.3em;
+  text-align: justify;
+  font-family: "Forum", serif;
+}
+
+@media (max-width: 768px) {
+  .outerContainer {
+    height: 60vh;
+  }
+  .centeredContainer {
+    height: 0.01vh;
+  }
+  .centeredText {
+    width: 80%;
+  }
+  .centeredImage {
+    max-width: 250px;
+  }
+}
+
+
+
+.faqContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+}
+.faqText:hover{
+  color: darkred;
+}
+
+.faqLink {
+  text-decoration: none;
+  color: black;
+}
+.faqLink:hover{
+  color: darkred;
+}
+.faqText {
+  margin-right: 5px;
+}
+
+.arrowContainer {
+  display: flex;
+}
+
+.arrow {
+  width: 20px;
+  height: 20px;
+  margin-left: 3px;
+  border-bottom: 2px solid black;
+  border-right: 2px solid black;
+  transform: rotate(45deg);
+  animation: animate 2s infinite;
+}
+
+.arrow:nth-child(2) {
+  animation-delay: -0.2s;
+}
+
+.arrow:nth-child(3) {
+  animation-delay: -0.4s;
+}
+@media (max-width: 768px) {
+  .outerContainer {
+    margin-bottom: 22rem; /* Reset margin bottom */
+  }
+
+  .faqContainer {
+    margin-top: 30rem; /* Margin top for faqContainer on smaller screens */
+  }
+}
+@keyframes animate {
+  0% {
+    opacity: 0;
+    transform: rotate(311deg) translate(-10px, -10px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(311deg) translate(10px, 10px);
+  }
+}

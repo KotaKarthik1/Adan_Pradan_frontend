@@ -9,3 +9,12 @@
   .thead-dark{
     background-color: rgb(244, 223, 104) !important;
   }
+  .btnforcancel{
+    background:rgb(255, 185, 185);
+    
+  }
+  .btnforcancel:hover{
+    background:gold ;
+    color: black;
+
+  }

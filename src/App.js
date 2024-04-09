@@ -25,6 +25,9 @@ import UserProfile from './component/UserProfile';
 import UpdateUser from './component/UpdateUser';
 import TestingLogInclgnew from './component/SignUpDate2';
 import Loginpagenew from './component/SignUpdate';
+import AboutUsNew from './component/Aboutusnew';
+import StudentCurvepostlogin from './component/StudentCurvepostlogin';
+
 
 function App() {
   const { authenticated } = useAuth();
@@ -35,6 +38,7 @@ function App() {
      <Router>
           <Routes>
           <Route path="studentprofilepage" element={<><StudentNav/><StudentProfile/></>}/>
+              {/* <Route path="curve" element={<><StudentNav/><StudentCurvepostlogin/></>}/> */}
               <Route path="/" element={<><Navbar/><Home/></>} />
               <Route path="faq" element={<><Navbar/><Faq/></>}/>
               <Route path="Login" element={<><Navbar/><Loginpage/></>}/>
@@ -46,9 +50,11 @@ function App() {
               <Route path="Login2" element={<><Navbar/><Loginpage2/></>}/>
               <Route path="loginupdate" element={<><Navbar/><Loginpagenew/></>}></Route>
               <Route path="loginupdate2" element={<><Navbar/><TestingLogInclgnew/></>}></Route>
+              <Route path="aboutusnew" element={<><AboutUsNew/></>}></Route>
+              
               {authenticated?(
                 <>
-                <Route path="student" element={<><StudentNav/><Userpostlogin/><Contact/></>}/>
+                <Route path="student" element={<><StudentNav/><StudentCurvepostlogin/></>}/>
                 <Route path="studfaq" element={<><StudentNav/><Faq/></>}/>
                 <Route path="clickcollege" element={<><StudentNav/><UserCollegetab/></>}/>
                 <Route path="studcontact" element={<><StudentNav/><Contact/></>}/>

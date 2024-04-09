@@ -1,0 +1,436 @@
+
+  /* #ffc107 */
+
+
+  
+  .yellow{
+    background: #ffc107;
+  }
+
+  /* App.module.css */
+
+.blue {
+  background: #3c31dd;
+}
+
+/* .red {
+  
+} */
+
+.cream{
+background:#f9dfbe ;
+overflow: hidden;
+}
+.creamgradient {
+  /* background: #dd3f31; */
+  background: linear-gradient(180deg, #f9dfbe, #f2eadf);
+  overflow: hidden;
+}
+
+/* .dark {
+  background: #0f0f10;
+} */
+.dark {
+  background: #0f0f10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.dark p {
+  color: #ffc107;
+  font-family: "Pixelify Sans", sans-serif;
+  font-size: 2.6rem; /* Adjust the font size as needed */
+  margin-top: 20px; /* Adjust the top margin as needed */
+}
+
+/* Add this to center the SVG shapes horizontally */
+.dark > div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+
+.customshapedividerbottom1712640759 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.customshapedividerbottom1712640759 svg {
+  position: relative;
+  display: block;
+  width: calc(118% + 1.3px);
+  height: 6rem;
+  transform: rotateY(180deg);
+}
+
+.customshapedividerbottom1712640759 .shapefill {
+  fill: #FFC107;
+}
+.customshapedividertop1712643250 {
+  position: absolute;
+  top: 25rem;
+  left: 0;
+  width: 100%;
+  overflow:visible;
+  line-height: 0;
+}
+
+.customshapedividertop1712643250 svg {
+  position: relative;
+  display: block;
+  width: calc(118% + 1.3px);
+  height: 10rem;
+  transform: rotateY(180deg);
+}
+
+.customshapedividertop1712643250 .shapefilldown {
+  fill: #FFC107;
+}
+@media (max-width: 750px) {
+  .customshapedividerbottom1712640759 svg,
+  .customshapedividertop1712643250 svg {
+    width: 100%; /* Adjust width for smaller screens */
+    height: 7rem;
+  }
+  /* .bubble::after{
+    content: '';
+    border-top-left-radius: 100% 100%;
+    border-top-right-radius: 100% 100%;
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+    width: 100%;
+    background-color: #0f0f10;
+    height: 100%;
+    
+    
+  } */
+  .bubble {
+    position: relative; /* Set position to relative for z-index to work */
+  }
+  
+  .bubble::after {
+    content: '';
+    border-top-left-radius: 100% 100%;
+    border-top-right-radius: 100% 100%;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #0f0f10;
+    height: 30%;
+  }
+  
+  .bubble-content {
+    /* position: absolute; Set position to relative */
+    justify-content: center;
+    font-size:  4rem;
+    font-family: "Pixelify Sans", sans-serif;
+    z-index: 1; /* Set a higher z-index to bring it in front of the pseudo-element */
+  }
+}
+.sectionstyle {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 400px;
+  padding-top: 100px;
+  color: white;
+}
+.sectionstyle2 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100px;
+  padding-top: 100px;
+  color: white;
+}
+.sectionstyle3 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 150px;
+  padding-top: 100px;
+  color: white;
+}
+
+.curve {
+  position: absolute;
+  height: 250px;
+  width: 100%;
+  bottom: 0;
+  text-align: center;
+}
+
+.curve::before {
+  content: '';
+  display: block;
+  position: absolute;
+  border-radius: 100% 50%;
+  width: 55%;
+  height: 100%;
+  transform: translate(85%, 60%);
+  background-color: hsl(217, 37%, 93%);
+}
+
+.curve::after {
+  content: '';
+  display: block;
+  position: absolute;
+  border-radius: 100% 50%;
+  width: 55%;
+  height: 100%;
+  background-color: #ffc107;
+  transform: translate(-4%, 40%);
+  z-index: -1;
+}
+
+/* .bubble::after {
+  content: '';
+  border-top-left-radius: 100% 100%;
+  border-top-right-radius: 100% 100%;
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
+  width: 100%;
+  background-color: #0f0f10;
+  height: 85%;
+} */
+.bubble {
+  position: relative; /* Set position to relative for z-index to work */
+}
+
+.bubble::after {
+  content: '';
+  border-top-left-radius: 100% 100%;
+  border-top-right-radius: 100% 100%;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #0f0f10;
+  height: 30%;
+}
+.stepstyle {
+  font-family: "Pixelify Sans", sans-serif;
+  font-size: 80px;
+  align-self: flex-start;
+  padding: 0% !important;
+  color: black;
+}
+
+@media (max-width: 768px) {
+  .stepstyle {
+    font-size: 25px; /* Adjust font size for smaller devices */
+  }
+}
+
+
+.bubble-content {
+  /* position: absolute; Set position to relative */
+  justify-content: center;
+  font-family: "Pixelify Sans", sans-serif;
+  font-size:  1.2rem;
+  z-index: 1; /* Set a higher z-index to bring it in front of the pseudo-element */
+}
+
+.wave {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.wave svg {
+  position: relative;
+  display: block;
+  width: calc(103% + 1.3px);
+  height: 262px;
+}
+@media (max-width: 768px) {
+ .wave svg
+ {
+  height: 100px;
+ }
+}
+.shape-fill {
+  fill: hsl(240, 3%, 6%);
+}
+
+.spacer {
+  aspect-ratio: 960/300;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.layer1 {
+  background-image: url('./layer1.svg');
+}
+
+.layer2 {
+  background-image: url('./layer2.svg');
+}
+
+.flip {
+  transform: rotate(180deg);
+}
+
+.blob-motion {
+  position: absolute;
+  transform: translateY(-20%);
+  z-index: 0;
+}
+
+.blobs {
+  width: 100%;
+  background: url('./blobs.svg') no-repeat bottom / cover;
+}
+.blob-content {
+  z-index: 1;
+}
+
+.blob-content h2 {
+  font-size: 24px;
+  
+  color: #333;
+}
+
+.blob-content ol {
+  list-style-type: decimal;
+  
+}
+
+.blob-content li {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.wrapperforlist{
+  max-width: 600px;
+	margin: 0 auto;
+}
+.wrapperforlist ul {
+	list-style: none;
+	padding: 0;
+}
+
+.wrapperforlist li + li {
+	margin-top: 1rem;
+}
+
+.wrapperforlist li {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	/* background: aliceblue; */
+	padding: 1.5rem;
+	border-radius: 1rem;
+	width: calc(100% - 2rem);
+	box-shadow: 0.25rem 0.25rem 0.75rem rgb(0 0 0 / 0.1);
+}
+
+.wrapperforlist li::before {
+  content: "\21AA"
+  /* Other styling properties */
+}
+
+
+.wrapperforlist li:nth-child(even) {
+	flex-direction: row-reverse;
+	/* background: honeydew; */
+	margin-right: -2rem;
+	margin-left: 2rem;
+}
+
+.wrapperforlist li:nth-child(even)::before {
+	transform: rotateY(180deg);
+}
+
+.fontforlist{
+  font-family: "Lugrasimo", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.lugrasimoregular {
+  font-family: "Lumanosimo", cursive;
+  font-weight: 400;
+  font-style: normal;
+  color: black;
+}
+
+.faqContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+}
+.faqText:hover{
+  color: darkred;
+}
+
+.faqLink {
+  text-decoration: none;
+  color: black;
+}
+.faqLink:hover{
+  color: darkred;
+}
+.faqText {
+  margin-right: 5px;
+}
+
+.arrowContainer {
+  display: flex;
+}
+
+.arrow {
+  width: 20px;
+  height: 20px;
+  margin-left: 3px;
+  border-bottom: 2px solid black;
+  border-right: 2px solid black;
+  transform: rotate(45deg);
+  animation: animate 2s infinite;
+}
+
+.arrow:nth-child(2) {
+  animation-delay: -0.2s;
+}
+
+.arrow:nth-child(3) {
+  animation-delay: -0.4s;
+}
+@media (max-width: 768px) {
+  .outerContainer {
+    margin-bottom: 22rem; /* Reset margin bottom */
+  }
+
+  .faqContainer {
+    margin-top: 2rem; /* Margin top for faqContainer on smaller screens */
+  }
+}
+@keyframes animate {
+  0% {
+    opacity: 0;
+    transform: rotate(311deg) translate(-10px, -10px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(311deg) translate(10px, 10px);
+  }
+}

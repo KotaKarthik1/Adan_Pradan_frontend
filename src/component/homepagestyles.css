@@ -103,3 +103,41 @@
  .carousel-control-next:hover{
      background-color: transparent !important;
  }
+ .marquee {
+     white-space: nowrap;
+     overflow: hidden;
+   }
+   
+   .marquee img {
+     display: inline-block;
+     margin-right: 10px; /* Adjust as needed */
+     animation: marquee 10s linear infinite;
+     width: 300px; /* Default width for large screens */
+     height: 200px; /* Default height for large screens */
+   }
+   
+   .marquee-image {
+     object-fit: cover; /* Maintain aspect ratio and cover the container */
+   }
+   
+   @media (max-width: 768px) {
+     .marquee img {
+       width: 200px; /* Set the width for small screens */
+       height: 120px; /* Set the height for small screens */
+     }
+   
+     .marquee-image {
+       width: 500px; /* Set the desired width for small screens */
+       height: 100px; /* Set the desired height for small screens */
+     }
+   }
+   
+   @keyframes marquee {
+     0% {
+       transform: translateX(600%);
+     }
+     100% {
+       transform: translateX(-600%);
+     }
+   }
+   

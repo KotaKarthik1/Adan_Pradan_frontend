@@ -1,0 +1,11 @@
+@media (max-width: 768px) {
+    .responsiveemail, .responsiveaddress {
+      max-width: 100%;
+      word-wrap: break-word;
+    }
+  }
+  .lablebro{
+    min-width: 150px; /* Adjust as needed */
+  display: inline-block;
+  color: #d3d7df;
+  }

@@ -9,20 +9,13 @@ function CollegeCard(props) {
       <div className="card-container bs">
         <div className="mb-4 textalign">
           <b>
-            <h1>CollegeCode: {clg.JntuCode}</h1>
-            <p>Website: {clg.website}</p>
-            <p>Area: {clg.Address}</p>
+            <h1 className="h1forcollegecode">CollegeCode: {clg.JntuCode}</h1>
+            <p className="rubik-maps-regular">Website: {clg.website}</p>
+            <p className="rubik-maps-regular">Area: {clg.Address}</p>
             <Link to={`/bookform/${clg._id}`}>
               <button
+              className=" buttonforcollegecard"
                 type="button"
-                style={{
-                  display: "flex",
-                  background: "green",
-                  color: "white",
-                  borderRadius: "10px",
-                  marginLeft: "30px",
-                  whiteSpace: "nowrap",
-                }}
               >
                 Book
               </button>

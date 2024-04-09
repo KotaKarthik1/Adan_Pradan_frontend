@@ -13,6 +13,7 @@ code {
 }
 .c1{
   box-shadow:0px 0px 30px 0.01px #d3d7df,0px 0px 1px ;
+  
 }
 .wrappingDiv{
   margin-top: 2.4cm; 
@@ -56,7 +57,7 @@ font-family: 'Josefin Sans', sans-serif;
   box-shadow:0px 0px 30px 0.01px #d3d7df,0px 0px 1px ;
 }
 .footer{
-  background-color:rgb(244, 223, 104);
+  background-color:#ffc107;
 }
 a{
 text-decoration: none;
@@ -71,4 +72,11 @@ word-spacing: 2ch;
 }
 .fa{
 padding-left:0.1cm;
+}
+
+@media (max-width: 768px) {
+  .responsiveemailfooter, .responsiveaddressfooter {
+    max-width: 100%;
+    word-wrap: break-word;
+  }
 }

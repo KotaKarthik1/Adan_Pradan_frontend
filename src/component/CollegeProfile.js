@@ -106,10 +106,10 @@ const [loading,setLoading]=useState(false);
           </Form.Group>
         </Modal.Body>
         <Modal.Footer>
-         <button className="btn"   onClick={() => {setShowEmailModal(false);setEmail('');}}>
+         <button className="" style={{background:'rgb(255, 185, 185)'}}   onClick={() => {setShowEmailModal(false);setEmail('');}}>
           Close
           </button>
-          <button type="submit" className="btn" disabled={loading} onClick={handleEmailSubmit}>
+          <button type="submit" className="submitforclg" disabled={loading} onClick={handleEmailSubmit}>
     {loading ? (
       <div className="d-flex align-items-center" style={{color:"gold"}}>
         <div className="spinner-border" role="status">

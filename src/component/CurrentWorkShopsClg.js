@@ -169,7 +169,7 @@ export default function CurrentWorkShopsClg() {
                     <td>{new Date(workshop.workshopDate).toLocaleDateString().split('T')[0]}</td>
                     <td>
                       <button
-                        className="btn deletebutton"
+                        className="deletebutton"
                         onClick={() => handleDelete(workshop.workshop_id)}
                       >
                         Delete

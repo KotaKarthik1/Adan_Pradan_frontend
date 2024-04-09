@@ -34,7 +34,7 @@ function Footer() {
             <h4>Contact Us</h4>
             <ul>
               <li>
-                <a href="#" className="a1">
+                <a href="#" className="a1 responsiveemailfooter">
                   adanpradan@gmail.com
                 </a>
               </li>
@@ -45,7 +45,7 @@ function Footer() {
               </li>
             </ul>
             <h4>Address</h4>
-            <p>3-**,Narayanaguda,Hyderabad,Telangana</p>
+            <p className="responsiveaddressfooter">3-**,Narayanaguda,Hyderabad,Telangana</p>
           </div>
 <div className="col-xl-3">
       <div className="fu pt-5">

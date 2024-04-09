@@ -5,7 +5,7 @@ import Loader from "./Loader";
 import Error from "./Error";
 import Faq from "./Faq";
 import Contact from "./Contact";
-
+import AboutUsNew from "./Aboutusnew";
 export default function Home() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
@@ -24,6 +24,63 @@ export default function Home() {
 
     fetchData();
   }, []);
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const [textIndex, setTextIndex] = useState(0);
+  const [isScrolling, setIsScrolling] = useState(false);
+  const [scriptindex,setscriptIndex]=useState(0);
+  const texts = ['Text 1', 'Text 2', 'Text 3', 'Text 4'];
+  const script=['ncfhuikbn kjvbvnkdv','fuhshuvn fkhjbinvk','njibshkjn jvndbkvb ','kiubsk snm sibk v'];
+  const images = [
+     `images/kmeccollege.jpg`,
+     `images/kmitcollege.jpg`,
+     `images/mcv16311_malla.png`,
+     `images/ngitcollegereal.jpeg`,
+     `images/osmaniacollege.jpg`,
+     `images/tirumalaengineeringcollege.jpg`,
+     // Add more image URLs as needed
+   ];
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollPosition(window.scrollY);
+      // Change text based on scroll position
+      if (scrollPosition < 300) {
+        setTextIndex(0);
+        setscriptIndex(0);
+      } else if (scrollPosition >= 400 && scrollPosition < 500) {
+        setTextIndex(1);
+        setscriptIndex(1);
+      } else if (scrollPosition >= 600 && scrollPosition < 700) {
+        setTextIndex(2);
+        setscriptIndex(2);
+      } else {
+        setTextIndex(3);
+        setscriptIndex(3);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [scrollPosition]);
+
+  useEffect(() => {
+    const handleScrollEnd = () => {
+      setIsScrolling(true);
+      setTimeout(() => {
+        setIsScrolling(false);
+      }, 300); // Adjust the duration of the transition as needed
+    };
+
+    window.addEventListener('scroll', handleScrollEnd);
+
+    return () => {
+      window.removeEventListener('scroll', handleScrollEnd);
+    };
+  }, []);
+
 
   return (
     <>
@@ -59,24 +116,12 @@ export default function Home() {
                          </div>
                     </div>
 
-                    <div className="container py-5 my-5 wrappingDiv">
+                    <div className="container my-5  wrappingDiv">
                          <p className="display-4 josephin" style={{fontFamily:'josephin'}}><center>Can't do your lab work in home?</center></p>
-                         {/* <h1 className="display-6 regstyle"><center><b>Register now</b></center></h1> */}
                     </div>
-                    <div className="container p-4 my-5 wrappingDiv c1" >
-                         <div className="display-4" style={{ color: "rgb(105, 58, 19)" }}><b>About us</b></div>
-                         <p className="b1 display-6" style={{fontFamily:'josephin',fontSize:'25px'}}> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Adan Pradan </b>
-                         is a workshop management platform designed to streamline the process of organizing and attending workshops.
-                          For colleges, it offers a complete solution 
-                         to efficiently manage workshop details, such as scheduling, participant registration, and tracking.
-                         <br></br>
-                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For students, Adan Pradan provides a user-friendly interface to explore various workshops,
-                          register for those of interest, and receive updates and reminders. It simplifies the workshop experience, 
-                          making it easier for students to engage with new learning opportunities and for colleges to manage 
-                          and promote their workshops effectively.</p>
-                    </div>
-                    <div className="container-md my-5 pt-5 quick c1">
+
+                    <AboutUsNew/>
+                    {/* <div className="container-md  quick c1" style={{marginTop:"11cm"}}>
                          <div className="josephin"><p className="display-6"><b>SIMPLE STEPS TO BOOK YOUR WORKSHOP</b></p>
                               <br />
                          </div>
@@ -131,9 +176,24 @@ export default function Home() {
                                    </div>
                               </div>
                          </div>
-                    </div>
-                    <Faq/>
-                    <Contact/>
+                    </div> */}
+                    {/* <Faq/> */}
+                    {/* <Link to='/faq'><p className={`${styles.centeredContainer} display-6`}>Faq</p></Link> */}
+
+              {/* <Contact/> */}
+              <div className="container-fluid">
+               <center><h1> Popular colleges registered</h1></center>
+      <div className="marquee" style={{ display: "flex", overflow: "hidden" }}>
+  {images.map((image, index) => (
+    <div key={index}>
+      <img src={image} alt={`Image ${index + 1}`}/>
+    </div>
+  ))}
+</div>
+
+    </div>
+
+
                </div>
         </>
       )}

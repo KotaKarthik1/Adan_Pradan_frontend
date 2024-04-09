@@ -3,12 +3,19 @@ import "./Userpostlogin.css";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import CollegeCard from "./CollegeCard";
+
 // import ImageUpload from "./ImageUpload";
 import Loader from "./Loader";
 function Userpostlogin() {
   const [Data, setData] = useState([]);
   const [loading, setloading] = useState();
   const [error, seterror] = useState();
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const [textIndex, setTextIndex] = useState(0);
+  const [isScrolling, setIsScrolling] = useState(false);
+  const [scriptindex,setscriptIndex]=useState(0);
+  const texts = ['Text 1', 'Text 2', 'Text 3', 'Text 4'];
+  const script=['ncfhuikbn kjvbvnkdv','fuhshuvn fkhjbinvk','njibshkjn jvndbkvb ','kiubsk snm sibk v'];
   const shuffleArray = (array) => {
     const shuffled = [...array];
     for (let i = shuffled.length - 1; i > 0; i--) {
@@ -55,6 +62,9 @@ function Userpostlogin() {
         seterror(true);
         console.error("Error fetching data:", error);
         setloading(false);
+      }finally{
+        seterror(false);
+        setloading(false);
       }
     };
     fetchData();
@@ -76,7 +86,7 @@ function Userpostlogin() {
                 <Loader />
               </h1>
             ) : error ? (
-              <h1>error</h1>
+              <h1>Something went wrong</h1>
             ) : (
               Data.map((clg) => {
                 return (
@@ -86,35 +96,13 @@ function Userpostlogin() {
                 );
               })
             )}
-            {/* <ImageUpload/> */}
           </div>
         </div>
-
-        <div className="container wrappingDiv c1" id="C">
-          <div className="display-2" style={{ color: "rgb(105, 58, 19)" }}>
-            <b>FAQ's</b>
-          </div>
-          <ul>
-            <li>
-              <h2>How can I book a slot?</h2>
-            </li>
-            <li>
-              <h2>How can I book based on location?</h2>
-            </li>
-            <li>
-              <h2>Who will receive me in college? </h2>
-            </li>
-            <Link to="/faq">
-              <h3 style={{ color: "rgb(201, 44, 44)" }}>
-                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                &nbsp; &nbsp; &nbsp; &nbsp;view more{" "}
-              </h3>
-            </Link>
-          </ul>
+        <div className="container">
+          <h1> how to book a workshop</h1>
+          
         </div>
       </div>
-
       <script>window.onload = function () {window.scrollTo(0, 0)};</script>
     </>
   );
