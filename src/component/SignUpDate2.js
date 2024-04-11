@@ -88,7 +88,7 @@ export default function TestingLogInclgnew() {
           {error && <div className="error-message">{error}</div>}
           <div>
             <Link to="/loginupdate"><button className={styles.buttonforcollege}>Student</button></Link>
-            <Link to="/signup"><button className={styles.buttonforcollege} style={{ margin: "10px" }}>Sign Up</button></Link>
+            <Link to="/clgsingnUp"><button className={styles.buttonforcollege} style={{ margin: "10px" }}>Sign Up</button></Link>
           </div>
         </form>
       </div>

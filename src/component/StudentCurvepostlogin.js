@@ -11,7 +11,7 @@ const StudentCurvepostlogin = () => {
       "#blob1",
       { path: "#blob1" },
       { path: "#blob2" },
-      { repeat: 999, duration: 3000, yoyo: true }
+      { repeat: Infinity, duration: 3000, yoyo: true }
     ).start();
   }, []);
   const [Data, setData] = useState([]);
@@ -174,7 +174,7 @@ const StudentCurvepostlogin = () => {
       </section>
 
       <section className={`${styles.cream} ${styles.sectionstyle3}`}>
-        <p className={`${styles.stepstyle}`}> steps to book workshop</p>
+        <p className={`${styles.stepstyle}`}> steps to book slot</p>
         <div className={styles.wave}>
           <svg
             xmlns="http://www.w3.org/2000/svg"

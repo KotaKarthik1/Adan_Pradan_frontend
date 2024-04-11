@@ -1,0 +1,57 @@
+.navbar-toggler {
+    background: transparent;
+    padding: 0.25rem 0.5rem;
+    font-size: 1.25rem;
+    color: #333 !important; /* Change color as needed */
+    cursor: pointer;
+    border: none;
+}
+.navbar-toggler:hover {
+    background: none !important;
+}
+.navbar-toggler:focus {
+    box-shadow: none !important;
+}
+.navbar-toggler-icon {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    vertical-align: middle;
+    content: "";
+    color: black;
+    background-size: 100% 100%;
+}
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+.closingcustom {
+    display: inline-block;
+    vertical-align: middle;
+    color: black;
+    animation: fadeIn 2s forwards;
+    /* font-size: '80px'; */
+}
+
+/* Navbar button toggler icon animation */
+/*.navbar-toggler-icon::before {
+    transform: rotate(0);
+    transition: transform 0.5s ease;
+}
+
+.closingcustom {
+    transform: rotate(0);
+    transition: transform 0.5s ease;
+ }
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::before {
+    transform: rotate(45deg);
+}
+
+.navbar-toggler[aria-expanded="true"] .closingcustom {
+    transform: rotate(45deg);
+} */

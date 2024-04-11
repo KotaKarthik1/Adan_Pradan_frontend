@@ -5,7 +5,6 @@ import Navbar from './component/Navbar';
 import Footer from './component/Footer';
 import Signupform from './component/Signupform';
 import Bookinpage from './component/Bookingpage';
-import Userpostlogin from './component/Userpostlogin';
 import Faq from './component/Faq';
 import Loginpage from './component/Loginpage';
 import Collegepostlogin from './component/Collegepostlogin';
@@ -27,6 +26,7 @@ import TestingLogInclgnew from './component/SignUpDate2';
 import Loginpagenew from './component/SignUpdate';
 import AboutUsNew from './component/Aboutusnew';
 import StudentCurvepostlogin from './component/StudentCurvepostlogin';
+import Blobbro from './component/Blobbro';
 
 
 function App() {
@@ -38,7 +38,9 @@ function App() {
      <Router>
           <Routes>
           <Route path="studentprofilepage" element={<><StudentNav/><StudentProfile/></>}/>
+          <Route path="blobbro" element={<><Blobbro/></>}/>
               {/* <Route path="curve" element={<><StudentNav/><StudentCurvepostlogin/></>}/> */}
+              {/* <Route path="/scroll" element={<><SmoothScroll/></>}/> */}
               <Route path="/" element={<><Navbar/><Home/></>} />
               <Route path="faq" element={<><Navbar/><Faq/></>}/>
               <Route path="Login" element={<><Navbar/><Loginpage/></>}/>

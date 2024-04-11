@@ -15,16 +15,16 @@ const UserCollegetab = () => {
         >
           <li className="nav-item" role="presentation">
             <button
-              className={`nav-link ${activeTab === 'college' ? 'active' : ''}`}
+              className={`nav-link spaceLandR ${activeTab === 'college' ? 'active' : ''}`}
               onClick={() => setActiveTab('college')}
               type="button"
             >
               <div className="display-3 itemcolor">COLLEGE</div>
             </button>
           </li>
-          <li className="nav-item" role="presentation">
+          <li className="nav-item" style={{paddingLeft:"20px",paddingRight:"20px"}} role="presentation">
             <button
-              className={`nav-link ${activeTab === 'workshop' ? 'active' : ''}`}
+              className={`nav-link spaceLandR ${activeTab === 'workshop' ? 'active' : ''}`}
               onClick={() => setActiveTab('workshop')}
               type="button"
             >

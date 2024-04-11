@@ -7,7 +7,10 @@ import Faq from "./Faq";
 import Contact from "./Contact";
 import AboutUsNew from "./Aboutusnew";
 import styles from "./AboutUsnew.module.css";
+import KUTE, { colors } from "kute.js";
+import Blobbro from "./Blobbro";
 export default function Home() {
+  
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
 
@@ -86,7 +89,7 @@ export default function Home() {
       window.removeEventListener("scroll", handleScrollEnd);
     };
   }, []);
-
+ 
   return (
     <>
       {loading ? (
@@ -153,30 +156,66 @@ export default function Home() {
             </div>
 
             <div className="container my-5  wrappingDiv">
-              <p
-                className="display-4 josephin"
-                style={{ fontFamily: "josephin" }}
-              >
-                <center>A platform to book workshop slots in colleges</center>
+              <p className="fontfortextaboveadanpradan">
+                <center>Welcome to workshop slot reservation platform.</center>
+              </p>
+              <p className="fontforadanpradan">
+                <center>Adan Pradan</center>
               </p>
             </div>
             {/* <div className="container-fluid middletemp">
               <h1> hello hello 123</h1>
 
             </div> */}
-             <div className={`${styles.spacer} ${styles.layerforhome}`}>
-               <p1 className="display-1 fontforaboutus"> About us </p1>
-               <img src="images\Robotic-Labs.jpg.webp" alt="Your Image" className={styles.centeredImage} />
-               <p className={styles.centeredText}>
-               <b>AdanPradan</b> is an innovative platform for workshop management platform designed to streamline the process of organizing and attending workshops.
-          <br /><br />
-          For <b>COLLEGES</b>, it provides a full solution to easily manage workshop details, such as scheduling, participant registration, and tracking.
-          <br /><br />
-          For <b>STUDENTS</b>, it provides a user-friendly interface to explore various workshops,
-          register for those of interest, and receive updates and reminders. It simplifies the workshop experience, 
-          making it easier for students to engage with new learning opportunities and for colleges to manage.
-               </p>
-             </div>
+            {/* <div className={`${styles.spacer} ${styles.layerforhome}`}> */}
+              {/* <p1 className="display-1 fontforaboutus"> About us </p1> */}
+              {/* <img
+                src="images\Robotic-Labs.jpg.webp"
+                alt="Your Image"
+                className={styles.centeredImage}
+              />
+              <p className={styles.centeredText}>
+                <b>AdanPradan</b> is an innovative platform for workshop
+                management platform designed to streamline the process of
+                organizing and attending workshops.
+                <br />
+                <br />
+                For <b>COLLEGES</b>, it provides a full solution to easily
+                manage workshop details, such as scheduling, participant
+                registration, and tracking.
+                <br />
+                <br />
+                For <b>STUDENTS</b>, it provides a user-friendly interface to
+                explore various workshops, register for those of interest, and
+                receive updates and reminders. It simplifies the workshop
+                experience, making it easier for students to engage with new
+                learning opportunities and for colleges to manage.
+              </p> */}
+            {/* </div> */}
+            <Blobbro/>
+            {/* write code here */}
+            
+            
+      {/* <div className={`${styles.spacer} ${styles.layer1}`}></div> */}
+
+      {/* <section className={styles.sectionstyle}>
+        <h1>Nice Curves!</h1>
+        <p>A website is like a road. The more curves it has the more interesting it is.</p>
+      </section> */}
+
+      {/* <div className={`${styles.spacer} ${styles.layer2} ${styles.flip}`}></div> */}
+
+      
+
+            {/* <div className={`${styles.spacer} ${styles.layer1}`}></div> */}
+
+            {/* <section className={styles.sectionstyle}>
+        <h1>Nice Curves!</h1>
+        <p>A website is like a road. The more curves it has the more interesting it is.</p>
+      </section> */}
+
+            {/* <div className={`${styles.spacer} ${styles.layer2} ${styles.flip}`}></div> */}
+
 
             {/* <AboutUsNew/> */}
             {/* <div className={styles.outerContainer}>
@@ -209,6 +248,7 @@ export default function Home() {
                 </div>
               </Link>
             </div>
+
             {/* <div className="container-md  quick c1" style={{marginTop:"11cm"}}>
                          <div className="josephin"><p className="display-6"><b>SIMPLE STEPS TO BOOK YOUR WORKSHOP</b></p>
                               <br />

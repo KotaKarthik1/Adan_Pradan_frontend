@@ -32,3 +32,7 @@
       font-size: 14px;
     }
   }
+  .spaceLandR{
+    padding-right: 10% !important;
+    padding-left: 10% !important;
+  }

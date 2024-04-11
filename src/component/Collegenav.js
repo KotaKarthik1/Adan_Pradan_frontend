@@ -47,7 +47,11 @@ export default function Collegenav() {
             <span className="sitename display-6">Adan Pradan</span>
           </Link>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#T" aria-controls="T" aria-expanded={!navClose ? true : false} aria-label="Toggle navigation" onClick={handleNavClose}>
-            <span className="navbar-toggler-icon"></span>
+          {navClose ? (
+              <span className="navbar-toggler-icon"></span>
+            ) : (
+              <span className="closingcustom" style={{fontSize:"40px"}}>&times;</span>
+            )}
           </button>
           <div className={`${navClose ? 'collapse' : ''} navbar-collapse`} id="T" style={{ transition: 'height 0.5s ease-in-out', maxHeight: navClose ? '0' : '100vh', overflow: 'hidden' }}>
             <ul className="navbar-nav ms-auto mb-2 mb-md-0" onClick={handleNavClose}>

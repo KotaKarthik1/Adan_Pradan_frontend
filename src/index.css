@@ -23,17 +23,20 @@ code {
   box-shadow: 0px 0px 7px 0.2px #6c6f74,0px 0px 1px;
 }
 .navbar ul li{
-  margin-right: 15px;
-  margin-left: 15px;
+  margin-right: 0px;
+  margin-left: 0px;
 }
 .sitename{
 font-family: 'Lobster Two', cursive;
 }
 .nav-link{
   margin-top: 0.6rem;
+  padding-right: 0% !important;
+  padding-left: 0% !important;
 }
 .nav-link:hover{
 color:brown;
+
 }
 .button1{
 width: 2cm;
@@ -79,4 +82,7 @@ padding-left:0.1cm;
     max-width: 100%;
     word-wrap: break-word;
   }
+}
+.logoutbutton{
+  color: rgb(253, 152, 152) !important;
 }

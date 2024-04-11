@@ -48,38 +48,43 @@ export default function StudentNav() {
               <span className="sitename display-6">Adan Pradan</span>
             </a>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#T" aria-controls="T" aria-expanded={!navClose ? true : false} aria-label="Toggle navigation" onClick={handleNavClose}>
+              {/* <span className="navbar-toggler-icon"></span> */}
+              {navClose ? (
               <span className="navbar-toggler-icon"></span>
+            ) : (
+              <span className="closingcustom" style={{fontSize:"40px"}}>&times;</span>
+            )}
             </button>
             <div className={`${navClose ? 'collapse' : ''} navbar-collapse`} id="T" style={{ transition: 'height 0.5s ease-in-out', maxHeight: navClose ? '0' : '100vh', overflow: 'hidden' }}>
               <ul className="navbar-nav ms-auto mb-2 mb-md-0" onClick={handleNavClose}>
                 <li className="nav-item">
-                  <Link to="/student" className="nav-link">
-                    <b>H o m e</b>
+                  <Link to="/student" className="nav-link" style={{ whiteSpace: "nowrap" }}>
+                    <b>Home</b>
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link to="/clickcollege" className="nav-link">
-                    <b>C o l l e g e s</b>
+                  <Link to="/clickcollege" className="nav-link" style={{ whiteSpace: "nowrap" }}>
+                    <b>Colleges</b>
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link to="/studfaq" className="nav-link">
-                    <b>F A Q's</b>
+                  <Link to="/studfaq" className="nav-link" style={{ whiteSpace: "nowrap" }}>
+                    <b>FAQ's</b>
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link to="/studcontact" className="nav-link">
-                    <b>C o n t a c t &nbsp;&nbsp;u s</b>
+                  <Link to="/studcontact" className="nav-link" style={{ whiteSpace: "nowrap" }}>
+                    <b>Contact &nbsp;&nbsp;us</b>
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link to="/UserClickOnBooked" className="nav-link">
-                    <b>B o o k e d</b>
+                  <Link to="/UserClickOnBooked" className="nav-link" style={{ whiteSpace: "nowrap" }}>
+                    <b>Booked</b>
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link to="/tostudprofile" className="nav-link">
-                    <b>P r o f i l e</b>
+                  <Link to="/tostudprofile" className="nav-link" style={{ whiteSpace: "nowrap" }}>
+                    <b>Profile</b>
                   </Link>
                 </li>
                 <li className="nav-item">
@@ -93,7 +98,7 @@ export default function StudentNav() {
                       navigate("/");
                     }}
                   >
-                    LOG &nbsp;OUT
+                    Logout
                   </button>
                 </li>
               </ul>
