@@ -8,6 +8,7 @@ import "./Signupform.css";
 const Signup = () => {
   const [loading, setloading] = useState(false);
   const [error, setError] = useState(false);
+  const [showSuccess, setShowSuccess] = useState(false);
   const [user, setUser] = useState({
     email: "",
     password: "",
@@ -30,9 +31,14 @@ const Signup = () => {
       setloading(true);
       console.log("em roo ber")
       await axios.post("https://adan-pradan-backend.onrender.com/AdanPradan/register", user);
-       window.location.href = "/success"; // Redirect to success page
-      // setloading(false);
-      // <Success/> // redirect to success component
+      setShowSuccess(true);
+      setTimeout(() => {
+        setShowSuccess(false);
+        window.location.href = "/loginupdate"; // Redirect to login page
+      }, 2500);
+
+      setloading(false);
+    //  write code here
     } catch (error) {
       setError(true);
       console.log(error);
@@ -143,6 +149,11 @@ const Signup = () => {
         </div>
         </div>
         </div> */}
+        {showSuccess && (
+                    <div className="alert alert-success" role="alert" style={{ marginTop: "1rem" }}>
+                      Signup successful! Redirecting to login page...
+                    </div>
+                  )}
         </div>
         </div>
         </div>

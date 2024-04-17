@@ -55,6 +55,7 @@ export default function Loginpagenew() {
 
   return (
     <>
+
       <div className={styles.container} style={{marginTop:'3cm'}}>
         <form onSubmit={handleSubmit}>
           <h1>Sign in</h1>
@@ -91,7 +92,7 @@ export default function Loginpagenew() {
             <Link to="/signup"><button className={styles.buttonforcollege} style={{ margin: "10px" }}>Sign Up</button></Link>
           </div>
         </form>
-      </div>
+      </div>  
     </>
   );
 }

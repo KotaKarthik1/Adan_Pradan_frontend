@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import Loader from "./Loader";
 import Error from "./Error";
-import Success from "./Success";
 const CollegeSignUpform= () => {
   const [loading, setloading] = useState(false);
   const [error, setError] = useState(false);
+  const [success,setShowSuccess]= useState(false);
   const [user, setUser] = useState({
     collegeName:"",
     email: "",
@@ -27,9 +27,13 @@ const CollegeSignUpform= () => {
       setloading(true);
       await axios.post("https://adan-pradan-backend.onrender.com/AdanPradan/registerclg", user);
       setloading(false);
-       window.location.href = "/success"; // Redirect to success page
-      // setloading(false);
-      // <Success/> // redirect to success component
+      setShowSuccess(true);
+      setShowSuccess(true);
+      setTimeout(() => {
+        setShowSuccess(false);
+        window.location.href = "/loginupdate2"; // Redirect to login page
+      }, 2500);
+      setloading(false);
     } catch (error) {
       setError(true);
       console.log(error);
@@ -143,7 +147,13 @@ const CollegeSignUpform= () => {
                   </div>
                   <button className="btn" type="submit" style={{ backgroundColor: "green", color: "white", float: "left" }}>Signup</button>
                   <Link to="/loginupdate"><button className="btn" type="submit" style={{ backgroundColor: "green", color: "white", float: "right", padding: "0px" }}>Login</button></Link>
+                  
                 </form>
+                 {success && (
+                    <div className="alert alert-success" role="alert" style={{ marginTop: "1rem" }}>
+                      Signup successful! Redirecting to login page...
+                    </div>
+                  )}
                 {/* <div className="container break">
                   <div className="row">
                     <Link to="/loginupdate"><button className="btn" type="submit" style={{ backgroundColor: "green", color: "white", float: "right", padding: "0px" }}>Login</button></Link>

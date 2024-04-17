@@ -97,16 +97,8 @@ function Userclickonclg() {
               <td>{row.JntuCode}</td>
               <td>
                 <Link to={`/bookform/${row._id}`}>
-                  <button
+                  <button className="buttonforclickonclg"
                     type="button"
-                    style={{
-                      display: "flex",
-                      background: "green",
-                      color: "white",
-                      borderRadius: "10px",
-                      marginLeft: "30px",
-                      whiteSpace: "nowrap",
-                    }}
                   >
                     Book
                   </button>

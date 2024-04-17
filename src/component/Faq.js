@@ -66,7 +66,7 @@ export default function Faq() {
 //     </>
 //   );
 // }
-<div className="container-flex wrappingDiv my-5 pt-5 c1" id="C" style={{ background: '#0f0f10',display: 'flex',
+<div className="container-flex wrappingDiv my-5 pt-5 c1" id="C" style={{ background: '#f2e1ae',display: 'flex',
   flexDirection: 'column',
   justifyContent: 'center',
   alignItems: 'center',
@@ -76,23 +76,23 @@ export default function Faq() {
   </div>
   <ul>
     <li>
-      <p className="fq josephin" style={{ color: '#d3d7df' }}>
-        <h2>How do I book a workshop as a student?</h2>
+      <p className="fq josephin" style={{ color: 'rgba(48, 48, 48, 0.737)',fontFamily:'"Forum", serif' ,fontSize:'28px'}}>
+        <h2 style={{color:'black',fontSize:'28px',fontFamily:' "Pixelify Sans", sans-serif'}}>How do I book a workshop as a student?</h2>
         <br />
         Simply log in, browse workshops, select one, and fill out the registration form.
 
       </p>
     </li>
     <li>
-      <p className="fq josephin" style={{ color: '#d3d7df' }}>
-        <h2>Can I cancel a workshop booking?</h2>
+      <p className="fq josephin" style={{ color: 'rgba(48, 48, 48, 0.737)',fontFamily:'"Forum", serif' ,fontSize:'28px'}}>
+        <h2 style={{color:'black',fontSize:'28px',fontFamily:' "Pixelify Sans", sans-serif'}}>Can I cancel a workshop booking?</h2>
         <br />
         Yes, students can cancel workshop bookings at any time.
       </p>
     </li>
     <li>
-      <p className="fq josephin" style={{ color: '#d3d7df' }}>
-        <h2>How do colleges manage workshops?</h2>
+      <p className="fq josephin" style={{ color: 'rgba(48, 48, 48, 0.737)',fontFamily:'"Forum", serif' ,fontSize:'28px'}}>
+        <h2 style={{color:'black',fontSize:'28px',fontFamily:' "Pixelify Sans", sans-serif'}}>How do colleges manage workshops?</h2>
         <br />
         Colleges can easily add, cancel, and update workshops through the platform, with changes reflected in student dashboards.
       </p>

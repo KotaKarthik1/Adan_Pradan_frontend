@@ -115,8 +115,6 @@ const WorkshopTab = () => {
                     type="button"
                     style={{
                       display: 'flex',
-                      background: 'green',
-                      color: 'white',
                       borderRadius: '10px',
                       marginLeft: '30px',
                       whiteSpace: 'nowrap',

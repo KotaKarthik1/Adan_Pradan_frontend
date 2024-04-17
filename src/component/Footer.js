@@ -3,7 +3,7 @@ import { FaGithub } from 'react-icons/fa';
 import { Link } from "react-router-dom";
 function Footer() {
   return (
-    <footer style={{ position: "fixed-bottom", bottom: "0px" }}>
+    <footer style={{ position: "fixed-bottom", bottom: "0px",background:"#ffe8a3"}}>
       <div className="container-fluid">
         <div className="row">
           <div className="col-xl-3">

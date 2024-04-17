@@ -27,6 +27,11 @@ import Loginpagenew from './component/SignUpdate';
 import AboutUsNew from './component/Aboutusnew';
 import StudentCurvepostlogin from './component/StudentCurvepostlogin';
 import Blobbro from './component/Blobbro';
+import Samplealert from './component/Samplealert';
+import { Collection } from 'mongoose';
+import Blobbroforpostclg from './component/Blobbroforpostclg';
+import Tabs from './component/Tabs';
+import AllCollegeBookings from './component/Tabs';
 
 
 function App() {
@@ -37,6 +42,7 @@ function App() {
     <>
      <Router>
           <Routes>
+          <Route path="tabs" element={<><Collegenav/><Tabs/></>}/>
           <Route path="studentprofilepage" element={<><StudentNav/><StudentProfile/></>}/>
           <Route path="blobbro" element={<><Blobbro/></>}/>
               {/* <Route path="curve" element={<><StudentNav/><StudentCurvepostlogin/></>}/> */}
@@ -53,7 +59,8 @@ function App() {
               <Route path="loginupdate" element={<><Navbar/><Loginpagenew/></>}></Route>
               <Route path="loginupdate2" element={<><Navbar/><TestingLogInclgnew/></>}></Route>
               <Route path="aboutusnew" element={<><AboutUsNew/></>}></Route>
-              
+              <Route path="alerts" element={<><Samplealert/></>}></Route>
+              <Route path="cllg" element={<><Blobbroforpostclg/></>}></Route>
               {authenticated?(
                 <>
                 <Route path="student" element={<><StudentNav/><StudentCurvepostlogin/></>}/>
@@ -72,13 +79,15 @@ function App() {
               {authenticated?(
                 <>
                 
-                <Route path="collegebookings" element={<><Collegenav/><CollegeBookings/></>}/>
+                <Route path="collegebookings" element={<><Collegenav/><AllCollegeBookings/></>}/>
                 <Route path="college" element={<><Collegenav/><Collegepostlogin/></>}/>
                 <Route path="collegeUpdate" element={<><Collegenav/><UpdatesClg/></>}/>
+                <Route path="clgfaq" element={<><Collegenav/><Faq/></>}/>
                 </>
               ):(
                 <>
                 <Route path="*" element={<><Navbar/><Home/></>}/>
+
                 </>
               )}
 

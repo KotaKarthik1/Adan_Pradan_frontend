@@ -72,7 +72,7 @@ overflow: hidden;
 }
 
 .customshapedividerbottom1712640759 .shapefill {
-  fill: #FFC107;
+  fill: #f2e1ae;
 }
 .customshapedividertop1712643250 {
   position: absolute;
@@ -92,7 +92,7 @@ overflow: hidden;
 }
 
 .customshapedividertop1712643250 .shapefilldown {
-  fill: #FFC107;
+  fill: #f2e1ae;
 }
 @media (max-width: 750px) {
   .customshapedividerbottom1712640759 svg,
@@ -113,6 +113,9 @@ overflow: hidden;
     
     
   } */
+  .bubble2{
+    position: relative;
+  }
   .bubble {
     position: relative; /* Set position to relative for z-index to work */
   }
@@ -127,6 +130,23 @@ overflow: hidden;
     background-color: #0f0f10;
     height: 30%;
   }
+  .bubble2::after {
+    content: '';
+    border-top-left-radius: 100% 100%;
+    border-top-right-radius: 100% 100%;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #f2e1ae !important;
+    height: 30%;
+  }
+  .bubble2-content {
+    /* position: absolute; Set position to relative */
+    justify-content: center;
+    font-size:  4rem;
+    font-family: "Pixelify Sans", sans-serif;
+    z-index: 1; /* Set a higher z-index to bring it in front of the pseudo-element */
+  }
   
   .bubble-content {
     /* position: absolute; Set position to relative */
@@ -136,6 +156,7 @@ overflow: hidden;
     z-index: 1; /* Set a higher z-index to bring it in front of the pseudo-element */
   }
 }
+
 .sectionstyle {
   position: relative;
   display: flex;
@@ -209,6 +230,19 @@ overflow: hidden;
 .bubble {
   position: relative; /* Set position to relative for z-index to work */
 }
+.bubble2 {
+  position: relative; /* Set position to relative for z-index to work */
+}
+.bubble2::after {
+  content: '';
+  border-top-left-radius: 100% 100%;
+  border-top-right-radius: 100% 100%;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #f2e1ae;
+  height: 30%;
+}
 
 .bubble::after {
   content: '';
@@ -234,7 +268,13 @@ overflow: hidden;
   }
 }
 
-
+.bubble2-content {
+  /* position: absolute; Set position to relative */
+  justify-content: center;
+  font-family: "Pixelify Sans", sans-serif;
+  font-size:  1.2rem;
+  z-index: 1; /* Set a higher z-index to bring it in front of the pseudo-element */
+}
 .bubble-content {
   /* position: absolute; Set position to relative */
   justify-content: center;
@@ -433,4 +473,11 @@ overflow: hidden;
     opacity: 0;
     transform: rotate(311deg) translate(10px, 10px);
   }
+}
+
+.buttonforpdf{
+  color: black !important;
+  border:1rem !important;
+  border-radius: 5px !important;
+  border-color: gold !important;
 }

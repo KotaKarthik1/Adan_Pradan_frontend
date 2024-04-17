@@ -38,3 +38,10 @@
       font-size: 14px;
     }
   }
+.buttonforclickonclg{
+    display: "flex";
+    color: "white";
+    border-radius: "10px";
+    margin-left: "30px";
+    white-space: "nowrap";
+}

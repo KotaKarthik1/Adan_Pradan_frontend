@@ -21,7 +21,7 @@
 //     try {
 //       setloading(true);
 //       const response = await axios.get(
-//         `https://adan-pradan-backend.onrender.com/AdanPradan/bookingsfilterbydate?id=${userId}&checkdate=${date}`
+//         `http://localhost:5031/AdanPradan/bookingsfilterbydate?id=${userId}&checkdate=${date}`
 //       );
 //       setNormalBookings(response.data);
 //       setloading(false);
@@ -46,7 +46,7 @@
 //       setloadingpast(true);
 //       const formattedDate = new Date(date).toISOString().split("T")[0];
 //       const response = await axios.get(
-//         `https://adan-pradan-backend.onrender.com/AdanPradan/bookingsfilterbydatepast?id=${userId}&checkdate=${formattedDate}`
+//         `http://localhost:5031/AdanPradan/bookingsfilterbydatepast?id=${userId}&checkdate=${formattedDate}`
 //       );
 //       setPastBookings(response.data);
 //       setDatespast(Object.keys(response.data));
@@ -72,7 +72,7 @@
 //       setloading(true);
 //       const formattedDate = new Date(date).toISOString().split("T")[0];
 //       const response = await axios.get(
-//         `https://adan-pradan-backend.onrender.com/AdanPradan/bookingsfilterbydateupcoming?id=${userId}&checkdate=${formattedDate}`
+//         `http://localhost:5031/AdanPradan/bookingsfilterbydateupcoming?id=${userId}&checkdate=${formattedDate}`
 //       );
 //       setUpcomingBookings(response.data);
 //       setDatesupcoming(Object.keys(response.data));
@@ -116,7 +116,7 @@
 //     return nextDate.toISOString().split("T")[0];
 //   });
 //   var pastdate = new Date(dates[0]);
-//   pastdate.setDate(pastdate.getDate() - 1);
+//   pastdate.setDate(pastdate.getDate()-1);
 //   // //console.log(pastdate, " is past date");
 //   const samplepastdate=pastdate;
 //   var upcomingdate = new Date(dates[dates.length - 1]);
@@ -517,15 +517,12 @@ const CollegeBookings = () => {
     return nextDate.toISOString().split("T")[0];
   });
   var pastdate = new Date(dates[0]);
-  pastdate.setDate(pastdate.getDate() - 1);
+  pastdate.setDate(pastdate.getDate()+2);
   // //console.log(pastdate, " is past date");
   const samplepastdate=pastdate;
   var upcomingdate = new Date(dates[dates.length - 1]);
   upcomingdate.setDate(upcomingdate.getDate() + 1);
   // ////console.log(upcomingdate, " is upcoming date");
-
-
-  // Rest of your code remains the same
 
   return (
     <div className="wrappingDiv">

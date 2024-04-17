@@ -43,13 +43,12 @@
   }
   .rubik-maps-regular
   {
-    font-family: "Rubik Maps", system-ui;
+    font-family: "Hedvig Letters Sans", sans-serif;
     font-weight: 300;
     /* font-style: normal; */
   }
   .bs
   {
-    
     color:white;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     margin-top: 20px;
@@ -60,18 +59,24 @@
   }
   .bs:hover
   {
+    /* background-color: #ffe8a3; */
     box-shadow: #f1f0edde;
     transform: scale(1.04);
-    background-color:#ffc107cf ;
+    background-color:#f5e6b6 ;
     /* background-color:#f1db35; */
     border-radius: 0%;
-    
+  }
+  .bs .h1forcollegecode{
+    font-size: 25px !important;
   }
   .bs:hover .h1forcollegecode {
-    color: black !important;
+    color: brown !important;
+  }
+  .bs:hover p{
+    color: rgb(31, 31, 31);
   }
   .h1forcollegecode{
-    color:#ffc107 !important;
+    color:#f2e1ae !important;
   }
 
 
