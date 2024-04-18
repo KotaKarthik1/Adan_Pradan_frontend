@@ -19,7 +19,7 @@ const Blobbro = () => {
       <section className={`${styles.yellow} ${styles.sectionstyleforbro}`}>
         <div className={styles["blob-content"]}>
           <p className={styles.centeredTextforbro}>
-            <b>AdanPradan</b> is an innovative platform for workshop management
+            <b>AadanPradan</b> is an innovative platform for workshop management
             platform designed to streamline the process of organizing and
             attending workshops.
             <br />

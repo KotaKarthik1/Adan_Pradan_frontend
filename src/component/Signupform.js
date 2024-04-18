@@ -56,11 +56,11 @@ const Signup = () => {
         <div>
         <div>
         <div>
-        <div className="container wrappingDiv" style={{border:"1px Solid gold",padding:"1cm",marginBottom:"1cm",marginTop:"2.7cm"}}>
-          <div className="row tothemiddle " >
+        <div className="container-fluid wrappingDiv" style={{border:"1px Solid gold",padding:"1cm",marginBottom:"1cm",marginTop:"2cm",background: 'linear-gradient(180deg, #f2e1ae, rgba(15, 15, 16, 0))'}}>
+          <div className="row tothemiddle "  >
             {/* <div style={{justifyContent}} */}
             <div className="col-12" style={{justifyContent:"center", display:"flex"}}>
-              <div style={{justifyContent:"center",border:"3px Solid gold",padding:"1cm"}}>
+              <div style={{background: 'linear-gradient(180deg, #f2e1ae, rgba(15, 15, 16, 0))',justifyContent:"center",border:"1px Solid BLACK",padding:"1cm"}}>
           <h1 className="display-1 josephin">Signup</h1>
           <Link to="/clgsingnUp"><p className="display-7"style={{color:"green", margin:"5px", float:"right"}}>Register as college?</p></Link>
           <form onSubmit={handleSubmit} >
@@ -128,7 +128,7 @@ const Signup = () => {
             </label>
             </div>
             
-            <button type="submit" className="btn"  style={{ backgroundColor: "green",color:"white", float:"left"}} disabled={loading}>
+            <button type="submit" className="btn"  style={{ backgroundColor: "green",color:"white", float:"left",width:'10vh'}} disabled={loading}>
     {loading ? (
       <div className="d-flex align-items-center">
         <div className="spinner-border" role="status">
@@ -136,10 +136,10 @@ const Signup = () => {
         </div>
       </div>
     ) : (
-      'Signup'
+      'SignUp'
     )}
   </button>
-  <Link to="/Loginupdate"><button className="btn" style={{ width:"100px",backgroundColor: "green", color: "white", float:"right"}}>Login</button></Link>
+  <Link to="/Loginupdate"><button className="btn" style={{ width:"9vh",backgroundColor: "green", color: "white", float:"right",}}>Login</button></Link>
           </form>
           {/* <div className='container break'>
             <br/>

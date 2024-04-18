@@ -52,7 +52,7 @@ export default function Contact() {
       <p className="display-7" style={{ color: 'black' }}><b>Email:</b></p>
     </div>
     <div className="col-lg-9 col-md-8 col-sm-6">
-      <p className="responsiveemail" style={{ color: 'rgba(48, 48, 48, 0.737)' }}>adanpradanHelpDesk@gmail.com</p>
+      <p className="responsiveemail" style={{ color: 'rgba(48, 48, 48, 0.737)' }}>aadanpradanHelpDesk@gmail.com</p>
     </div>
   </div>
   <div className="row">

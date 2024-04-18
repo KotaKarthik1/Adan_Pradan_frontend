@@ -51,9 +51,9 @@ const CollegeSignUpform= () => {
     <div>
       <div>
         <div>
-          <div className="container wrappingDiv" style={{ border: "1px Solid gold", padding: "1cm", marginBottom: "1cm", marginTop: "2.7cm" }}>
+          <div className="container-fluid wrappingDiv" style={{background: 'linear-gradient(180deg, #f2e1ae, rgba(15, 15, 16, 0))', border: "1px Solid gold", padding: "1cm", marginBottom: "1cm", marginTop: "2cm" }}>
             <div className="row justify-content-center">
-              <div className="col-12 col-md-8" style={{ border: "3px Solid gold", padding: "1cm" }}>
+              <div className="col-12 col-md-4" style={{background: 'linear-gradient(180deg, #f2e1ae, rgba(15, 15, 16, 0))', border: "1px Solid black", padding: "1cm" }}>
                 <h1 className="display-1 josephin text-center">Signup</h1>
                 <Link to="/signup"><p style={{ color: "green", float: "right", marginTop: "4px" }}>Register Student?</p></Link>
                 <form onSubmit={handleSubmit}> 
@@ -145,8 +145,8 @@ const CollegeSignUpform= () => {
                       }
                     />
                   </div>
-                  <button className="btn" type="submit" style={{ backgroundColor: "green", color: "white", float: "left" }}>Signup</button>
-                  <Link to="/loginupdate"><button className="btn" type="submit" style={{ backgroundColor: "green", color: "white", float: "right", padding: "0px" }}>Login</button></Link>
+                  <button className="btn" type="submit" style={{ backgroundColor: "green", color: "white", float: "left",width:'10vh' }}>Signup</button>
+                  <Link to="/loginupdate"><button className="btn" type="submit" style={{ backgroundColor: "green", color: "white", float: "right", padding: "0px",width:'9vh' }}>Login</button></Link>
                   
                 </form>
                  {success && (

@@ -44,7 +44,7 @@ export default function Collegenav() {
               className="d-inline-block align-middle mr-2"
               style={{ borderRadius: "50%",boxShadow: "rgb(175, 181, 190) 0px 0px 3px 0.1px, inset 0px 0px 0px 0px" }}
             />
-            <span className="sitename display-6">Adan Pradan</span>
+            <span className="sitename display-6">Aadan Pradan</span>
           </Link>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#T" aria-controls="T" aria-expanded={!navClose ? true : false} aria-label="Toggle navigation" onClick={handleNavClose}>
           {navClose ? (

@@ -115,7 +115,7 @@ function Navbar(){
                 className="d-inline-block align-middle mr-2"
               />
             </Link>
-            <Link to="/"><span className="sitename display-6" style={{color:"black"}}>Adan Pradan</span></Link>
+            <Link to="/"><span className="sitename display-6" style={{color:"black"}}>Aadan Pradan</span></Link>
           </div>
           <button className={`navbar-toggler ${navClose ? 'homenavbarbutton' : 'close'}`} type="button" data-bs-toggle="collapse" data-bs-target="#T" aria-controls="T" aria-expanded={!navClose ? true : false} aria-label="Toggle navigation" onClick={handleNavClose}>
             {navClose ? (

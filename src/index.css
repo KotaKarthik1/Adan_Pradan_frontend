@@ -61,6 +61,7 @@ font-family: 'Josefin Sans', sans-serif;
 }
 .footer{
   background-color:#f2e1ae;
+   /* background:#f4eedd !important; */
 }
 a{
 text-decoration: none;

@@ -34,7 +34,7 @@ export default function StudentNav() {
   return (
     <>
       <div>
-        <nav className="navbar navbar-expand-lg fixed-top">
+        <nav className="navbar navbar-expand-lg fixed-top" >
           <div className="container">
             <a href="#" className="navbar-brand">
               <img
@@ -45,7 +45,7 @@ export default function StudentNav() {
                 className="d-inline-block align-middle mr-2"
                 style={{borderRadius: "50%", boxShadow: "rgb(175, 181, 190) 0px 0px 3px 0.1px, inset 0px 0px 0px 0px" }}
               />
-              <span className="sitename display-6">Adan Pradan</span>
+              <span className="sitename display-6">Aadan Pradan</span>
             </a>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#T" aria-controls="T" aria-expanded={!navClose ? true : false} aria-label="Toggle navigation" onClick={handleNavClose}>
               {/* <span className="navbar-toggler-icon"></span> */}

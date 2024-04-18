@@ -160,7 +160,7 @@ export default function Home() {
                 <center>Welcome to workshop slot reservation platform.</center>
               </p>
               <p className="fontforadanpradan">
-                <center>Adan Pradan</center>
+                <center>Aadan Pradan</center>
               </p>
             </div>
             {/* <div className="container-fluid middletemp">

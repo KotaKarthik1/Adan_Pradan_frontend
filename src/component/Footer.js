@@ -8,7 +8,7 @@ function Footer() {
         <div className="row">
           <div className="col-xl-3">
             <div>
-              <p className="display-1 border p-5">Adan Pradan</p>
+              <p className="display-1 border p-5">Aadan Pradan</p>
               
             </div>
           </div>
@@ -35,7 +35,7 @@ function Footer() {
             <ul>
               <li>
                 <a href="#" className="a1 responsiveemailfooter">
-                  adanpradan@gmail.com
+                  aadanpradan@gmail.com
                 </a>
               </li>
               <li>
@@ -71,7 +71,7 @@ function Footer() {
         </div>
         <div className="d-flex justify-content-center">
           <div className="copyright">
-            <p>&copy;adanpradan</p>
+            <p>&copy;aadanpradan</p>
           </div>
         </div>
       </div>

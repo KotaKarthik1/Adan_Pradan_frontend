@@ -102,7 +102,7 @@ function BookingPage() {
       <div className="booking-page-container">
         <br />
         <h1>
-          Get Slot by <span className="booking-page-name">ADAN PRADAN</span>
+          Get Slot by <span className="booking-page-name sitename">Aadan Pradan</span>
         </h1>
         {loading?<Loader/>:colleges.length==0?(<EmptyDataComponent/>):(
           <>
