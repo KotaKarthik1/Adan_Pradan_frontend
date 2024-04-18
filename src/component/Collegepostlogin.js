@@ -34,7 +34,58 @@ function Collegepostlogin() {
     fetchData();
   }, []);
   const [emptymessage,setEmptyMessage]=useState("");
-  const generatePDF = (workshop) => {
+  
+
+//   function WorkshopCard({ workshop }) {
+
+//     const generatePDF = () => {
+//     const doc = new jsPDF();
+
+//     // Add a title to the PDF
+//     doc.setFontSize(20);
+//     doc.text(`Workshop: ${workshop._id}`, 15, 15);
+
+//     // Add workshop details
+//     doc.setFontSize(12);
+//     doc.text(`Date: ${new Date(workshop.date).toDateString()}`, 15, 25);
+
+//     // Add student details
+//     doc.autoTable({
+//       startY: 35,
+//       head: [["Name", "College"]],
+//       body: workshop.students.map((student) => [student.name, student.collegeName]),
+//     });
+
+//     // Save the PDF
+//     doc.save("workshop_details.pdf");
+//   };
+//  return (
+//       <div className="row">
+//         <div className="card-container bs hey bro">
+//           <div className="mb-4 textalign">
+//             <h2 style={{ fontFamily: 'DM Serif Display', color: 'brown', marginBottom: '0.5em' }}>{workshop._id}</h2>
+//             <p style={{ color:'black', marginBottom: '0.5em' }}>Date: {new Date(workshop.date).toDateString()}</p>
+//             <h3 style={{color:'black' ,marginBottom: '0.5em' }}>Students:</h3>
+//             <ul style={{ listStyleType: "none", padding: 0 }}>
+//               {workshop.students.slice(0, 1).map((student, index) => (
+//                 <li key={index} style={{ color:'black',marginBottom: "0.5em" }}>
+//                   {student.name} - {student.collegeName}
+//                 </li>
+//               ))}
+//             </ul>
+//             <button  className='buttonforcollegecard' style={{background:"#f2e1ae"}} onClick={generatePDF()} >
+//               <h5 style={{color:'black'}}
+//               >
+//                 Get PDF
+//               </h5>
+//             </button>
+//           </div>
+//         </div>
+//       </div>
+//     );
+//   }
+function WorkshopCard({ workshop }) {
+  const generatePDF = () => {
     const doc = new jsPDF();
 
     // Add a title to the PDF
@@ -56,33 +107,32 @@ function Collegepostlogin() {
     doc.save("workshop_details.pdf");
   };
 
-
-  function WorkshopCard({ workshop }) {
-    return (
-      <div className="row">
-        <div className="card-container bs hey bro">
-          <div className="mb-4 textalign">
-            <h2 style={{ fontFamily: 'DM Serif Display', color: 'brown', marginBottom: '0.5em' }}>{workshop._id}</h2>
-            <p style={{ color:'black', marginBottom: '0.5em' }}>Date: {new Date(workshop.date).toDateString()}</p>
-            <h3 style={{color:'black' ,marginBottom: '0.5em' }}>Students:</h3>
-            <ul style={{ listStyleType: "none", padding: 0 }}>
-              {workshop.students.slice(0, 1).map((student, index) => (
-                <li key={index} style={{ color:'black',marginBottom: "0.5em" }}>
-                  {student.name} - {student.collegeName}
-                </li>
-              ))}
-            </ul>
-            <button  className='buttonforcollegecard' style={{background:"#f2e1ae"}}>
-              <h5 style={{color:'black'}}
-              >
-                Get PDF
-              </h5>
-            </button>
-          </div>
+  return (
+    <div className="row">
+      <div className="card-container bs hey bro">
+        <div className="mb-4 textalign">
+          <h2 style={{ fontFamily: 'DM Serif Display', color: 'brown', marginBottom: '0.5em' }}>{workshop._id}</h2>
+          <p style={{ color:'black', marginBottom: '0.5em' }}>Date: {new Date(workshop.date).toDateString()}</p>
+          <h3 style={{color:'black' ,marginBottom: '0.5em' }}>Students:</h3>
+          <ul style={{ listStyleType: "none", padding: 0 }}>
+            {workshop.students.slice(0, 1).map((student, index) => (
+              <li key={index} style={{ color:'black',marginBottom: "0.5em" }}>
+                {student.name} - {student.collegeName}
+              </li>
+            ))}
+          </ul>
+          <button  className='buttonforcollegecard' style={{background:"#f2e1ae"}} onClick={generatePDF} >
+            <h5 style={{color:'black'}}
+            >
+              Get PDF
+            </h5>
+          </button>
         </div>
       </div>
-    );
-  }
+    </div>
+  );
+}
+
 
   if (loading) {
     return <Loader />;
